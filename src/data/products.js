@@ -9,7 +9,7 @@ export const productsData = {
       "Una sintesi di design, tecnologia, qualità componentistiche che rende questo prodotto unico per comfort acustico e termico, con soluzioni avanzate per il benessere della vostra abitazione. Non ultimo pensati per proteggervi da intrusioni indesiderate con sistemi di antieffrazione e antiscasso.",
       "Tutti i prodotti ALUK sono disponibili in una vasta gamma di colori e finiture, certificati e testati secondo le più severe norme e leggi vigenti in Europa."
     ],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    image: '/alluminio-preview.webp',
     sidebar: [
       {
         title: 'Serie per finestre e porte finestre',
@@ -36,7 +36,7 @@ export const productsData = {
       "Il sistema è composto da profili in alluminio per la parte esterna e profili in legno per quella interna. La serie è disponibile in una vasta gamma di colori e rifiniture.",
       "Le serie 50IWood e 80IWood soddisfano pienamente le varie tipologie costruttive e architettoniche nel rispetto delle più esigenti normative per il risparmio energetico e isolamento acustico a tutto beneficio del comfort e dell'estetica dell'abitazione."
     ],
-    image: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80',
+    image: '/alluminio-legno-preview.webp',
     sidebar: [
       {
         title: 'Profili per finestre e porte finestre',
@@ -57,7 +57,7 @@ export const productsData = {
       "Un valore che dura nel tempo: le nostre finestre e porte-finestre in PVC hanno tutti i requisiti per soddisfare ogni vostra esigenza in merito a funzionalità, allestimenti e design. Gli eccellenti valori di isolamento termico degli infissi rendono poi più confortevole il vostro abitare.",
       "Ottimo rapporto qualità-prezzo, facilità di apertura e utilizzo, ridotta necessità di manutenzione: lasciatevi conquistare dalla varietà del nostro assortimento di infissi!"
     ],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    image: '/pvc-preview.webp',
     sidebar: [
       {
         title: 'Finestre e porte finestre',
@@ -82,7 +82,7 @@ export const productsData = {
       "Le nostre verande ampliano i vostri spazi abitativi, regalandovi nuove prospettive sull'esterno. Moderni sistemi di ventilazione, efficienti dispositivi oscuranti e molteplici tipologie di apertura contribuiscono a creare un'atmosfera accogliente. La veranda, inoltre, incrementa il valore estetico e commerciale della vostra casa.",
       "Tutte le nostre soluzioni, accuratamente progettate e collaudate, vi offrono il massimo isolamento termico, un'ottima protezione dai rumori e funzionalità durevole nel tempo."
     ],
-    image: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+    image: '/verande-preview.webp',
     sidebar: [
       {
         title: 'In Alluminio',
@@ -104,7 +104,7 @@ export const productsData = {
       "Una sintesi di design, tecnologia, qualità componentistiche che rendono queste serie adattabili a qualsiasi esigenza architettonica, dove si voglia valorizzare il fattore estetico del vetro ad una struttura portante versatile e personalizzabile.",
       "Tali prodotti offrono garanzie di isolamento termico-acustico e durabilità nel tempo nel rispetto delle più esigenti normative per il risparmio energetico ed il comfort interno."
     ],
-    image: 'https://images.unsplash.com/photo-1600607687959-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+    image: '/facciate-preview.webp',
     sidebar: [
       {
         title: 'In Alluminio',
@@ -120,7 +120,7 @@ export const productsData = {
     description: [
       "Il primo passo per proteggere la casa è sicuramente l'ingresso principale, ma proteggere non vuol dire dover, per forza, rinunciare a bellezza, comodità e praticità. La S.C.S. offre una vasta gamma di soluzioni di sicurezza e personalizzazioni per garantirvi di possedere una porta blindata UNICA nel suo genere, coniugando i vostri desideri con la nostra esperienza."
     ],
-    image: 'https://images.unsplash.com/photo-1506377711776-db0c2016c68a?auto=format&fit=crop&w=800&q=80',
+    image: '/porte-blindate-preview.webp',
     sidebar: [
       { title: 'Torterolo & Re', items: ['Serie Gold Plus', 'Serie Gold'] },
       { title: 'Dierre', items: ['Modello Hibry'] },
@@ -136,7 +136,7 @@ export const productsData = {
       "La porta interna è la chiave di volta dell'arredamento di una casa. Governa lo spazio e lo rende dinamico, creando barriere e aperture funzionali allo stile di vita di chi lo abita.",
       "La nostra ricerca ci ha permesso di individuare alcune aziende leader, che sanno interpretare questo compito con creatività, semplicità ed efficienza."
     ],
-    image: 'https://images.unsplash.com/photo-1534062601955-d3e3dd2475ba?auto=format&fit=crop&w=800&q=80',
+    image: '/porte-interne-preview.webp',
     sidebar: [
       { title: 'Porteleader', items: ['Porte Laccate', 'Porte in Laminato', 'Porte in Vetro', 'Accessori'] }
     ]
@@ -151,7 +151,7 @@ export const productsData = {
       "Risultano pertanto robusti e sicuri mantenendo un'estetica classica valorizzando architettonicamente ogni abitazione.",
       "La gamma comprende varie versioni di persiane: Classica, Storico, Scurone, Scorrevole, Liberty, Firenze. Tutte le tipologie sono accomunate dalla ridotta manutenzione mantenendo la stessa estetica tradizionale delle persiane in legno."
     ],
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    image: '/persiane-alluminio-preview.webp',
     sidebar: [
       { title: 'Persiane alluminio', items: ['Classica', 'Storica', 'Scorrevole', 'Scurone'] }
     ]
@@ -167,7 +167,7 @@ export const productsData = {
       "Le caratteristiche di sicurezza non inficiano le funzionalità principali di apertura e chiusura e sono facili da manovrare ma soprattutto sicure. La struttura semplice e lineare riduce al minimo il disturbo alla visuale, risultando sempre gradevoli.",
       "La struttura risulta razionale ed elegante è facilmente integrabile con i diversi stili architettonici."
     ],
-    image: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=800&q=80',
+    image: '/persiane-blindate-preview.webp',
     sidebar: [
       { title: 'Persiane In Acciaio', items: [] }
     ]
@@ -180,7 +180,7 @@ export const productsData = {
     description: [
       "Soluzioni per la sicurezza della tua casa, progettate per integrarsi perfettamente con lo stile architettonico senza rinunciare alla massima protezione contro i tentativi di intrusione."
     ],
-    image: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
+    image: '/inferriate-preview.webp',
     sidebar: []
   },
   'zanzariere': {
@@ -192,7 +192,7 @@ export const productsData = {
       "Senza fili, modulare e soprattutto integrato con l'azionamento delle tapparelle. CONFIGURAZIONE BASE a partire da 999,00 euro Installazione esclusa!",
       "La CONFIGURAZIONE BASE comprende: 1 Unità di controllo con modulo GSM + 1 Tastiera LCD con badge + 1 Sirena da esterno + 2 sensori volumetrici da interno."
     ],
-    image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80',
+    image: '/zanzariere-preview.webp',
     sidebar: [
       { title: 'Per porte', items: ['Scenica', 'Miniscenica', 'Susy Elite', 'Beta'] },
       { title: 'Per finestre', items: [] },
@@ -208,7 +208,7 @@ export const productsData = {
     description: [
       "Per vivere al meglio gli spazi all'aperto in ogni stagione dell'anno, Brianzatende propone un ampio ventaglio di soluzioni adatte a tutti gli ambienti esterni, perfette per ogni dimensione e stile architettonico."
     ],
-    image: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?auto=format&fit=crop&w=800&q=80',
+    image: '/tende-da-sole-preview.webp',
     sidebar: [
       { title: 'Tende da sole a bracci', items: ['Con cassonetto', 'Senza cassonetto'] },
       { title: 'Tende da sole a caduta', items: [] },
@@ -226,7 +226,7 @@ export const productsData = {
       "Senza fili, modulare e soprattutto integrato con l'azionamento delle tapparelle. CONFIGURAZIONE BASE a partire da 999,00 euro Installazione esclusa!",
       "La CONFIGURAZIONE BASE comprende: 1 Unità di controllo con modulo GSM + 1 Tastiera LCD con badge + 1 Sirena da esterno + 2 sensori volumetrici da interno."
     ],
-    image: 'https://images.unsplash.com/photo-1502672260266-1c1c2b4415f1?auto=format&fit=crop&w=800&q=80',
+    image: '/tapparelle-preview.webp',
     sidebar: [
       { title: 'In Acciaio', items: ['Tapparelle in Acciaio'] },
       { title: 'In Alluminio', items: [] },
