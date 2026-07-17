@@ -1,0 +1,309 @@
+.glass-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.glass-header.transparent {
+  background: transparent;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-bottom: 1px solid transparent;
+  padding-top: 0.5rem; /* Slight shift down when transparent */
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 45px;
+  width: auto;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.4));
+  transition: filter 0.3s ease;
+}
+
+.logo-img:hover {
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.6));
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.nav-item-wrapper {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.nav-link {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent-brand);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-item-wrapper:hover .nav-link::after {
+  width: 100%;
+}
+
+.nav-item-wrapper:hover .nav-link {
+  color: var(--accent-brand);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(15px);
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 1rem 0;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+  padding: 0.8rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  text-align: left;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 0;
+  background-color: var(--accent-brand);
+  transition: height 0.3s ease;
+}
+
+.dropdown-item:hover::before {
+  height: 60%;
+}
+
+.dropdown-item:hover {
+  color: var(--text-primary);
+  background: linear-gradient(90deg, rgba(230, 92, 0, 0.1) 0%, rgba(15, 15, 15, 0) 100%);
+  padding-left: 2rem;
+}
+
+.search-icon {
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.search-icon:hover {
+  color: var(--accent-brand);
+}
+
+/* Mobile Sidebar and Overlay */
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: flex;
+}
+
+.mobile-menu-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 105;
+}
+
+.mobile-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 101;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 300px;
+  max-width: 80vw;
+  height: 100vh;
+  background: var(--surface-color);
+  z-index: 102;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-sidebar.active {
+  right: 0;
+}
+
+.mobile-sidebar-header {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-logo {
+  height: 35px;
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+}
+
+.mobile-nav {
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-category-header {
+  padding: 1rem 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.mobile-category-header.active {
+  color: var(--accent-brand);
+}
+
+.mobile-sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.mobile-sub-menu.open {
+  max-height: 400px; /* arbitrary max-height large enough for items */
+}
+
+.mobile-sub-item {
+  display: block;
+  padding: 0.8rem 1.5rem 0.8rem 2.5rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
+.mobile-sub-item:hover {
+  color: var(--text-primary);
+  border-left: 2px solid var(--accent-brand);
+  background: rgba(230, 92, 0, 0.05);
+}
+
+.mobile-contact-btn {
+  margin: 2rem 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid var(--accent-brand);
+  color: var(--accent-brand);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.mobile-contact-btn:hover {
+  background: var(--accent-brand);
+  color: var(--bg-color);
+}
+
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: flex;
+  }
+
+  .header-container {
+    padding: 1rem 1.5rem;
+  }
+}
