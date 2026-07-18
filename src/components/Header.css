@@ -306,4 +306,10 @@
   .header-container {
     padding: 1rem 1.5rem;
   }
+  
+  .logo-img {
+    height: 38px;
+    display: block;
+    margin-top: 6px;
+  }
 }

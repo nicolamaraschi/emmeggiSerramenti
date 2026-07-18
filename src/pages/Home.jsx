@@ -1,4 +1,5 @@
 import React from 'react';
+import BeforeAfterSlider from '../components/BeforeAfterSlider';
 
 export default function Home() {
   return (
@@ -78,6 +79,22 @@ export default function Home() {
                 <img src="/montaggio-interno.webp" alt="Montaggio Qualificato Interno Serramenti" className="service-image" />
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* BEFORE/AFTER SECTION */}
+        <section className="before-after-section" style={{ padding: '5rem 0', backgroundColor: 'var(--bg-color)' }}>
+          <div className="container">
+            <div className="section-header" style={{ textAlign: 'center', marginBottom: '3rem' }}>
+              <h2 className="section-title">I Nostri Lavori: Il Prima e il Dopo</h2>
+              <p className="section-subtitle">Scorri il cursore per vedere la differenza che un serramento di lusso può fare</p>
+            </div>
+            
+            <div className="before-after-grid">
+              <BeforeAfterSlider beforeImage="/prima1a.png" afterImage="/dopo1b.png" />
+              <BeforeAfterSlider beforeImage="/prima2a.png" afterImage="/dopo2b.png" />
+            </div>
+
           </div>
         </section>
 
