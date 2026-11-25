@@ -22,7 +22,7 @@ const HERO_SLIDES = [
     title: 'L’arte di abitare la luce.',
     description:
       'L’amore di fare le cose per bene, dal 1990. Serramenti progettati su misura per fondere estetica, innovazione tecnologica e materiali pregiati.',
-    image: '/hero-bg.webp',
+    image: '/hero-bg-light.jpg',
     primaryCta: { label: 'Preventivo Online', to: '/preventivo' },
     secondaryCta: { label: 'Esplora le Collezioni', href: '#collezioni' },
   },
@@ -297,7 +297,7 @@ export default function Home() {
                 idx === activeSlide ? 'scale-105' : 'scale-100'
               }`}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/65" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/38 via-black/28 to-black/52" />
           </div>
         ))}
 
