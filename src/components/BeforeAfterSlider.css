@@ -24,11 +24,12 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 4px;
-  background-color: var(--accent-brand);
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.85);
   transform: translateX(-50%);
   pointer-events: none;
   z-index: 5;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
 
 .slider-handle {
@@ -36,15 +37,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  background-color: var(--accent-brand);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(10, 10, 10, 0.85);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.55);
 }
 
 .slider-handle svg {

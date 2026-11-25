@@ -5,7 +5,7 @@ export const productsData = {
     headline: 'Finestre e porte-finestre in alluminio',
     subtitle: 'Serramenti alluminio; linee eleganti, prestazioni perfette',
     description: [
-      "Le serie per finestre IW riassumono i risultati delle ricerche e dell'esperienza del marchio ALUK nel settore dei serramenti alluminio.",
+      "Le serie per finestre C67K, 67K-M e C77K – CS con anta nascosta riassumono i risultati delle ricerche e dell'esperienza del marchio ALUK nel settore dei serramenti alluminio.",
       "Una sintesi di design, tecnologia, qualità componentistiche che rende questo prodotto unico per comfort acustico e termico, con soluzioni avanzate per il benessere della vostra abitazione. Non ultimo pensati per proteggervi da intrusioni indesiderate con sistemi di antieffrazione e antiscasso.",
       "Tutti i prodotti ALUK sono disponibili in una vasta gamma di colori e finiture, certificati e testati secondo le più severe norme e leggi vigenti in Europa."
     ],
@@ -13,7 +13,7 @@ export const productsData = {
     sidebar: [
       {
         title: 'Serie per finestre e porte finestre',
-        items: ['Aluk 45N', 'Aluk 50IW', 'Aluk 67IW', 'Aluk 77IW']
+        items: ['Aluk C67K', 'Aluk 67K-M', 'Aluk C77K – CS con anta nascosta']
       },
       {
         title: 'Serie per scorrevoli',
@@ -34,13 +34,17 @@ export const productsData = {
       "Tutti i prodotti ALUK sono disponibili in una vasta gamma di colori e finiture, certificati e testati secondo le più severe norme e leggi vigenti in Europa.",
       "I serramenti alluminio e legno sono il perfetto connubio tra le caratteristiche dell'alluminio, robustezza, durabilità, assenza di manutenzione, e del legno, tradizione, estetica, calore.",
       "Il sistema è composto da profili in alluminio per la parte esterna e profili in legno per quella interna. La serie è disponibile in una vasta gamma di colori e rifiniture.",
-      "Le serie 50IWood e 80IWood soddisfano pienamente le varie tipologie costruttive e architettoniche nel rispetto delle più esigenti normative per il risparmio energetico e isolamento acustico a tutto beneficio del comfort e dell'estetica dell'abitazione."
+      "Le serie 50IWood e 80IWood di AluK e la linea Thermic X di Fossati soddisfano pienamente le varie tipologie costruttive e architettoniche nel rispetto delle più esigenti normative per il risparmio energetico e isolamento acustico a tutto beneficio del comfort e dell'estetica dell'abitazione."
     ],
     image: '/alluminio-legno-preview.webp',
     sidebar: [
       {
         title: 'Profili per finestre e porte finestre',
         items: ['Aluk 50 IWood', 'Aluk 80 IWood']
+      },
+      {
+        title: 'Fossati (Legno-Alluminio)',
+        items: ['Thermic X']
       },
       {
         title: 'Profili per scorrevoli',
@@ -54,14 +58,14 @@ export const productsData = {
     headline: 'Finestre in PVC',
     subtitle: 'La scelta più classica: ottimo isolamento termico e sicure funzionalità',
     description: [
-      "Un valore che dura nel tempo: le nostre finestre e porte-finestre in PVC hanno tutti i requisiti per soddisfare ogni vostra esigenza in merito a funzionalità, allestimenti e design. Gli eccellenti valori di isolamento termico degli infissi rendono poi più confortevole il vostro abitare.",
+      "Un valore che dura nel tempo: le nostre finestre e porte-finestre in PVC Fossati (linee Linea 76, Solaris e Icon) hanno tutti i requisiti per soddisfare ogni vostra esigenza in merito a funzionalità, allestimenti e design. Gli eccellenti valori di isolamento termico degli infissi rendono poi più confortevole il vostro abitare.",
       "Ottimo rapporto qualità-prezzo, facilità di apertura e utilizzo, ridotta necessità di manutenzione: lasciatevi conquistare dalla varietà del nostro assortimento di infissi!"
     ],
     image: '/pvc-preview.webp',
     sidebar: [
       {
-        title: 'Finestre e porte finestre',
-        items: ['Veka - Climatek', 'Veka - Isoltek', 'Veka - Ecotek', 'Veka - Alutek', 'Veka - Alutek Clima']
+        title: 'Finestre e porte finestre (Fossati)',
+        items: ['Fossati - Linea 76', 'Fossati - Solaris', 'Fossati - Icon']
       },
       {
         title: 'Scorrevoli',
@@ -206,7 +210,8 @@ export const productsData = {
     headline: 'Tende da Sole',
     subtitle: '',
     description: [
-      "Per vivere al meglio gli spazi all'aperto in ogni stagione dell'anno, Brianzatende propone un ampio ventaglio di soluzioni adatte a tutti gli ambienti esterni, perfette per ogni dimensione e stile architettonico."
+      "Per vivere al meglio gli spazi all'aperto in ogni stagione dell'anno, Brianzatende propone un ampio ventaglio di soluzioni adatte a tutti gli ambienti esterni, perfette per ogni dimensione e stile architettonico.",
+      "Disponibili anche con motorizzazioni marca Somfy per un’apertura e chiusura comoda, silenziosa e automatizzata."
     ],
     image: '/tende-da-sole-preview.webp',
     sidebar: [
@@ -214,7 +219,8 @@ export const productsData = {
       { title: 'Tende da sole a caduta', items: [] },
       { title: 'Per balcone', items: [] },
       { title: 'Capottine', items: [] },
-      { title: 'Pensiline New entry', items: [] }
+      { title: 'Pensiline New entry', items: [] },
+      { title: 'Motorizzazioni', items: ['Motori Somfy'] }
     ]
   },
   'tapparelle': {
@@ -224,13 +230,15 @@ export const productsData = {
     subtitle: 'La soluzione completa per la tua sicurezza',
     description: [
       "Senza fili, modulare e soprattutto integrato con l'azionamento delle tapparelle. CONFIGURAZIONE BASE a partire da 999,00 euro Installazione esclusa!",
-      "La CONFIGURAZIONE BASE comprende: 1 Unità di controllo con modulo GSM + 1 Tastiera LCD con badge + 1 Sirena da esterno + 2 sensori volumetrici da interno."
+      "La CONFIGURAZIONE BASE comprende: 1 Unità di controllo con modulo GSM + 1 Tastiera LCD con badge + 1 Sirena da esterno + 2 sensori volumetrici da interno.",
+      "Per le tapparelle motorizzate utilizziamo motori marca Somfy, sinonimo di affidabilità, silenziosità e durata nel tempo."
     ],
     image: '/tapparelle-preview.webp',
     sidebar: [
       { title: 'In Acciaio', items: ['Tapparelle in Acciaio'] },
       { title: 'In Alluminio', items: [] },
-      { title: 'In PVC', items: [] }
+      { title: 'In PVC', items: [] },
+      { title: 'Motorizzazioni', items: ['Motori Somfy'] }
     ]
   }
 };

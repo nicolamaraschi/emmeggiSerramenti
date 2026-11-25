@@ -10,15 +10,27 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@aws-sdk/client-ses": "^3.1177.0",
+    "lucide-react": "^1.79.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.1"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.25.1",
+    "@aws-amplify/backend-cli": "^1.10.0",
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/aws-lambda": "^8.10.164",
+    "@types/node": "^26.6.7",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
+    "aws-cdk-lib": "^2.278.0",
+    "constructs": "^10.8.1",
     "oxlint": "^1.71.0",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
     "vite": "^8.1.1"
   }
 }
