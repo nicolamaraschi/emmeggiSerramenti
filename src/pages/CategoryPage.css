@@ -6,9 +6,9 @@
 
 /* Page Header Banner */
 .page-header {
-  background: linear-gradient(180deg, rgba(28, 28, 28, 0.95) 0%, rgba(16, 16, 16, 0.9) 100%);
+  background: linear-gradient(180deg, #f6f5f2 0%, #efede8 100%);
   padding: 2.2rem 0 1.8rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(24, 24, 27, 0.08);
   position: relative;
 }
 
@@ -89,13 +89,11 @@
 }
 
 .sidebar-inner {
-  background: rgba(22, 22, 22, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 8px;
+  background: #f6f5f2;
+  border: 1px solid rgba(24, 24, 27, 0.08);
+  border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 12px 30px rgba(24, 24, 27, 0.06);
 }
 
 .sidebar-header-label {
@@ -105,12 +103,12 @@
   color: var(--accent-brand);
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(24, 24, 27, 0.08);
   font-weight: 600;
 }
 
 .sidebar-section {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(24, 24, 27, 0.07);
   padding: 0.75rem 0;
 }
 
@@ -212,10 +210,10 @@
 
 .category-image-container {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 36px rgba(24, 24, 27, 0.1);
+  border: 1px solid rgba(24, 24, 27, 0.08);
   background: var(--surface-color);
   position: relative;
 }
@@ -237,8 +235,8 @@
   font-size: 0.85rem;
   font-style: italic;
   color: var(--text-secondary);
-  background: rgba(14, 14, 14, 0.95);
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: #f6f5f2;
+  border-top: 1px solid rgba(24, 24, 27, 0.08);
   text-align: center;
   letter-spacing: 0.5px;
 }
@@ -253,7 +251,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(24, 24, 27, 0.08);
   padding-bottom: 1.3rem;
 }
 

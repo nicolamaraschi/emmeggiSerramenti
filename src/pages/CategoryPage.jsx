@@ -65,7 +65,7 @@ export default function CategoryPage() {
                 if (!hasItems) {
                   return (
                     <div key={index} className="sidebar-section">
-                      <div className="flex items-center gap-2.5 py-1.5 text-sm font-medium text-neutral-300">
+                      <div className="flex items-center gap-2.5 py-1.5 text-sm font-medium text-neutral-700">
                         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand/80" />
                         <span>{section.title}</span>
                       </div>

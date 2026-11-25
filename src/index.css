@@ -3,18 +3,18 @@
 @theme {
   --color-brand: #e65c00;
   --color-brand-hover: #ff7a26;
-  --color-surface: #222222;
-  --color-canvas: #151515;
+  --color-surface: #f6f5f2;
+  --color-canvas: #ffffff;
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 }
 
 :root {
-  /* Luxury Color Palette */
-  --bg-color: #151515;
-  --surface-color: #222222;
-  --text-primary: #f5f5f5;
-  --text-secondary: #b5b5b5;
+  /* Light Architectural Color Palette */
+  --bg-color: #ffffff;
+  --surface-color: #f6f5f2;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
   --accent-brand: #e65c00; /* Emmegi Orange */
   --accent-brand-hover: #ff7a26;
   

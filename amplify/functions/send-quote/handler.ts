@@ -5,6 +5,8 @@ interface QuoteItem {
   quantity: number | string;
   typology: string;
   detail?: string;
+  width?: string;
+  height?: string;
 }
 
 interface QuoteAttachment {
@@ -69,14 +71,19 @@ function buildHtmlEmail(payload: QuotePayload): string {
       : '';
 
   const itemsRows = payload.items
-    .map(
-      (item) => `
+    .map((item) => {
+      const dims =
+        item.width || item.height
+          ? `${item.width ? `${escapeHtml(String(item.width))} cm` : '?'} × ${item.height ? `${escapeHtml(String(item.height))} cm` : '?'}`
+          : '-';
+      return `
       <tr>
         <td style="padding:10px 12px;border-bottom:1px solid #e5e7eb;font-weight:600;color:#111827;">${escapeHtml(String(item.quantity))}</td>
         <td style="padding:10px 12px;border-bottom:1px solid #e5e7eb;color:#111827;">${escapeHtml(item.typology)}</td>
         <td style="padding:10px 12px;border-bottom:1px solid #e5e7eb;color:#4b5563;">${escapeHtml(item.detail || '-')}</td>
-      </tr>`
-    )
+        <td style="padding:10px 12px;border-bottom:1px solid #e5e7eb;color:#111827;white-space:nowrap;">${dims}</td>
+      </tr>`;
+    })
     .join('');
 
   return `<!doctype html>
@@ -109,6 +116,7 @@ function buildHtmlEmail(payload: QuotePayload): string {
             <th style="padding:10px 12px;border-bottom:1px solid #e5e7eb;font-size:12px;text-transform:uppercase;color:#6b7280;">Qtà</th>
             <th style="padding:10px 12px;border-bottom:1px solid #e5e7eb;font-size:12px;text-transform:uppercase;color:#6b7280;">Tipologia</th>
             <th style="padding:10px 12px;border-bottom:1px solid #e5e7eb;font-size:12px;text-transform:uppercase;color:#6b7280;">Dettaglio / Ante</th>
+            <th style="padding:10px 12px;border-bottom:1px solid #e5e7eb;font-size:12px;text-transform:uppercase;color:#6b7280;">Misure (L × H)</th>
           </tr>
         </thead>
         <tbody>
@@ -248,7 +256,7 @@ export const handler = async (event: APIGatewayProxyEventV2): Promise<APIGateway
   }
 
   const senderEmail = process.env.SENDER_EMAIL || 'nicola.maraschi01@gmail.com';
-  const recipientEmail = process.env.RECIPIENT_EMAIL || 'info@serramentiemmegi.it';
+  const recipientEmail = process.env.RECIPIENT_EMAIL || 'emmegiserramenti@gmail.com';
 
   const subject = sanitizeHeader(
     `Preventivo Online: ${payload.product} - ${payload.customer.fullName}`

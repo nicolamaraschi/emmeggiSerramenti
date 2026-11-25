@@ -9,6 +9,7 @@ import {
   Paperclip,
   Phone,
   Plus,
+  Ruler,
   Send,
   Trash2,
   X,
@@ -26,16 +27,18 @@ import { getQuoteApiUrl } from '../config/quoteApi';
 
 const STEPS = [
   { id: 1, label: 'Prodotti' },
-  { id: 2, label: 'Quantità' },
+  { id: 2, label: 'Quantità e Misure' },
   { id: 3, label: 'Informazioni' },
 ];
 
 const MAX_FILE_BYTES = 5 * 1024 * 1024; // 5 MB
 
 const inputBase =
-  'w-full rounded-lg border border-white/15 bg-neutral-950/80 px-3.5 py-2.5 text-sm text-neutral-100 placeholder-neutral-500 transition focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand';
+  'w-full rounded-lg border border-neutral-300 bg-white px-3.5 py-2.5 text-sm text-neutral-900 placeholder-neutral-400 transition focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand';
 
-const labelBase = 'mb-1.5 block text-xs font-medium uppercase tracking-wider text-neutral-400';
+const labelBase = 'mb-1.5 block text-xs font-semibold uppercase tracking-wider text-neutral-600';
+
+const EMPTY_ROW = { quantity: '1', typology: '', detail: '1 Anta', width: '', height: '' };
 
 function fileToBase64(file) {
   return new Promise((resolve, reject) => {
@@ -65,7 +68,7 @@ export default function PreventivoPage() {
   const [color, setColor] = useState('');
 
   // Step 2
-  const [rows, setRows] = useState([{ quantity: '1', typology: '', detail: '1 Anta' }]);
+  const [rows, setRows] = useState([{ ...EMPTY_ROW }]);
 
   // Step 3
   const [customer, setCustomer] = useState({
@@ -95,7 +98,7 @@ export default function PreventivoPage() {
 
   const addRow = () => {
     if (rows.length >= 12) return;
-    setRows((prev) => [...prev, { quantity: '1', typology: '', detail: '1 Anta' }]);
+    setRows((prev) => [...prev, { ...EMPTY_ROW }]);
   };
 
   const removeRow = (index) => {
@@ -167,6 +170,8 @@ export default function PreventivoPage() {
         quantity: Number(r.quantity),
         typology: r.typology,
         detail: r.detail,
+        width: r.width.trim(),
+        height: r.height.trim(),
       }));
 
     if (validRows.length === 0) {
@@ -227,7 +232,7 @@ export default function PreventivoPage() {
     setError('');
     setProductSlug('');
     setColor('');
-    setRows([{ quantity: '1', typology: '', detail: '1 Anta' }]);
+    setRows([{ ...EMPTY_ROW }]);
     setCustomer({
       fullName: '',
       email: '',
@@ -242,22 +247,22 @@ export default function PreventivoPage() {
   };
 
   return (
-    <main className="min-h-screen bg-canvas pt-28 pb-20 px-4 sm:px-6">
-      <div className="mx-auto max-w-3xl">
+    <main className="min-h-screen bg-[#f6f5f2] px-4 pt-28 pb-20 sm:px-6">
+      <div className="mx-auto max-w-4xl">
         {/* Heading */}
         <div className="mb-10 text-center">
           <p className="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand">
             Preventivo Gratuito
           </p>
-          <h1 className="font-heading text-3xl text-white sm:text-4xl">
+          <h1 className="font-heading text-3xl text-neutral-900 sm:text-4xl">
             Fai il tuo preventivo online
           </h1>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-400 sm:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-sm text-neutral-600 sm:text-base">
             Bastano pochi minuti per ricevere un preventivo dettagliato per i tuoi serramenti,
             porte, persiane o complementi. Non hai le misure?{' '}
             <a
               href="tel:+390245708405"
-              className="inline-flex items-center gap-1 font-medium text-brand underline-offset-4 hover:underline"
+              className="inline-flex items-center gap-1 font-semibold text-brand underline-offset-4 hover:underline"
             >
               <Phone className="h-3.5 w-3.5" />
               Contattaci per una consulenza gratuita
@@ -268,23 +273,23 @@ export default function PreventivoPage() {
 
         {submitted ? (
           /* Confirmation Card */
-          <section className="rounded-2xl border border-white/10 bg-neutral-900/70 p-8 text-center backdrop-blur-sm sm:p-12">
-            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand/15 text-brand">
+          <section className="rounded-2xl border border-neutral-200 bg-white p-8 text-center shadow-sm sm:p-12">
+            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-brand/10 text-brand">
               <CheckCircle2 className="h-8 w-8" />
             </div>
-            <h2 className="font-heading text-2xl text-white sm:text-3xl">
+            <h2 className="font-heading text-2xl text-neutral-900 sm:text-3xl">
               Richiesta inviata con successo
             </h2>
-            <p className="mx-auto mt-3 max-w-md text-sm text-neutral-400">
-              Grazie <span className="text-neutral-200">{customer.fullName}</span>, abbiamo ricevuto
-              la tua richiesta per <span className="text-neutral-200">{selectedProduct?.title}</span>
+            <p className="mx-auto mt-3 max-w-md text-sm text-neutral-600">
+              Grazie <span className="font-semibold text-neutral-900">{customer.fullName}</span>, abbiamo ricevuto
+              la tua richiesta per <span className="font-semibold text-neutral-900">{selectedProduct?.title}</span>
               . Il nostro team tecnico ti ricontatterà al più presto.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <button
                 type="button"
                 onClick={resetForm}
-                className="cursor-pointer rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-neutral-200 transition hover:border-white/30 hover:bg-white/5"
+                className="cursor-pointer rounded-lg border border-neutral-300 bg-white px-5 py-2.5 text-sm font-medium text-neutral-800 transition hover:border-neutral-400 hover:bg-neutral-50"
               >
                 Nuovo preventivo
               </button>
@@ -310,12 +315,12 @@ export default function PreventivoPage() {
                         type="button"
                         onClick={() => (isDone ? goToStep(s.id) : null)}
                         disabled={!isDone}
-                        className={`flex w-full items-center justify-center gap-2.5 rounded-xl border px-3 py-3 text-xs font-medium transition sm:text-sm ${
+                        className={`flex w-full items-center justify-center gap-2.5 rounded-xl border px-3 py-3 text-xs font-semibold transition sm:text-sm ${
                           isActive
-                            ? 'border-brand bg-brand/15 text-white'
+                            ? 'border-brand bg-brand/10 text-neutral-900 shadow-xs'
                             : isDone
-                            ? 'cursor-pointer border-white/15 bg-neutral-900/70 text-neutral-200 hover:border-white/30'
-                            : 'cursor-default border-white/10 bg-neutral-950/50 text-neutral-500'
+                            ? 'cursor-pointer border-neutral-300 bg-white text-neutral-800 hover:border-brand/50'
+                            : 'cursor-default border-neutral-200 bg-white/60 text-neutral-400'
                         }`}
                       >
                         <span
@@ -323,8 +328,8 @@ export default function PreventivoPage() {
                             isActive
                               ? 'bg-brand text-white'
                               : isDone
-                              ? 'bg-emerald-500/20 text-emerald-400'
-                              : 'bg-white/10 text-neutral-500'
+                              ? 'bg-emerald-500/15 text-emerald-700'
+                              : 'bg-neutral-200 text-neutral-500'
                           }`}
                         >
                           {isDone ? <Check className="h-3.5 w-3.5" /> : s.id}
@@ -340,13 +345,13 @@ export default function PreventivoPage() {
             {/* Form Card */}
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-white/10 bg-neutral-900/60 p-6 backdrop-blur-sm sm:p-8"
+              className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm sm:p-8"
               noValidate
             >
               {error && (
                 <div
                   role="alert"
-                  className="mb-6 rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-3 text-sm text-red-300"
+                  className="mb-6 rounded-lg border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-700"
                 >
                   {error}
                 </div>
@@ -409,7 +414,7 @@ export default function PreventivoPage() {
                     <button
                       type="button"
                       onClick={() => goToStep(2)}
-                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-brand px-6 py-2.5 text-sm font-medium text-white transition hover:bg-brand-hover"
+                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-brand px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-hover"
                     >
                       Avanti
                       <ArrowRight className="h-4 w-4" />
@@ -418,105 +423,138 @@ export default function PreventivoPage() {
                 </div>
               )}
 
-              {/* STEP 2: QUANTITÀ */}
+              {/* STEP 2: QUANTITÀ E MISURE */}
               {step === 2 && (
                 <div className="space-y-6">
                   {/* Selected Summary */}
-                  <div className="flex flex-wrap items-center gap-2 rounded-xl border border-white/10 bg-neutral-950/60 px-4 py-3 text-xs text-neutral-300">
-                    <span className="font-semibold text-white">{selectedProduct?.title}</span>
-                    <span className="text-neutral-600">•</span>
-                    <span>{color}</span>
-                  </div>
-
-                  {/* Column Headers (Desktop) */}
-                  <div className="hidden grid-cols-12 gap-3 text-xs font-medium uppercase tracking-wider text-neutral-400 sm:grid">
-                    <div className="col-span-2">Quantità</div>
-                    <div className="col-span-5">Tipologia</div>
-                    <div className="col-span-4">Ante / Dettaglio</div>
-                    <div className="col-span-1" />
+                  <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-neutral-200 bg-[#f6f5f2] px-4 py-3 text-xs text-neutral-600">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="font-semibold text-neutral-900">{selectedProduct?.title}</span>
+                      <span className="text-neutral-400">•</span>
+                      <span>{color}</span>
+                    </div>
+                    <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-neutral-500">
+                      <Ruler className="h-3.5 w-3.5 text-brand" />
+                      Misure in cm (anche indicative)
+                    </span>
                   </div>
 
                   {/* Dynamic Rows */}
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {rows.map((row, idx) => (
                       <div
                         key={idx}
-                        className="grid grid-cols-1 gap-3 rounded-xl border border-white/10 bg-neutral-950/40 p-3 sm:grid-cols-12 sm:items-center sm:border-0 sm:bg-transparent sm:p-0"
+                        className="rounded-xl border border-neutral-200 bg-[#faf9f7] p-4"
                       >
-                        <div className="sm:col-span-2">
-                          <label className="mb-1 block text-[11px] uppercase text-neutral-500 sm:hidden">
-                            Quantità
-                          </label>
-                          <input
-                            type="number"
-                            min="1"
-                            max="999"
-                            value={row.quantity}
-                            onChange={(e) => updateRow(idx, 'quantity', e.target.value)}
-                            placeholder="1"
-                            className={inputBase}
-                          />
-                        </div>
-
-                        <div className="sm:col-span-5">
-                          <label className="mb-1 block text-[11px] uppercase text-neutral-500 sm:hidden">
-                            Tipologia
-                          </label>
-                          <select
-                            value={row.typology}
-                            onChange={(e) => {
-                              updateRow(idx, 'typology', e.target.value);
-                              setError('');
-                            }}
-                            className={inputBase}
-                          >
-                            <option value="">Seleziona tipologia</option>
-                            {typologyOptions.primary.length > 0 && (
-                              <optgroup label={`Consigliate per ${selectedProduct?.category}`}>
-                                {typologyOptions.primary.map((t) => (
-                                  <option key={t} value={t}>
-                                    {t}
-                                  </option>
-                                ))}
-                              </optgroup>
-                            )}
-                            <optgroup label="Tutte le tipologie">
-                              {typologyOptions.secondary.map((t) => (
-                                <option key={t} value={t}>
-                                  {t}
-                                </option>
-                              ))}
-                            </optgroup>
-                          </select>
-                        </div>
-
-                        <div className="sm:col-span-4">
-                          <label className="mb-1 block text-[11px] uppercase text-neutral-500 sm:hidden">
-                            Ante / Dettaglio
-                          </label>
-                          <select
-                            value={row.detail}
-                            onChange={(e) => updateRow(idx, 'detail', e.target.value)}
-                            className={inputBase}
-                          >
-                            {ANTE_OPTIONS.map((opt) => (
-                              <option key={opt} value={opt}>
-                                {opt}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-
-                        <div className="flex justify-end sm:col-span-1">
+                        <div className="mb-3 flex items-center justify-between">
+                          <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                            Serramento #{idx + 1}
+                          </span>
                           <button
                             type="button"
                             onClick={() => removeRow(idx)}
                             disabled={rows.length <= 1}
                             title="Rimuovi riga"
-                            className="cursor-pointer rounded-lg p-2 text-neutral-500 transition hover:bg-white/5 hover:text-red-400 disabled:cursor-not-allowed disabled:opacity-30"
+                            className="cursor-pointer rounded-lg p-1.5 text-neutral-400 transition hover:bg-red-50 hover:text-red-600 disabled:cursor-not-allowed disabled:opacity-30"
                           >
                             <Trash2 className="h-4 w-4" />
                           </button>
+                        </div>
+
+                        <div className="grid grid-cols-1 gap-3 sm:grid-cols-12">
+                          <div className="sm:col-span-2">
+                            <label className="mb-1 block text-[11px] font-semibold uppercase text-neutral-500">
+                              Quantità
+                            </label>
+                            <input
+                              type="number"
+                              min="1"
+                              max="999"
+                              value={row.quantity}
+                              onChange={(e) => updateRow(idx, 'quantity', e.target.value)}
+                              placeholder="1"
+                              className={inputBase}
+                            />
+                          </div>
+
+                          <div className="sm:col-span-5">
+                            <label className="mb-1 block text-[11px] font-semibold uppercase text-neutral-500">
+                              Tipologia *
+                            </label>
+                            <select
+                              value={row.typology}
+                              onChange={(e) => {
+                                updateRow(idx, 'typology', e.target.value);
+                                setError('');
+                              }}
+                              className={inputBase}
+                            >
+                              <option value="">Seleziona tipologia</option>
+                              {typologyOptions.primary.length > 0 && (
+                                <optgroup label={`Consigliate per ${selectedProduct?.category}`}>
+                                  {typologyOptions.primary.map((t) => (
+                                    <option key={t} value={t}>
+                                      {t}
+                                    </option>
+                                  ))}
+                                </optgroup>
+                              )}
+                              <optgroup label="Tutte le tipologie">
+                                {typologyOptions.secondary.map((t) => (
+                                  <option key={t} value={t}>
+                                    {t}
+                                  </option>
+                                ))}
+                              </optgroup>
+                            </select>
+                          </div>
+
+                          <div className="sm:col-span-5">
+                            <label className="mb-1 block text-[11px] font-semibold uppercase text-neutral-500">
+                              Ante / Dettaglio
+                            </label>
+                            <select
+                              value={row.detail}
+                              onChange={(e) => updateRow(idx, 'detail', e.target.value)}
+                              className={inputBase}
+                            >
+                              {ANTE_OPTIONS.map((opt) => (
+                                <option key={opt} value={opt}>
+                                  {opt}
+                                </option>
+                              ))}
+                            </select>
+                          </div>
+
+                          <div className="sm:col-span-6">
+                            <label className="mb-1 block text-[11px] font-semibold uppercase text-neutral-500">
+                              Larghezza (cm)
+                            </label>
+                            <input
+                              type="number"
+                              min="10"
+                              max="1000"
+                              value={row.width}
+                              onChange={(e) => updateRow(idx, 'width', e.target.value)}
+                              placeholder="es. 120"
+                              className={inputBase}
+                            />
+                          </div>
+
+                          <div className="sm:col-span-6">
+                            <label className="mb-1 block text-[11px] font-semibold uppercase text-neutral-500">
+                              Altezza (cm)
+                            </label>
+                            <input
+                              type="number"
+                              min="10"
+                              max="1000"
+                              value={row.height}
+                              onChange={(e) => updateRow(idx, 'height', e.target.value)}
+                              placeholder="es. 140"
+                              className={inputBase}
+                            />
+                          </div>
                         </div>
                       </div>
                     ))}
@@ -526,10 +564,10 @@ export default function PreventivoPage() {
                     <button
                       type="button"
                       onClick={addRow}
-                      className="inline-flex cursor-pointer items-center gap-1.5 text-xs font-medium text-brand transition hover:text-brand-hover"
+                      className="inline-flex cursor-pointer items-center gap-1.5 text-xs font-semibold text-brand transition hover:text-brand-hover"
                     >
                       <Plus className="h-4 w-4" />
-                      Aggiungi un’altra tipologia
+                      Aggiungi un’altra tipologia / misura
                     </button>
                   )}
 
@@ -537,7 +575,7 @@ export default function PreventivoPage() {
                     <button
                       type="button"
                       onClick={() => goToStep(1)}
-                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-neutral-200 transition hover:border-white/30 hover:bg-white/5"
+                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-neutral-300 bg-white px-5 py-2.5 text-sm font-medium text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
                     >
                       <ArrowLeft className="h-4 w-4" />
                       Indietro
@@ -545,7 +583,7 @@ export default function PreventivoPage() {
                     <button
                       type="button"
                       onClick={() => goToStep(3)}
-                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-brand px-6 py-2.5 text-sm font-medium text-white transition hover:bg-brand-hover"
+                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-brand px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-hover"
                     >
                       Avanti
                       <ArrowRight className="h-4 w-4" />
@@ -662,7 +700,7 @@ export default function PreventivoPage() {
                       rows={4}
                       value={customer.message}
                       onChange={(e) => setCustomer({ ...customer, message: e.target.value })}
-                      placeholder="Misure indicative, note sul montaggio o richieste particolari..."
+                      placeholder="Note aggiuntive sulle misure, sul montaggio o richieste particolari..."
                       className={inputBase}
                     />
                   </div>
@@ -671,7 +709,7 @@ export default function PreventivoPage() {
                   <div>
                     <span className={labelBase}>Allega un file (opzionale — max 5 MB)</span>
                     {attachmentFile ? (
-                      <div className="flex items-center justify-between rounded-lg border border-white/15 bg-neutral-950/80 px-3.5 py-2.5 text-sm text-neutral-200">
+                      <div className="flex items-center justify-between rounded-lg border border-neutral-300 bg-[#faf9f7] px-3.5 py-2.5 text-sm text-neutral-800">
                         <span className="flex items-center gap-2 truncate">
                           <Paperclip className="h-4 w-4 shrink-0 text-brand" />
                           <span className="truncate">{attachmentFile.name}</span>
@@ -682,14 +720,14 @@ export default function PreventivoPage() {
                         <button
                           type="button"
                           onClick={() => setAttachmentFile(null)}
-                          className="ml-2 cursor-pointer text-neutral-400 hover:text-white"
+                          className="ml-2 cursor-pointer text-neutral-500 hover:text-neutral-900"
                           aria-label="Rimuovi allegato"
                         >
                           <X className="h-4 w-4" />
                         </button>
                       </div>
                     ) : (
-                      <label className="flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-dashed border-white/20 bg-neutral-950/40 px-4 py-4 text-sm text-neutral-400 transition hover:border-brand/60 hover:text-neutral-200">
+                      <label className="flex cursor-pointer items-center justify-center gap-2 rounded-lg border border-dashed border-neutral-300 bg-[#faf9f7] px-4 py-4 text-sm text-neutral-600 transition hover:border-brand/60 hover:text-neutral-900">
                         <Paperclip className="h-4 w-4 text-brand" />
                         <span>Scegli planimetria, foto o documento (PDF, JPG, PNG)</span>
                         <input
@@ -703,7 +741,7 @@ export default function PreventivoPage() {
                   </div>
 
                   {/* GDPR */}
-                  <label className="flex cursor-pointer items-start gap-3 pt-1 text-xs leading-relaxed text-neutral-400">
+                  <label className="flex cursor-pointer items-start gap-3 pt-1 text-xs leading-relaxed text-neutral-600">
                     <input
                       type="checkbox"
                       checked={customer.privacyAccepted}
@@ -724,7 +762,7 @@ export default function PreventivoPage() {
                       type="button"
                       onClick={() => goToStep(2)}
                       disabled={submitting}
-                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-neutral-200 transition hover:border-white/30 hover:bg-white/5 disabled:opacity-50"
+                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-neutral-300 bg-white px-5 py-2.5 text-sm font-medium text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50 disabled:opacity-50"
                     >
                       <ArrowLeft className="h-4 w-4" />
                       Indietro

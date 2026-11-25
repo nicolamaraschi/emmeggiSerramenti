@@ -129,14 +129,14 @@ export default function Footer() {
                 <span className="font-medium">02 45708405</span>
               </a>
               <a
-                href="mailto:info@serramentiemmegi.it"
+                href="mailto:emmegiserramenti@gmail.com"
                 className="flex items-center gap-2.5 text-neutral-700 transition hover:text-brand"
               >
                 <Mail className="h-4 w-4 shrink-0 text-brand" />
-                <span>info@serramentiemmegi.it</span>
+                <span>emmegiserramenti@gmail.com</span>
               </a>
               <a
-                href="https://wa.me/390245708405"
+                href="https://wa.me/393338363730"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg bg-[#16a34a] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#15803d]"
