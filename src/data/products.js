@@ -409,6 +409,8 @@ export const productsData = {
         brand: 'Metalportblindate',
         name: 'Porta Blindata Serie M2',
         image: '/profili/metalport-blindate.jpg',
+        profileImage: '/profili/metalport-struttura-m2.jpg',
+        profileImageLabel: 'Schema Struttura Interna M2',
         description:
           'Porta blindata certificata Classe 3 antieffrazione con doppia lamiera in acciaio pressopiegata da 15/10, telaio da 20/10 e coibentazione interna in lana di roccia ad alta densità.',
         note: 'Ottimo equilibrio tra sicurezza residenziale, isolamento termico e acustico.',
@@ -422,6 +424,8 @@ export const productsData = {
         brand: 'Metalportblindate',
         name: 'Porta Blindata Serie SIKUR',
         image: '/profili/metalport-blindate.jpg',
+        profileImage: '/profili/metalport-struttura-sikur.jpg',
+        profileImageLabel: 'Schema Struttura Interna SIKUR',
         description:
           'Linea ad alte prestazioni in Classe 3 con 18–19 punti di chiusura perimetrali, 3 cerniere pesanti regolabili, defender speciale e piastra al manganese a protezione della serratura.',
         note: 'Predisponibile con kit termo-acustico, cerniere a scomparsa o serratura motorizzata.',
@@ -435,6 +439,8 @@ export const productsData = {
         brand: 'Metalportblindate',
         name: 'Porta Blindata Serie BLINDO',
         image: '/profili/metalport-blindate.jpg',
+        profileImage: '/profili/metalport-struttura-blindo.jpg',
+        profileImageLabel: 'Schema Struttura Interna BLINDO',
         description:
           'Soluzione top di gamma certificata Classe 4 per ingressi esposti, ville indipendenti e piani terra. Struttura ultra-rinforzata progettata contro tentativi di scasso prolungati e utensili pesanti.',
         note: 'Ampia personalizzazione con pannelli pantografati, legno o alluminio coibentato.',
@@ -613,6 +619,7 @@ export const productsData = {
       'Scenica': {
         brand: 'Bettio',
         name: 'Zanzariera Scenica®',
+        image: '/profili/bettio-scenica.jpg',
         description:
           'Zanzariera avvolgibile a scorrimento laterale totalmente priva di guide a pavimento e profili di riscontro: la barra maniglia si ferma in qualsiasi posizione per un passaggio sicuro e senza barriere.',
         note: 'Sistema antivento brevettato Bettio con rete in fibra di vetro e PVC.',
@@ -625,6 +632,7 @@ export const productsData = {
       'Miniscenica': {
         brand: 'Bettio',
         name: 'Miniscenica® evo',
+        image: '/profili/bettio-miniscenica.jpg',
         description:
           'Tutta la tecnologia senza barriere di Scenica in un ingombro ridottissimo di soli 43 mm (50 mm nella versione ad incasso). Completamente reversibile destra/sinistra con installazione facilitata.',
         note: 'Disponibile in versione in vista (43 mm) o ad incasso (50 mm).',
