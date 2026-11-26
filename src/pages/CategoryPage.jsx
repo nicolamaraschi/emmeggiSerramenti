@@ -162,11 +162,11 @@ export default function CategoryPage() {
                     {activeProfileData.name}
                   </span>
                 </div>
-                <div className="flex items-center justify-center bg-white p-4">
+                <div className="flex h-64 items-center justify-center bg-white p-4">
                   <img
                     src={activeProfileData.profileImage}
                     alt={`Dettaglio profilo ${activeProfileData.name}`}
-                    className="max-h-64 w-auto object-contain"
+                    className="h-full w-full object-contain"
                   />
                 </div>
               </div>
