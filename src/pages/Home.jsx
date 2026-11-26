@@ -49,9 +49,9 @@ const HERO_SLIDES = [
 ];
 
 const COMPANY_STATS = [
-  { value: '40', label: 'Anni di attività' },
-  { value: '22.000', label: 'Finestre montate' },
-  { value: '10', label: 'Anni di garanzia' },
+  { value: '37', suffix: '', label: 'Anni di attività' },
+  { value: '22.000', suffix: '+', label: 'Finestre montate' },
+  { value: '10', suffix: '', label: 'Anni di garanzia' },
 ];
 
 const COLLECTIONS = [
@@ -382,7 +382,7 @@ export default function Home() {
               >
                 <span className="font-heading text-5xl font-semibold tracking-tight text-neutral-900 sm:text-6xl">
                   {stat.value}
-                  <span className="text-brand">+</span>
+                  {stat.suffix && <span className="text-brand">{stat.suffix}</span>}
                 </span>
                 <span className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 sm:text-sm">
                   {stat.label}

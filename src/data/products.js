@@ -34,14 +34,10 @@ export const productsData = {
       "Tutti i prodotti ALUK sono disponibili in una vasta gamma di colori e finiture, certificati e testati secondo le più severe norme e leggi vigenti in Europa.",
       "I serramenti alluminio e legno sono il perfetto connubio tra le caratteristiche dell'alluminio, robustezza, durabilità, assenza di manutenzione, e del legno, tradizione, estetica, calore.",
       "Il sistema è composto da profili in alluminio per la parte esterna e profili in legno per quella interna. La serie è disponibile in una vasta gamma di colori e rifiniture.",
-      "Le serie 50IWood e 80IWood di AluK e la linea Thermic X di Fossati soddisfano pienamente le varie tipologie costruttive e architettoniche nel rispetto delle più esigenti normative per il risparmio energetico e isolamento acustico a tutto beneficio del comfort e dell'estetica dell'abitazione."
+      "La linea Thermic X di Fossati soddisfa pienamente le varie tipologie costruttive e architettoniche nel rispetto delle più esigenti normative per il risparmio energetico e isolamento acustico a tutto beneficio del comfort e dell'estetica dell'abitazione."
     ],
     image: '/alluminio-legno-preview.webp',
     sidebar: [
-      {
-        title: 'Profili per finestre e porte finestre',
-        items: ['Aluk 50 IWood', 'Aluk 80 IWood']
-      },
       {
         title: 'Fossati (Legno-Alluminio)',
         items: ['Thermic X']
@@ -50,7 +46,21 @@ export const productsData = {
         title: 'Profili per scorrevoli',
         items: []
       }
-    ]
+    ],
+    profileDetails: {
+      'Thermic X': {
+        brand: 'Fossati Serramenti',
+        name: 'Thermic X',
+        description:
+          'Coniuga il calore e il pregio del legno all’interno con l’estrema resistenza e l’assenza di manutenzione dell’alluminio all’esterno, per i più elevati standard di isolamento termico e acustico.',
+        note: 'Disponibile anche nella versione ThermicX PLUS con triplo vetro.',
+        specs: [
+          { label: 'Struttura', value: 'Interno in legno · Esterno in alluminio' },
+          { label: 'Vetrature', value: 'Doppio vetro o triplo vetro (versione Plus)' },
+          { label: 'Personalizzazione', value: 'Due sagome interne e ampia gamma colori' }
+        ]
+      }
+    }
   },
   'serramenti-in-pvc': {
     title: 'Serramenti in PVC',
@@ -75,7 +85,45 @@ export const productsData = {
         title: 'Portoncini',
         items: []
       }
-    ]
+    ],
+    profileDetails: {
+      'Fossati - Linea 76': {
+        brand: 'Fossati Serramenti',
+        name: 'Linea 76',
+        description:
+          'Alta efficienza energetica intesa come isolamento termico e comfort abitativo. Profilo in PVC multicamera da 76 mm con rinforzi in acciaio dal design pulito e contemporaneo.',
+        note: 'Disponibile anche nelle versioni PLUS, ALU e ALU PLUS.',
+        specs: [
+          { label: 'Isolamento Termico', value: 'Uw fino a 1,0 W/mqK (Ug 0,6) · 1,3 W/mqK (Ug 1,1)' },
+          { label: 'Isolamento Acustico', value: 'Rw fino a 46 dB' },
+          { label: 'Sicurezza', value: 'Fino alla Classe RC2' }
+        ]
+      },
+      'Fossati - Solaris': {
+        brand: 'Fossati Serramenti',
+        name: 'Solaris',
+        description:
+          'Profilo in PVC multicamera da 82 mm con tripla guarnizione di battuta TPE/EPDM e rinforzi in acciaio, studiato per massimizzare la luce naturale, la protezione dagli agenti esterni e il risparmio energetico.',
+        note: 'Profilo da 82 mm con tripla guarnizione TPE/EPDM ad alte prestazioni.',
+        specs: [
+          { label: 'Isolamento Termico', value: 'Uw fino a 0,9 W/mqK (Ug 0,6) · 1,2 W/mqK (Ug 1,1)' },
+          { label: 'Isolamento Acustico', value: 'Rw fino a 45 dB' },
+          { label: 'Sicurezza', value: 'Fino alla Classe RC2' }
+        ]
+      },
+      'Fossati - Icon': {
+        brand: 'Fossati Serramenti',
+        name: 'Icon',
+        description:
+          'Profili in PVC estruso di Classe A da 76 mm con mescole di Classe S (climi severi) e ferramenta anta-ribalta con chiusura a nottolini registrabili. Unione di design essenziale, solidità e affidabilità.',
+        note: 'Profilo in PVC Classe A da 76 mm per climi severi.',
+        specs: [
+          { label: 'Isolamento Termico', value: 'Uw fino a 1,3 W/mqK (Ug 1,0)' },
+          { label: 'Isolamento Acustico', value: 'Rw fino a 42 dB' },
+          { label: 'Sicurezza', value: 'Fino alla Classe RC2' }
+        ]
+      }
+    }
   },
   'verande': {
     title: 'Verande',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { productsData } from '../data/products';
 import './CategoryPage.css';
@@ -9,8 +9,13 @@ export default function CategoryPage() {
   // Find the product data based on the slug.
   const data = productsData[slug];
   
-  // State for sidebar accordions
+  // State for sidebar accordions & selected profile detail
   const [openSidebarSections, setOpenSidebarSections] = useState({});
+  const [selectedProfile, setSelectedProfile] = useState(null);
+
+  useEffect(() => {
+    setSelectedProfile(null);
+  }, [slug]);
 
   const toggleSection = (index) => {
     setOpenSidebarSections(prev => ({
@@ -18,6 +23,11 @@ export default function CategoryPage() {
       [index]: !prev[index]
     }));
   };
+
+  const activeProfileData =
+    selectedProfile && data?.profileDetails?.[selectedProfile]
+      ? data.profileDetails[selectedProfile]
+      : null;
 
   if (!data) {
     return (
@@ -100,9 +110,26 @@ export default function CategoryPage() {
                     </button>
                     
                     <div className={`sidebar-items ${isOpen ? 'open' : ''}`}>
-                      {section.items.map((item, idx) => (
-                        <div key={idx} className="sidebar-item">{item}</div>
-                      ))}
+                      {section.items.map((item, idx) => {
+                        const hasDetail = Boolean(data.profileDetails?.[item]);
+                        const isSelected = selectedProfile === item;
+                        if (hasDetail) {
+                          return (
+                            <button
+                              key={idx}
+                              type="button"
+                              onClick={() => setSelectedProfile(isSelected ? null : item)}
+                              className={`sidebar-item sidebar-item-btn ${isSelected ? 'active' : ''}`}
+                            >
+                              <span>{item}</span>
+                              <span className="sidebar-item-arrow" aria-hidden="true">→</span>
+                            </button>
+                          );
+                        }
+                        return (
+                          <div key={idx} className="sidebar-item">{item}</div>
+                        );
+                      })}
                     </div>
                   </div>
                 );
@@ -111,24 +138,72 @@ export default function CategoryPage() {
           </aside>
         )}
 
-        {/* Content Area: Image + Text Side-by-Side */}
+        {/* Content Area: Image + Text Side-by-Side (or Selected Profile Detail) */}
         <main className="category-content">
           <div className="category-image-container">
-            <img src={data.image} alt={data.headline} className="category-image" />
-            <div className="image-caption">{data.title}</div>
+            <img
+              src={activeProfileData?.image || data.image}
+              alt={activeProfileData ? activeProfileData.name : data.headline}
+              className="category-image"
+            />
+            <div className="image-caption">
+              {activeProfileData ? `${activeProfileData.brand} — ${activeProfileData.name}` : data.title}
+            </div>
           </div>
           
           <div className="category-text-content">
-            <div className="text-header-group">
-              <h2 className="content-headline">{data.headline}</h2>
-              {data.subtitle && <h3 className="content-subtitle">{data.subtitle}</h3>}
-            </div>
-            
-            <div className="content-description">
-              {data.description.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-            </div>
+            {activeProfileData ? (
+              <>
+                <button
+                  type="button"
+                  onClick={() => setSelectedProfile(null)}
+                  className="inline-flex w-fit cursor-pointer items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-neutral-500 transition hover:text-brand"
+                >
+                  ← Torna a {data.title}
+                </button>
+                <div className="text-header-group">
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand">
+                    {activeProfileData.brand}
+                  </span>
+                  <h2 className="content-headline">{activeProfileData.name}</h2>
+                  {activeProfileData.note && (
+                    <h3 className="content-subtitle">{activeProfileData.note}</h3>
+                  )}
+                </div>
+
+                <div className="content-description">
+                  <p>{activeProfileData.description}</p>
+                </div>
+
+                {activeProfileData.specs && activeProfileData.specs.length > 0 && (
+                  <dl className="divide-y divide-neutral-200 rounded-xl border border-neutral-200 bg-[#f6f5f2] px-5 py-2">
+                    {activeProfileData.specs.map((spec) => (
+                      <div key={spec.label} className="py-3.5">
+                        <dt className="text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-500">
+                          {spec.label}
+                        </dt>
+                        <dd className="mt-1 text-base font-semibold text-neutral-900">
+                          {spec.value}
+                        </dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+              </>
+            ) : (
+              <>
+                <div className="text-header-group">
+                  <h2 className="content-headline">{data.headline}</h2>
+                  {data.subtitle && <h3 className="content-subtitle">{data.subtitle}</h3>}
+                </div>
+                
+                <div className="content-description">
+                  {data.description.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))}
+                </div>
+              </>
+            )}
 
             <div className="content-cta-group">
               <a href="tel:+390245708405" className="cta-call-btn" title="Chiama subito per questo prodotto">
