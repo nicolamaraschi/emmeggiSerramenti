@@ -16,12 +16,11 @@ import {
 } from 'lucide-react';
 import { productsData } from '../data/products';
 import {
-  ALL_TYPOLOGIES,
-  ANTE_OPTIONS,
   COLOR_OPTIONS,
+  COLOR_OPTIONS_BY_PRODUCT,
+  getStep2ConfigForProduct,
   ITALIAN_PROVINCES,
   PRODUCT_GROUPS,
-  TYPOLOGY_OPTIONS_BY_CATEGORY,
 } from '../data/quoteConfig';
 import { getQuoteApiUrl } from '../config/quoteApi';
 
@@ -68,7 +67,12 @@ export default function PreventivoPage() {
   const [color, setColor] = useState('');
 
   // Step 2
-  const [rows, setRows] = useState([{ ...EMPTY_ROW }]);
+  const [rows, setRows] = useState([
+    {
+      ...EMPTY_ROW,
+      detail: getStep2ConfigForProduct(validInitialSlug).details[0] || '',
+    },
+  ]);
 
   // Step 3
   const [customer, setCustomer] = useState({
@@ -84,13 +88,8 @@ export default function PreventivoPage() {
   const [attachmentFile, setAttachmentFile] = useState(null);
 
   const selectedProduct = productSlug ? productsData[productSlug] : null;
-
-  const typologyOptions = useMemo(() => {
-    const category = selectedProduct?.category;
-    const primary = (category && TYPOLOGY_OPTIONS_BY_CATEGORY[category]) || [];
-    const secondary = ALL_TYPOLOGIES.filter((t) => !primary.includes(t));
-    return { primary, secondary };
-  }, [selectedProduct]);
+  const step2Config = useMemo(() => getStep2ConfigForProduct(productSlug), [productSlug]);
+  const colorOptions = COLOR_OPTIONS_BY_PRODUCT[productSlug] || COLOR_OPTIONS;
 
   const updateRow = (index, field, value) => {
     setRows((prev) => prev.map((row, idx) => (idx === index ? { ...row, [field]: value } : row)));
@@ -98,7 +97,10 @@ export default function PreventivoPage() {
 
   const addRow = () => {
     if (rows.length >= 12) return;
-    setRows((prev) => [...prev, { ...EMPTY_ROW }]);
+    setRows((prev) => [
+      ...prev,
+      { ...EMPTY_ROW, detail: step2Config.details[0] || '' },
+    ]);
   };
 
   const removeRow = (index) => {
@@ -369,7 +371,11 @@ export default function PreventivoPage() {
                         id="quote-product"
                         value={productSlug}
                         onChange={(e) => {
-                          setProductSlug(e.target.value);
+                          const nextSlug = e.target.value;
+                          const nextCfg = getStep2ConfigForProduct(nextSlug);
+                          setProductSlug(nextSlug);
+                          setColor('');
+                          setRows([{ ...EMPTY_ROW, detail: nextCfg.details[0] || '' }]);
                           setError('');
                         }}
                         className={inputBase}
@@ -401,7 +407,7 @@ export default function PreventivoPage() {
                         className={inputBase}
                       >
                         <option value="">Seleziona colore</option>
-                        {COLOR_OPTIONS.map((opt) => (
+                        {colorOptions.map((opt) => (
                           <option key={opt} value={opt}>
                             {opt}
                           </option>
@@ -448,7 +454,7 @@ export default function PreventivoPage() {
                       >
                         <div className="mb-3 flex items-center justify-between">
                           <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500">
-                            Serramento #{idx + 1}
+                            {step2Config.rowLabel} #{idx + 1}
                           </span>
                           <button
                             type="button"
@@ -490,35 +496,24 @@ export default function PreventivoPage() {
                               className={inputBase}
                             >
                               <option value="">Seleziona tipologia</option>
-                              {typologyOptions.primary.length > 0 && (
-                                <optgroup label={`Consigliate per ${selectedProduct?.category}`}>
-                                  {typologyOptions.primary.map((t) => (
-                                    <option key={t} value={t}>
-                                      {t}
-                                    </option>
-                                  ))}
-                                </optgroup>
-                              )}
-                              <optgroup label="Tutte le tipologie">
-                                {typologyOptions.secondary.map((t) => (
-                                  <option key={t} value={t}>
-                                    {t}
-                                  </option>
-                                ))}
-                              </optgroup>
+                              {step2Config.typologies.map((t) => (
+                                <option key={t} value={t}>
+                                  {t}
+                                </option>
+                              ))}
                             </select>
                           </div>
 
                           <div className="sm:col-span-5">
                             <label className="mb-1 block text-[11px] font-semibold uppercase text-neutral-500">
-                              Ante / Dettaglio
+                              {step2Config.detailLabel}
                             </label>
                             <select
                               value={row.detail}
                               onChange={(e) => updateRow(idx, 'detail', e.target.value)}
                               className={inputBase}
                             >
-                              {ANTE_OPTIONS.map((opt) => (
+                              {step2Config.details.map((opt) => (
                                 <option key={opt} value={opt}>
                                   {opt}
                                 </option>
@@ -536,7 +531,7 @@ export default function PreventivoPage() {
                               max="1000"
                               value={row.width}
                               onChange={(e) => updateRow(idx, 'width', e.target.value)}
-                              placeholder="es. 120"
+                              placeholder={step2Config.widthPlaceholder}
                               className={inputBase}
                             />
                           </div>
@@ -551,7 +546,7 @@ export default function PreventivoPage() {
                               max="1000"
                               value={row.height}
                               onChange={(e) => updateRow(idx, 'height', e.target.value)}
-                              placeholder="es. 140"
+                              placeholder={step2Config.heightPlaceholder}
                               className={inputBase}
                             />
                           </div>

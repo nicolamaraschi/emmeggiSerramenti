@@ -101,6 +101,123 @@ export const ANTE_OPTIONS = [
   'Fisso / Non applicabile',
 ];
 
+const WINDOW_STEP2_CONFIG = {
+  rowLabel: 'Serramento',
+  typologies: ['Finestra', 'Portafinestra / Balcone', 'Scorrevole / Alzante', 'Portoncino', 'Vetrata fissa'],
+  detailLabel: 'Ante / Apertura',
+  details: ['1 Anta', '2 Ante', '3 Ante', '4 Ante', 'Scorrevole', 'Fisso'],
+  widthPlaceholder: 'es. 120',
+  heightPlaceholder: 'es. 140',
+};
+
+export const PRODUCT_STEP2_CONFIG = {
+  'serramenti-in-pvc': WINDOW_STEP2_CONFIG,
+  'alluminio': WINDOW_STEP2_CONFIG,
+  'alluminio-e-legno': WINDOW_STEP2_CONFIG,
+  'verande': {
+    rowLabel: 'Veranda',
+    typologies: ['Veranda a battente', 'Veranda pieghevole a libro (BSF70)', 'Chiusura per terrazzo / loggia'],
+    detailLabel: 'Configurazione',
+    details: ['2 Ante', '3 Ante', '4+ Ante / Panoramica', 'A libro', 'Fisso + Apribile'],
+    widthPlaceholder: 'es. 300',
+    heightPlaceholder: 'es. 240',
+  },
+  'pergole': {
+    rowLabel: 'Pergola',
+    typologies: ['Pergola bioclimatica Pallazzo®'],
+    detailLabel: 'Installazione',
+    details: ['Addossata a parete', 'Autoportante', 'Con chiusure laterali / LED'],
+    widthPlaceholder: 'es. 400',
+    heightPlaceholder: 'es. 350',
+  },
+  'porte-blindate': {
+    rowLabel: 'Porta Blindata',
+    typologies: ['Porta blindata ingresso (appartamento)', 'Porta blindata per esterno / villa', 'Porta blindata con fiancoluce / sopraluce'],
+    detailLabel: 'Configurazione',
+    details: ['1 Anta', '1 Anta + Fiancoluce', '2 Ante', 'Classe 3', 'Classe 4 (alta sicurezza)'],
+    widthPlaceholder: 'es. 90',
+    heightPlaceholder: 'es. 210',
+  },
+  'porte-interne': {
+    rowLabel: 'Porta Interna',
+    typologies: ['Porta battente', 'Porta scorrevole interno muro', 'Porta scorrevole esterno muro', 'Porta in vetro e alluminio'],
+    detailLabel: 'Configurazione',
+    details: ['1 Anta', '2 Ante', 'A libro', 'Filomuro'],
+    widthPlaceholder: 'es. 80',
+    heightPlaceholder: 'es. 210',
+  },
+  'persiane-alluminio': {
+    rowLabel: 'Persiana',
+    typologies: ['Persiana a battente (lamelle fisse)', 'Persiana a battente (lamelle orientabili)', 'Persiana scorrevole', 'Scurone / Antone dogato'],
+    detailLabel: 'Ante / Fissaggio',
+    details: ['1 Anta', '2 Ante', '3 Ante', '4 Ante', 'Scorrevole'],
+    widthPlaceholder: 'es. 120',
+    heightPlaceholder: 'es. 140',
+  },
+  'persiane-blindate': {
+    rowLabel: 'Persiana / Scuro Blindato',
+    typologies: ['Persiana blindata in acciaio', 'Scuro blindato Pivot', 'Scuro blindato scorrevole (Slide)'],
+    detailLabel: 'Ante / Apertura',
+    details: ['1 Anta', '2 Ante', '3 Ante', '4 Ante', 'Scorrevole / Pivot'],
+    widthPlaceholder: 'es. 120',
+    heightPlaceholder: 'es. 140',
+  },
+  'inferriate': {
+    rowLabel: 'Inferriata',
+    typologies: ['Inferriata fissa', 'Inferriata apribile (Cardine / Dual)', 'Inferriata scorrevole / Pivot'],
+    detailLabel: 'Ante / Apertura',
+    details: ['1 Anta', '2 Ante', '3 Ante', '4 Ante', 'Snodata con persiana', 'Fissa'],
+    widthPlaceholder: 'es. 120',
+    heightPlaceholder: 'es. 140',
+  },
+  'zanzariere': {
+    rowLabel: 'Zanzariera',
+    typologies: ['Zanzariera per finestra', 'Zanzariera per portafinestra / balcone'],
+    detailLabel: 'Modello / Scorrimento',
+    details: ['Laterale senza barriere (Scenica / Miniscenica)', 'Laterale a molla (1 anta)', 'Laterale 2 ante', 'Verticale a molla'],
+    widthPlaceholder: 'es. 120',
+    heightPlaceholder: 'es. 220',
+  },
+  'tende-da-sole': {
+    rowLabel: 'Tenda da Sole',
+    typologies: ['Tenda a bracci con cassonetto', 'Tenda a bracci senza cassonetto', 'Tenda a caduta verticale (TS115 / Zip)', 'Pergola bioclimatica'],
+    detailLabel: 'Azionamento',
+    details: ['Manuale ad argano', 'Motorizzata Somfy (telecomando)', 'Motorizzata Somfy + sensore vento/sole'],
+    widthPlaceholder: 'es. 400',
+    heightPlaceholder: 'es. 250',
+  },
+  'tapparelle': {
+    rowLabel: 'Tapparella',
+    typologies: ['Tapparella in Acciaio coibentato', 'Tapparella in Alluminio coibentato', 'Tapparella in PVC', 'Tapparella frangisole Orienta / New Solar'],
+    detailLabel: 'Azionamento',
+    details: ['Manuale (cinghia / argano)', 'Motorizzata Somfy (pulsante a parete)', 'Motorizzata Somfy (telecomando / TaHoma®)'],
+    widthPlaceholder: 'es. 120',
+    heightPlaceholder: 'es. 150',
+  },
+};
+
+export function getStep2ConfigForProduct(slug) {
+  return PRODUCT_STEP2_CONFIG[slug] || WINDOW_STEP2_CONFIG;
+}
+
+export const COLOR_OPTIONS_BY_PRODUCT = {
+  'tende-da-sole': [
+    'Tessuto chiaro / Bianco struttura',
+    'Tessuto tortora / Grigio Antracite',
+    'Tessuto rigato / Fantasia Tempotest',
+    'Struttura RAL personalizzata',
+    'Da definire in consulenza',
+  ],
+  'zanzariere': [
+    'Bianco',
+    'Grigio Antracite',
+    'Bronzo / Marrone',
+    'Argento / Anodizzato',
+    'Effetto Legno',
+    'Da definire in consulenza',
+  ],
+};
+
 export const ITALIAN_PROVINCES = [
   'MI - Milano',
   'MB - Monza e Brianza',
