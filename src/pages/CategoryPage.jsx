@@ -3,6 +3,23 @@ import { useParams, Link } from 'react-router-dom';
 import { productsData } from '../data/products';
 import './CategoryPage.css';
 
+// Technical cutaways / diagrams on white background that must not be cropped
+const CONTAIN_IMAGES = new Set([
+  '/profili/aluk-c67k.jpg',
+  '/profili/aluk-infineo-c67km.jpg',
+  '/profili/aluk-c77k-profilo.jpg',
+  '/profili/aluk-c77k-cs.jpg',
+  '/profili/aluk-sc156-hi.jpg',
+  '/profili/aluk-s140.jpg',
+  '/profili/aluk-45v.jpg',
+  '/profili/aluk-bsf70.jpg',
+  '/profili/aluk-persiane-45p.jpg',
+  '/profili/aluk-persiane-scorrevole.jpg',
+  '/profili/fossati-portoncini.jpg',
+  '/profili/plasticino-guide.jpg',
+  '/immagineProdottolsomfy.webp',
+]);
+
 export default function CategoryPage() {
   const { slug } = useParams();
   
@@ -142,11 +159,17 @@ export default function CategoryPage() {
         <main className="category-content">
           <div className="flex flex-col gap-5">
             <div className="category-image-container">
-              <img
-                src={activeProfileData?.image || data.image}
-                alt={activeProfileData ? activeProfileData.name : data.headline}
-                className={activeProfileData ? 'category-image category-image-profile' : 'category-image'}
-              />
+              {(() => {
+                const imgSrc = activeProfileData?.image || data.image;
+                const isContain = activeProfileData && CONTAIN_IMAGES.has(imgSrc);
+                return (
+                  <img
+                    src={imgSrc}
+                    alt={activeProfileData ? activeProfileData.name : data.headline}
+                    className={isContain ? 'category-image category-image-profile' : 'category-image'}
+                  />
+                );
+              })()}
               <div className="image-caption">
                 {activeProfileData ? `${activeProfileData.brand} — ${activeProfileData.name}` : data.title}
               </div>
