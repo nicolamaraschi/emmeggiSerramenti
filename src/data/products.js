@@ -28,6 +28,7 @@ export const productsData = {
       'Aluk C67K': {
         brand: 'AluK Group',
         name: 'Serie C67K / 67IW',
+        image: '/profili/aluk-c67k.jpg',
         description:
           'Sistema a battente in alluminio a taglio termico con guarnizione centrale di giunto aperto e barrette alveolari da 28,5 mm. Linea tradizionale complanare all’esterno e a sormonto interno, disponibile anche con sagomatura stondata.',
         note: 'Lega EN AW-6060 con marcatura CE secondo UNI EN 14351-1.',
@@ -40,6 +41,7 @@ export const productsData = {
       'Aluk 67K-M': {
         brand: 'AluK Group',
         name: 'Serie 67K-M (Maggiorata)',
+        image: '/profili/aluk-67km.jpg',
         description:
           'Versione maggiorata della serie 67IW progettata per porte-finestre e grandi specchiature, con tubolarità esterna aumentata per un’elevata robustezza strutturale e predisposizione per serratura e doppia maniglia.',
         note: 'Ideale per porte-finestre ad alta frequenza d’uso e vetrine commerciali.',
@@ -52,6 +54,7 @@ export const productsData = {
       'Aluk C77K – CS con anta nascosta': {
         brand: 'AluK Group',
         name: 'Serie C77K / 77IW',
+        image: '/profili/aluk-c77k.jpg',
         description:
           'Massima espressione tra le serie a battente AluK per isolamento termico e statica. Il taglio termico con barrette alveolari e listelli isolanti riduce al minimo le dispersioni, garantendo prestazioni elevate anche su serramenti di grandi dimensioni.',
         note: 'Disponibile anche con estetica minimale ad anta nascosta.',
@@ -248,9 +251,36 @@ export const productsData = {
       }
     ],
     profileDetails: {
+      '45V': {
+        brand: 'AluK Group',
+        name: 'Sistema 45V',
+        image: '/profili/aluk-45v.jpg',
+        description:
+          'Sistema a freddo in alluminio per verande e chiusure stagionali, leggero, versatile e resistente agli agenti atmosferici.',
+        note: 'Ideale per verande, giardini d’inverno e divisori vetrati.',
+        specs: [
+          { label: 'Tipologia', value: 'Sistema in alluminio per verande e chiusure' },
+          { label: 'Lega', value: 'EN AW-6060 ad alta resistenza' },
+          { label: 'Finiture', value: 'Ossidato o verniciato RAL / effetto legno' }
+        ]
+      },
+      'BSF70': {
+        brand: 'AluK Group',
+        name: 'Sistema a Libro BSF70',
+        image: '/profili/aluk-bsf70.jpg',
+        description:
+          'Sistema pieghevole a libro ad alto isolamento termico per grandi aperture panoramiche su terrazzi e giardini.',
+        note: 'Aperture totali senza montanti fissi intermedi.',
+        specs: [
+          { label: 'Tipologia', value: 'Chiusura pieghevole a libro a taglio termico' },
+          { label: 'Profondità', value: '70 mm con vetri ad alto isolamento' },
+          { label: 'Applicazione', value: 'Verande panoramiche e dehors' }
+        ]
+      },
       '67IW': {
         brand: 'AluK Group',
         name: 'Sistema 67IW',
+        image: '/profili/aluk-67iw.jpg',
         description:
           'Sistema a taglio termico da 66,5 mm con barrette alveolari da 28,5 mm e guarnizione centrale a giunto aperto, ideale per verande e chiusure vetrate ad alte prestazioni.',
         note: 'Compatibile con vetri ad alto spessore da 22 a 50 mm.',
@@ -263,6 +293,7 @@ export const productsData = {
       '77IW': {
         brand: 'AluK Group',
         name: 'Sistema 77IW',
+        image: '/profili/aluk-c77k.jpg',
         description:
           'Sistema a battente top di gamma AluK per isolamento termico e robustezza statica, con listelli isolanti nella camera di taglio termico e di alloggiamento del vetrocamera.',
         note: 'Progettato per grandi aperture vetrate e massimo comfort.',
@@ -295,6 +326,7 @@ export const productsData = {
       'SL 50': {
         brand: 'AluK Group',
         name: 'Facciata Continua SL 50',
+        image: '/profili/aluk-sl50.jpg',
         description:
           'Sistema a montanti e traversi con ingombro frontale a vista di soli 50 mm, adatto a facciate verticali, inclinate, piane o poligonali con integrazione di moduli apribili.',
         note: 'Copertine esterne personalizzabili e massima versatilità architettonica.',
@@ -307,6 +339,7 @@ export const productsData = {
       'SG 50': {
         brand: 'AluK Group',
         name: 'Facciata Strutturale SG 50',
+        image: '/profili/aluk-sg50.png',
         description:
           'Sistema di facciata strutturale (Structural Glazing) basato su griglia da 50 mm: il vetro è fissato tramite incollaggio strutturale o sistemi a scomparsa per un effetto tuttovetro continuo.',
         note: 'Estetica minimale con fuga ridotta tra i moduli vetrati.',
@@ -316,9 +349,23 @@ export const productsData = {
           { label: 'Estetica', value: 'Assenza di profili metallici esterni a vista' }
         ]
       },
+      'SL 60': {
+        brand: 'AluK Group',
+        name: 'Facciata Continua SL 60',
+        image: '/profili/aluk-sl60.png',
+        description:
+          'Sistema di facciata continua a montanti e traversi con profilo da 60 mm per grandi specchiature vetrate e carichi strutturali elevati.',
+        note: 'Ideale per grandi superfici vetrate commerciali e residenziali.',
+        specs: [
+          { label: 'Ingombro a Vista', value: '60 mm su montanti e traversi' },
+          { label: 'Portata', value: 'Adatto a vetri di grande dimensione e peso' },
+          { label: 'Normativa', value: 'Marcatura CE · UNI EN 13830' }
+        ]
+      },
       'AW 86S': {
         brand: 'AluK Group',
         name: 'Facciata AW 86S (Cellule)',
+        image: '/profili/aluk-aw86.png',
         description:
           'Sistema di facciata continua a cellule (unitized system) di altezza pari all’interpiano. Privilegia le lavorazioni in officina riducendo tempi e costi di posa in cantiere su grandi edifici.',
         note: 'Conforme alla norma UNI EN 13830 per facciate continue.',
@@ -331,6 +378,7 @@ export const productsData = {
       'AW 86B': {
         brand: 'AluK Group',
         name: 'Facciata AW 86B (Cellule)',
+        image: '/profili/aluk-aw86.png',
         description:
           'Variante del sistema a cellule AW86 concepita per grandi superfici vetrate e quote elevate, con connessioni orizzontali ad alta tenuta e possibilità di incollaggio strutturale del vetro.',
         note: 'Conforme alla norma UNI EN 13830 per facciate continue.',
@@ -360,6 +408,7 @@ export const productsData = {
       'Serie M2': {
         brand: 'Metalportblindate',
         name: 'Porta Blindata Serie M2',
+        image: '/profili/metalport-blindate.jpg',
         description:
           'Porta blindata certificata Classe 3 antieffrazione con doppia lamiera in acciaio pressopiegata da 15/10, telaio da 20/10 e coibentazione interna in lana di roccia ad alta densità.',
         note: 'Ottimo equilibrio tra sicurezza residenziale, isolamento termico e acustico.',
@@ -372,6 +421,7 @@ export const productsData = {
       'Serie SIKUR': {
         brand: 'Metalportblindate',
         name: 'Porta Blindata Serie SIKUR',
+        image: '/profili/metalport-blindate.jpg',
         description:
           'Linea ad alte prestazioni in Classe 3 con 18–19 punti di chiusura perimetrali, 3 cerniere pesanti regolabili, defender speciale e piastra al manganese a protezione della serratura.',
         note: 'Predisponibile con kit termo-acustico, cerniere a scomparsa o serratura motorizzata.',
@@ -384,6 +434,7 @@ export const productsData = {
       'Serie BLINDO': {
         brand: 'Metalportblindate',
         name: 'Porta Blindata Serie BLINDO',
+        image: '/profili/metalport-blindate.jpg',
         description:
           'Soluzione top di gamma certificata Classe 4 per ingressi esposti, ville indipendenti e piani terra. Struttura ultra-rinforzata progettata contro tentativi di scasso prolungati e utensili pesanti.',
         note: 'Ampia personalizzazione con pannelli pantografati, legno o alluminio coibentato.',
@@ -412,6 +463,7 @@ export const productsData = {
       'Porte Laccate': {
         brand: 'Bertolotto Porte',
         name: 'Collezioni Laccate a Mano',
+        image: '/profili/bertolotto-laccate.webp',
         description:
           'Porte interne laccate certificate CATAS (linee Millerighe, PantoNext, PantoClassica, CL e Baltimora) con verniciatura artigianale, disponibili cieche o con inserti in vetro coordinati.',
         note: 'Disponibili a battente, scorrevoli interno/esterno muro e filomuro.',
@@ -424,6 +476,7 @@ export const productsData = {
       'Porte in Laminato': {
         brand: 'Bertolotto Porte',
         name: 'Collezioni in Laminato',
+        image: '/profili/bertolotto-laminato.webp',
         description:
           'Superfici antigraffio e idrofughe con venature tattili ed effetto legno naturale (collezioni Materik, Grafite, Trame e Textile). Pratiche, resistenti e ideali per ogni ambiente domestico.',
         note: 'Configurabili anche con inserti geometrici in cristallo di sicurezza.',
@@ -436,6 +489,7 @@ export const productsData = {
       'Porte in Vetro': {
         brand: 'Bertolotto Porte',
         name: 'Porte in Vetro e Alluminio',
+        image: '/profili/bertolotto-vetro.webp',
         description:
           'Soluzioni luminose con cristalli temperati di sicurezza o stratificati da 8 mm (linee Alaska e Glass Design), perfette per dividere gli spazi valorizzando la luce naturale.',
         note: 'Vetri trasparenti, extraclear, acidati, sabbiati o decorati.',
@@ -465,6 +519,7 @@ export const productsData = {
       'Classica': {
         brand: 'AluK Group',
         name: 'Persiana Classica',
+        image: '/profili/aluk-persiane-45p.jpg',
         description:
           'Persiana in alluminio dalle linee tradizionali adatta sia a contesti residenziali moderni che classici, con lamelle fisse o orientabili per regolare luce e ventilazione senza manutenzione.',
         note: 'Disponibile in colori RAL e finiture effetto legno ad alta durata.',
@@ -477,6 +532,7 @@ export const productsData = {
       'Storica': {
         brand: 'AluK Group',
         name: 'Persiana Storica',
+        image: '/profili/aluk-persiane-45p.jpg',
         description:
           'Studiata per ristrutturazioni in centri storici o edifici vincolati, riproduce fedelmente l’estetica delle persiane tradizionali in legno con tutta la durata e sicurezza dell’alluminio.',
         note: 'Finiture effetto legno e ferramenta tradizionale su richiesta.',
@@ -489,6 +545,7 @@ export const productsData = {
       'Scorrevole': {
         brand: 'AluK Group',
         name: 'Persiana Scorrevole',
+        image: '/profili/aluk-persiane-scorrevole.jpg',
         description:
           'Sistema oscurante a scorrimento esterno o interno muro, ideale per aperture ampie, balconi e facciate moderne dove è necessario ottimizzare gli ingombri di apertura.',
         note: 'Binari di scorrimento fluidi e silenziosi in alluminio.',
@@ -598,6 +655,7 @@ export const productsData = {
       'Con cassonetto': {
         brand: 'Brianzatende',
         name: 'Tende a Bracci con Cassonetto',
+        image: '/profili/brianzatende-bracci.jpg',
         description:
           'Tende da sole estensibili con cassonetto a scomparsa totale o parziale (linee Ponant R51, Elegance R90/R93, Abrego) che protegge telo e meccanismi da pioggia, vento e smog tutto l’anno.',
         note: 'Motorizzabili con motori Somfy e sensori vento/sole.',
@@ -610,6 +668,7 @@ export const productsData = {
       'Senza cassonetto': {
         brand: 'Brianzatende',
         name: 'Tende a Bracci su Barra Quadra',
+        image: '/profili/brianzatende-bracci.jpg',
         description:
           'Strutture robuste su barra quadra 40×40 mm con bracci estensibili in alluminio (linee Mistral, Design LED e Levante), ideali per terrazzi ampi e installazioni sotto balcone o sporto di gronda.',
         note: 'Disponibili anche versioni giganti per coperture di grandi superfici.',
@@ -622,6 +681,7 @@ export const productsData = {
       'Tende a caduta TS115': {
         brand: 'Brianzatende',
         name: 'Tende a Caduta Verticale',
+        image: '/profili/brianzatende-caduta.jpg',
         description:
           'Schermature verticali per balconi, finestre e verande (modelli TS115 e sistemi Zip Flat), perfette contro sole basso, vento e per garantire la massima privacy.',
         note: 'Disponibili a caduta libera, con guide laterali o sistema Zip antivento.',
@@ -634,6 +694,7 @@ export const productsData = {
       'Pergole Bioclimatiche': {
         brand: 'Brianzatende',
         name: 'Pergole Bioclimatiche & Pergolati',
+        image: '/profili/brianzatende-bioclimatiche.jpg',
         description:
           'Strutture in alluminio addossate o autoportanti con lamelle orientabili da 0° a 140° o teli retraibili impermeabili (Pergolife / Pergotesa), per vivere terrazzi e giardini in ogni stagione.',
         note: 'Personalizzabili con chiusure laterali, vetrate panoramiche e LED.',
@@ -677,6 +738,7 @@ export const productsData = {
       'Tapparelle in Acciaio': {
         brand: 'Plasticino',
         name: 'Avvolgibili in Acciaio Coibentato',
+        image: '/profili/plasticino-avvolgibili.jpg',
         description:
           'Teli avvolgibili in acciaio coibentato ad alta densità per chi cerca la massima resistenza meccanica, protezione antieffrazione e durata nel tempo.',
         note: 'Ampia scelta di colorazioni e compatibilità con motori Somfy.',
@@ -689,6 +751,7 @@ export const productsData = {
       'Tapparelle in Alluminio': {
         brand: 'Plasticino',
         name: 'Avvolgibili in Alluminio',
+        image: '/profili/plasticino-avvolgibili.jpg',
         description:
           'Soluzione leggera, indeformabile e resistente agli agenti atmosferici. L’alluminio coibentato offre ottimo isolamento termico e acustico con un’estetica sempre impeccabile.',
         note: 'Disponibili in numerose finiture tinta unita ed effetto legno.',
@@ -701,6 +764,7 @@ export const productsData = {
       'Tapparelle in PVC': {
         brand: 'Plasticino',
         name: 'Avvolgibili in PVC',
+        image: '/profili/plasticino-avvolgibili.jpg',
         description:
           'Leggeri, isolanti ed economici, i teli avvolgibili in PVC Plasticino resistono agli agenti atmosferici senza richiedere verniciatura o manutenzione.',
         note: 'Ottimo isolamento termico e ampia gamma colori.',
@@ -713,6 +777,7 @@ export const productsData = {
       'Orienta & New Solar': {
         brand: 'Plasticino',
         name: 'Tapparelle Frangisole Orienta & New Solar',
+        image: '/profili/plasticino-orienta.jpg',
         description:
           'Sistemi innovativi a metà tra tapparella e persiana frangisole: permettono di orientare o distanziare le stecche per dosare luce naturale e ricambio d’aria mantenendo privacy e sicurezza.',
         note: 'Si installano nelle stesse guide di un normale avvolgibile.',
