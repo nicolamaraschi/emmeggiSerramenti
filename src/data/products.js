@@ -23,7 +23,45 @@ export const productsData = {
         title: 'Serie per portoncini e porte',
         items: []
       }
-    ]
+    ],
+    profileDetails: {
+      'Aluk C67K': {
+        brand: 'AluK Group',
+        name: 'Serie C67K / 67IW',
+        description:
+          'Sistema a battente in alluminio a taglio termico con guarnizione centrale di giunto aperto e barrette alveolari da 28,5 mm. Linea tradizionale complanare all’esterno e a sormonto interno, disponibile anche con sagomatura stondata.',
+        note: 'Lega EN AW-6060 con marcatura CE secondo UNI EN 14351-1.',
+        specs: [
+          { label: 'Profondità Profili', value: 'Telaio 66,5 mm · Anta 76,5 mm' },
+          { label: 'Taglio Termico & Vetro', value: 'Barrette alveolari 28,5 mm · Vetri da 22 a 50 mm' },
+          { label: 'Sicurezza & Tenuta', value: 'Guarnizione centrale giunto aperto · EPDM' }
+        ]
+      },
+      'Aluk 67K-M': {
+        brand: 'AluK Group',
+        name: 'Serie 67K-M (Maggiorata)',
+        description:
+          'Versione maggiorata della serie 67IW progettata per porte-finestre e grandi specchiature, con tubolarità esterna aumentata per un’elevata robustezza strutturale e predisposizione per serratura e doppia maniglia.',
+        note: 'Ideale per porte-finestre ad alta frequenza d’uso e vetrine commerciali.',
+        specs: [
+          { label: 'Profondità Profili', value: 'Telaio 66,5 mm · Anta 76,5 mm (profilo maggiorato)' },
+          { label: 'Vetrature', value: 'Vetri o pannelli da 22 a 50 mm ad alta sicurezza' },
+          { label: 'Dotazione', value: 'Alloggiamento serratura con doppia maniglia' }
+        ]
+      },
+      'Aluk C77K – CS con anta nascosta': {
+        brand: 'AluK Group',
+        name: 'Serie C77K / 77IW',
+        description:
+          'Massima espressione tra le serie a battente AluK per isolamento termico e statica. Il taglio termico con barrette alveolari e listelli isolanti riduce al minimo le dispersioni, garantendo prestazioni elevate anche su serramenti di grandi dimensioni.',
+        note: 'Disponibile anche con estetica minimale ad anta nascosta.',
+        specs: [
+          { label: 'Profondità Profili', value: 'Telaio 77 mm · Anta 87 mm' },
+          { label: 'Taglio Termico', value: 'Barrette alveolari con listelli isolanti aggiuntivi' },
+          { label: 'Vetrature', value: 'Spessore vetri da 32 a 50 mm in camera singola o triplo vetro' }
+        ]
+      }
+    }
   },
   'alluminio-e-legno': {
     title: 'Alluminio e legno',
@@ -144,7 +182,33 @@ export const productsData = {
         title: 'In PVC',
         items: ['Top 72', 'Top 90']
       }
-    ]
+    ],
+    profileDetails: {
+      '67IW': {
+        brand: 'AluK Group',
+        name: 'Sistema 67IW',
+        description:
+          'Sistema a taglio termico da 66,5 mm con barrette alveolari da 28,5 mm e guarnizione centrale a giunto aperto, ideale per verande e chiusure vetrate ad alte prestazioni.',
+        note: 'Compatibile con vetri ad alto spessore da 22 a 50 mm.',
+        specs: [
+          { label: 'Profondità Profili', value: 'Stipite 66,5 mm · Battente 76,5 mm' },
+          { label: 'Taglio Termico', value: 'Barrette alveolari da 28,5 mm' },
+          { label: 'Vetrature', value: 'Da 22 a 50 mm con guarnizioni EPDM' }
+        ]
+      },
+      '77IW': {
+        brand: 'AluK Group',
+        name: 'Sistema 77IW',
+        description:
+          'Sistema a battente top di gamma AluK per isolamento termico e robustezza statica, con listelli isolanti nella camera di taglio termico e di alloggiamento del vetrocamera.',
+        note: 'Progettato per grandi aperture vetrate e massimo comfort.',
+        specs: [
+          { label: 'Profondità Profili', value: 'Stipite 77 mm · Battente 87 mm' },
+          { label: 'Isolamento', value: 'Barrette alveolari con listelli isolanti integrati' },
+          { label: 'Vetrature', value: 'Vetri da 32 a 50 mm' }
+        ]
+      }
+    }
   },
   'facciate': {
     title: 'Facciate',
@@ -162,7 +226,33 @@ export const productsData = {
         title: 'In Alluminio',
         items: ['SL 50', 'SL 60', 'SG 50', 'AW 86S', 'AW 86B', 'FRS']
       }
-    ]
+    ],
+    profileDetails: {
+      'AW 86S': {
+        brand: 'AluK Group',
+        name: 'Facciata AW 86S (Cellule)',
+        description:
+          'Sistema di facciata continua a cellule (unitized system) di altezza pari all’interpiano. Privilegia le lavorazioni in officina riducendo tempi e costi di posa in cantiere su grandi edifici.',
+        note: 'Conforme alla norma UNI EN 13830 per facciate continue.',
+        specs: [
+          { label: 'Tipologia', value: 'Facciata a cellule pre-assemblate in officina' },
+          { label: 'Tenuta', value: 'Guarnizioni statiche e dinamiche in EPDM' },
+          { label: 'Normativa', value: 'Marcatura CE · UNI EN 13830' }
+        ]
+      },
+      'AW 86B': {
+        brand: 'AluK Group',
+        name: 'Facciata AW 86B (Cellule)',
+        description:
+          'Variante del sistema a cellule AW86 concepita per grandi superfici vetrate e quote elevate, con connessioni orizzontali ad alta tenuta e possibilità di incollaggio strutturale del vetro.',
+        note: 'Conforme alla norma UNI EN 13830 per facciate continue.',
+        specs: [
+          { label: 'Tipologia', value: 'Facciata continua a cellule (Unitized System)' },
+          { label: 'Tenuta', value: 'Guarnizioni EPDM su connessione orizzontale' },
+          { label: 'Normativa', value: 'Marcatura CE · UNI EN 13830' }
+        ]
+      }
+    }
   },
   'porte-blindate': {
     title: 'Porte Blindate',
