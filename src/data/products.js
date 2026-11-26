@@ -449,6 +449,45 @@ export const productsData = {
           { label: 'Struttura', value: 'Scocca ultra-rinforzata contro scardinamento e taglio' },
           { label: 'Rivestimenti', value: 'Legno, pantografati, alluminio o stile condominiale' }
         ]
+      },
+      'Serie Gold Plus': {
+        brand: 'Torterolo & Re',
+        name: 'Porta Blindata Serie Gold Plus',
+        image: '/profili/torterolo-gold-plus.jpg',
+        description:
+          'Porta blindata top di gamma certificata Classe 4 con doppia lamiera in acciaio elettrozincato, rinforzi verticali a omega con inserti in acciaio al manganese antitaglio, deviatori doppi e telaio da 20/10.',
+        note: 'Disponibile con serratura TR400, doppia serratura TR601 o elettronica motorizzata LINX.',
+        specs: [
+          { label: 'Classe Antieffrazione', value: 'Classe 4 (UNI ENV 1627) · Rinforzi al manganese' },
+          { label: 'Isolamento Termico', value: 'Ud tra 1,2 e 1,4 W/m²K' },
+          { label: 'Isolamento Acustico', value: 'Rw tra 40 e 43 dB · Soglia mobile parafreddo' }
+        ]
+      },
+      'Serie Gold': {
+        brand: 'Torterolo & Re',
+        name: 'Porta Blindata Serie Gold',
+        image: '/profili/torterolo-gold.jpg',
+        description:
+          'Porta blindata Torterolo & Re progettata per unire sicurezza certificata, comfort abitativo e ampia possibilità di personalizzazione estetica su pannelli interni ed esterni.',
+        note: 'Telaio e controtelaio registrabili in acciaio 20/10 con cerniere regolabili su due assi.',
+        specs: [
+          { label: 'Struttura', value: 'Doppia lamiera elettrozincata con rinforzi verticali' },
+          { label: 'Serratura', value: 'Cilindro a profilo europeo con defender antitrapano' },
+          { label: 'Dotazione', value: 'Spioncino panoramico e soglia mobile parafreddo' }
+        ]
+      },
+      'Modello Hibry': {
+        brand: 'Dierre',
+        name: 'Porta Blindata Hibry',
+        image: '/profili/dierre-hibry.jpg',
+        description:
+          'Porta blindata smart a doppia funzione (meccanica ed elettronica): si apre avvicinando chiave transponder, card, smartphone o impronta digitale, mantenendo sempre attiva la chiave meccanica di sicurezza.',
+        note: 'Display touch interno per gestione accessi e predisposizione domotica.',
+        specs: [
+          { label: 'Classe Antieffrazione', value: 'Classe 3 di serie · Classe 4 su richiesta' },
+          { label: 'Sistema Chiusura', value: 'Doppia funzione motorizzata + meccanica (cilindro New Power)' },
+          { label: 'Isolamento Acustico', value: 'Fino a 40–46 dB · Apertura Keyless / Touch / Domotica' }
+        ]
       }
     }
   },
