@@ -89,6 +89,7 @@ export const productsData = {
       'Thermic X': {
         brand: 'Fossati Serramenti',
         name: 'Thermic X',
+        image: '/profili/fossati-thermicx.jpg',
         description:
           'Coniuga il calore e il pregio del legno all’interno con l’estrema resistenza e l’assenza di manutenzione dell’alluminio all’esterno, per i più elevati standard di isolamento termico e acustico.',
         note: 'Disponibile anche nella versione ThermicX PLUS con triplo vetro.',
@@ -128,6 +129,7 @@ export const productsData = {
       'Fossati - Linea 76': {
         brand: 'Fossati Serramenti',
         name: 'Linea 76',
+        image: '/profili/fossati-linea76.jpg',
         description:
           'Alta efficienza energetica intesa come isolamento termico e comfort abitativo. Profilo in PVC multicamera da 76 mm con rinforzi in acciaio dal design pulito e contemporaneo.',
         note: 'Disponibile anche nelle versioni PLUS, ALU e ALU PLUS.',
@@ -140,6 +142,7 @@ export const productsData = {
       'Fossati - Solaris': {
         brand: 'Fossati Serramenti',
         name: 'Solaris',
+        image: '/profili/fossati-solaris.jpg',
         description:
           'Profilo in PVC multicamera da 82 mm con tripla guarnizione di battuta TPE/EPDM e rinforzi in acciaio, studiato per massimizzare la luce naturale, la protezione dagli agenti esterni e il risparmio energetico.',
         note: 'Profilo da 82 mm con tripla guarnizione TPE/EPDM ad alte prestazioni.',
@@ -152,6 +155,7 @@ export const productsData = {
       'Fossati - Icon': {
         brand: 'Fossati Serramenti',
         name: 'Icon',
+        image: '/profili/fossati-icon.jpg',
         description:
           'Profili in PVC estruso di Classe A da 76 mm con mescole di Classe S (climi severi) e ferramenta anta-ribalta con chiusura a nottolini registrabili. Unione di design essenziale, solidità e affidabilità.',
         note: 'Profilo in PVC Classe A da 76 mm per climi severi.',
