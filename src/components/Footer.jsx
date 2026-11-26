@@ -7,7 +7,7 @@ const INFISSI_PORTE_LINKS = [
   { label: 'Alluminio e Legno', to: '/infissi/alluminio-e-legno' },
   { label: 'Serramenti in PVC', to: '/infissi/serramenti-in-pvc' },
   { label: 'Verande', to: '/infissi/verande' },
-  { label: 'Facciate Continue', to: '/infissi/facciate' },
+  { label: 'Pergole', to: '/infissi/pergole' },
   { label: 'Porte Blindate', to: '/porte/porte-blindate' },
   { label: 'Porte Interne', to: '/porte/porte-interne' },
 ];

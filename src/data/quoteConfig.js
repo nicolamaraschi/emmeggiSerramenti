@@ -3,7 +3,7 @@ import { productsData } from './products';
 export const PRODUCT_GROUPS = [
   {
     category: 'Infissi',
-    slugs: ['serramenti-in-pvc', 'alluminio', 'alluminio-e-legno', 'verande', 'facciate'],
+    slugs: ['serramenti-in-pvc', 'alluminio', 'alluminio-e-legno', 'verande', 'pergole'],
   },
   {
     category: 'Porte',
@@ -50,7 +50,7 @@ export const TYPOLOGY_OPTIONS_BY_CATEGORY = {
     'Porte scorrevoli',
     'Portoncini',
     'Verande',
-    'Facciate continue',
+    'Pergole bioclimatiche',
   ],
   Porte: [
     'Porta blindata ingresso',
@@ -85,7 +85,7 @@ export const ALL_TYPOLOGIES = [
   'Porte blindate',
   'Porte interne',
   'Verande',
-  'Facciate continue',
+  'Pergole bioclimatiche',
   'Inferriate',
   'Zanzariere',
   'Tende da sole',

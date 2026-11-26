@@ -5,7 +5,7 @@ export const productsData = {
     headline: 'Finestre e porte-finestre in alluminio',
     subtitle: 'Serramenti alluminio; linee eleganti, prestazioni perfette',
     description: [
-      "Le serie per finestre C67K, 67K-M e C77K – CS con anta nascosta riassumono i risultati delle ricerche e dell'esperienza del marchio ALUK nel settore dei serramenti alluminio.",
+      "Le serie AluK per finestre a battente (C67K, INFINEO C67K-M, C77K e C77K-CS con anta nascosta), gli scorrevoli ad alte prestazioni (Nuovo SC156-HI, S140 e S140R) e le porte d'ingresso Secure-K riassumono la ricerca e l'esperienza del marchio ALUK nel settore dei serramenti in alluminio.",
       "Una sintesi di design, tecnologia, qualità componentistiche che rende questo prodotto unico per comfort acustico e termico, con soluzioni avanzate per il benessere della vostra abitazione. Non ultimo pensati per proteggervi da intrusioni indesiderate con sistemi di antieffrazione e antiscasso.",
       "Tutti i prodotti ALUK sono disponibili in una vasta gamma di colori e finiture, certificati e testati secondo le più severe norme e leggi vigenti in Europa."
     ],
@@ -13,15 +13,15 @@ export const productsData = {
     sidebar: [
       {
         title: 'Serie per finestre e porte finestre',
-        items: ['Aluk C67K', 'Aluk 67K-M', 'Aluk C77K – CS con anta nascosta']
+        items: ['Aluk C67K', 'INFINEO C67K-M', 'C77K', 'C77K-CS']
       },
       {
         title: 'Serie per scorrevoli',
-        items: []
+        items: ['Nuovo SC156-HI', 'S140 e S140R']
       },
       {
         title: 'Serie per portoncini e porte',
-        items: []
+        items: ['Porte Secure-K']
       }
     ],
     profileDetails: {
@@ -38,30 +38,82 @@ export const productsData = {
           { label: 'Sicurezza & Tenuta', value: 'Guarnizione centrale giunto aperto · EPDM' }
         ]
       },
-      'Aluk 67K-M': {
+      'INFINEO C67K-M': {
         brand: 'AluK Group',
-        name: 'Serie 67K-M (Maggiorata)',
-        image: '/profili/aluk-67km.jpg',
+        name: 'INFINEO C67K-M',
+        image: '/profili/aluk-infineo-c67km.jpg',
         description:
-          'Versione maggiorata della serie 67IW progettata per porte-finestre e grandi specchiature, con tubolarità esterna aumentata per un’elevata robustezza strutturale e predisposizione per serratura e doppia maniglia.',
-        note: 'Ideale per porte-finestre ad alta frequenza d’uso e vetrine commerciali.',
+          'La serie a battente Infineo C67K-M è studiata per realizzare infissi di qualità, con dimensioni e pesi importanti, ad elevate prestazioni per isolamento termico e acustico, permeabilità all’aria e tenuta all’acqua. Presenta una vista frontale minimale ridotta a soli 65 mm circa per le sezioni perimetrali e un nodo centrale con soluzione T+Z di ridotto ingombro frontale.',
+        note: 'Utilizzabile esclusivamente con cerniere di tipo nascosto della gamma accessori “K”. Disponibile nelle varianti estetiche Linea Standard e Linea Ferro.',
         specs: [
-          { label: 'Profondità Profili', value: 'Telaio 66,5 mm · Anta 76,5 mm (profilo maggiorato)' },
-          { label: 'Vetrature', value: 'Vetri o pannelli da 22 a 50 mm ad alta sicurezza' },
-          { label: 'Dotazione', value: 'Alloggiamento serratura con doppia maniglia' }
+          { label: 'Vista Frontale', value: 'Minimale ridotta a ~65 mm · Nodo centrale T+Z slim' },
+          { label: 'Ferramenta', value: 'Esclusivamente con cerniere nascoste gamma accessori “K”' },
+          { label: 'Varianti Estetiche', value: 'Linea Standard e Linea Ferro' }
         ]
       },
-      'Aluk C77K – CS con anta nascosta': {
+      'C77K': {
         brand: 'AluK Group',
-        name: 'Serie C77K',
-        image: '/profili/aluk-c77k.jpg',
+        name: 'C77K',
+        image: '/profili/aluk-c77k-profilo.jpg',
         description:
-          'Massima espressione tra le serie a battente AluK per isolamento termico e statica. Il taglio termico con barrette alveolari e listelli isolanti riduce al minimo le dispersioni, garantendo prestazioni elevate anche su serramenti di grandi dimensioni.',
-        note: 'Disponibile anche con estetica minimale ad anta nascosta.',
+          'Finestre in stile tradizionale e universale con anta visibile per offrire una scelta più ampia di vetri e opzioni. Adatta sia a nuove abitazioni sia a ristrutturazioni, garantisce le massime prestazioni in conformità con le più severe normative sul risparmio energetico e consente di realizzare grandi dimensioni.',
+        note: 'Verniciabile in qualunque colore, anche bicolore interno/esterno. Compatibile con le nuove maniglie NOVAE.',
         specs: [
           { label: 'Profondità Profili', value: 'Telaio 77 mm · Anta 87 mm' },
-          { label: 'Taglio Termico', value: 'Barrette alveolari con listelli isolanti aggiuntivi' },
-          { label: 'Vetrature', value: 'Spessore vetri da 32 a 50 mm in camera singola o triplo vetro' }
+          { label: 'Isolamento', value: 'Prestazioni termiche e acustiche ai vertici per ogni zona climatica' },
+          { label: 'Personalizzazione', value: 'Ampio spessore vetro (anche triplo) · Maniglie NOVAE' }
+        ]
+      },
+      'C77K-CS': {
+        brand: 'AluK Group',
+        name: 'C77K-CS Finestre con anta nascosta',
+        image: '/profili/aluk-c77k-cs.jpg',
+        description:
+          'Sistema ad anta nascosta in cui la parte mobile della finestra scompare dietro il telaio fisso, aumentando sensibilmente la superficie vetrata e la luce naturale. Ha una mostra frontale tra le più ridotte sul mercato (nodo laterale 74 mm), senza rinunciare a prestazioni, sicurezza e facilità d’uso.',
+        note: 'Adatta sia a nuove costruzioni che a riqualificazioni. Ossidabile o verniciabile bicolore e compatibile con maniglie NOVAE.',
+        specs: [
+          { label: 'Estetica', value: 'Anta nascosta dietro il telaio · Nodo laterale di soli 74 mm' },
+          { label: 'Luminosità', value: 'Superficie vetrata maggiorata anche su grandi dimensioni' },
+          { label: 'Finiture & Accessori', value: 'Bicolore interno/esterno · Maniglie di design NOVAE' }
+        ]
+      },
+      'Nuovo SC156-HI': {
+        brand: 'AluK Group',
+        name: 'Nuovo SC156-HI',
+        image: '/profili/aluk-sc156-hi.jpg',
+        description:
+          'Il nuovo sistema alzante-scorrevole ad alte prestazioni di riferimento per il mercato. Progettato per grandi vetrate panoramiche con elevate portate, unisce isolamento termico e acustico di livello superiore, nodo centrale slim da 50 mm e soglia ribassata per la massima continuità tra interno ed esterno.',
+        note: 'Soluzione top di gamma AluK per aperture panoramiche ad alta efficienza energetica.',
+        specs: [
+          { label: 'Tipologia', value: 'Alzante-scorrevole ad alte prestazioni (High Insulation)' },
+          { label: 'Design & Soglia', value: 'Nodo centrale slim 50 mm · Soglia piana ribassata 23 mm' },
+          { label: 'Portata', value: 'Fino a 500 kg per anta per grandi specchiature vetrate' }
+        ]
+      },
+      'S140 e S140R': {
+        brand: 'AluK Group',
+        name: 'S140 e S140R',
+        image: '/profili/aluk-s140.jpg',
+        description:
+          'Sistema ad elevate prestazioni e design elegante per porte e finestre con meccanismo alzante-scorrevole o scorrevole, per la massima qualità e comfort. Il nodo centrale ultrasottile da 44 mm aumenta la superficie vetrata e valorizza la luce naturale degli ambienti.',
+        note: 'Configurabile a 1, 2 o 3 binari sia in versione scorrevole sia alzante-scorrevole.',
+        specs: [
+          { label: 'Tipologia', value: 'Scorrevole e alzante-scorrevole (versioni S140 e S140R)' },
+          { label: 'Mostra Frontale', value: 'Nodo centrale ultrasottile da 44 mm per maggiore luminosità' },
+          { label: 'Configurazioni', value: '1, 2 o 3 binari con elevate prestazioni termiche e di tenuta' }
+        ]
+      },
+      'Porte Secure-K': {
+        brand: 'AluK Group',
+        name: 'Porte Secure-K',
+        image: '/profili/aluk-secure-k.jpg',
+        description:
+          'La porta d’ingresso Secure-K è un prodotto di altissima qualità e design, con grandi possibilità di personalizzazione estetica e funzionale. Progettata per offrire elevato isolamento termico e acustico, stabilità dimensionale grazie a giunti di dilatazione brevettati e massima sicurezza antieffrazione.',
+        note: 'Configurabile fino alla Classe antieffrazione RC3 con tracciabilità dedicata AluK UNIX.',
+        specs: [
+          { label: 'Sicurezza', value: 'Certificazione antieffrazione fino alla Classe RC3' },
+          { label: 'Isolamento Termico', value: 'Ud fino a 0,6 W/m²K con giunti di dilatazione brevettati' },
+          { label: 'Personalizzazione', value: 'Ampia gamma pannelli, finiture, maniglioni e luci laterali' }
         ]
       }
     }
@@ -165,8 +217,8 @@ export const productsData = {
         brand: 'Fossati Serramenti',
         name: 'Icon',
         image: '/profili/fossati-icon.jpg',
-        profileImage: '/profili/fossati-icon-finestra.jpg',
-        profileImageLabel: 'Dettaglio Finestra Icon',
+        profileImage: '/profili/fossati-icon-profilo.jpg',
+        profileImageLabel: 'Sezione Profilo Icon 76 mm',
         description:
           'Profili in PVC estruso di Classe A da 76 mm con mescole di Classe S (climi severi) e ferramenta anta-ribalta con chiusura a nottolini registrabili. Unione di design essenziale, solidità e affidabilità.',
         note: 'Profilo in PVC Classe A da 76 mm per climi severi.',
@@ -243,11 +295,7 @@ export const productsData = {
     sidebar: [
       {
         title: 'In Alluminio',
-        items: ['45V', 'BSF70', '67IW']
-      },
-      {
-        title: 'In PVC',
-        items: ['Top 72', 'Top 90']
+        items: ['45V', 'BSF70']
       }
     ],
     profileDetails: {
@@ -276,142 +324,38 @@ export const productsData = {
           { label: 'Profondità', value: '70 mm con vetri ad alto isolamento' },
           { label: 'Applicazione', value: 'Verande panoramiche e dehors' }
         ]
-      },
-      '67IW': {
-        brand: 'AluK Group',
-        name: 'Sistema 67IW',
-        image: '/profili/aluk-67iw.jpg',
-        description:
-          'Sistema a taglio termico da 66,5 mm con barrette alveolari da 28,5 mm e guarnizione centrale a giunto aperto, ideale per verande e chiusure vetrate ad alte prestazioni.',
-        note: 'Compatibile con vetri ad alto spessore da 22 a 50 mm.',
-        specs: [
-          { label: 'Profondità Profili', value: 'Stipite 66,5 mm · Battente 76,5 mm' },
-          { label: 'Taglio Termico', value: 'Barrette alveolari da 28,5 mm' },
-          { label: 'Vetrature', value: 'Da 22 a 50 mm con guarnizioni EPDM' }
-        ]
-      },
-      'Top 72': {
-        brand: 'Sistemi PVC',
-        name: 'Veranda in PVC Top 72',
-        image: '/profili/fossati-linea76.jpg',
-        description:
-          'Sistema per verande in PVC multicamera con telaio da 72–76 mm e guarnizioni perimetrali ad alta tenuta, ideale per chiudere terrazzi e porticati con ottimo isolamento termico.',
-        note: 'Manutenzione minima e ampia disponibilità di finiture pellicolate.',
-        specs: [
-          { label: 'Materiale', value: 'PVC multicamera rinforzato in acciaio' },
-          { label: 'Isolamento', value: 'Doppio vetro basso-emissivo ad alta efficienza' },
-          { label: 'Applicazione', value: 'Chiusura verande, logge e balconi' }
-        ]
-      },
-      'Top 90': {
-        brand: 'Sistemi PVC',
-        name: 'Veranda in PVC Top 90',
-        image: '/profili/fossati-solaris.jpg',
-        description:
-          'Sistema top di gamma in PVC ad elevato spessore e tripla guarnizione per verande abitative ad uso continuativo tutto l’anno, con possibilità di triplo vetro.',
-        note: 'Massime prestazioni termo-acustiche per giardini d’inverno abitabili.',
-        specs: [
-          { label: 'Materiale', value: 'PVC ad alto spessore con tripla guarnizione' },
-          { label: 'Vetrature', value: 'Doppio o triplo vetro ad alto abbattimento acustico' },
-          { label: 'Comfort', value: 'Abitabilità 4 stagioni senza ponti termici' }
-        ]
       }
     }
   },
-  'facciate': {
-    title: 'Facciate',
+  'pergole': {
+    title: 'Pergole',
     category: 'Infissi',
-    headline: 'Facciate',
-    subtitle: 'Sistemi per facciate continue in alluminio',
+    headline: 'Pergole',
+    subtitle: 'Pergola Bioclimatica Pallazzo® in alluminio',
     description: [
-      "Le serie per Facciate SL, SG e AW86 riassumono i risultati delle ricerche e dell'esperienza del marchio ALUK nel settore delle chiusure trasparenti e di copertura in alluminio.",
-      "Una sintesi di design, tecnologia, qualità componentistiche che rendono queste serie adattabili a qualsiasi esigenza architettonica, dove si voglia valorizzare il fattore estetico del vetro ad una struttura portante versatile e personalizzabile.",
-      "Tali prodotti offrono garanzie di isolamento termico-acustico e durabilità nel tempo nel rispetto delle più esigenti normative per il risparmio energetico ed il comfort interno."
+      "Pallazzo® è una pergola bioclimatica a lamelle orientabili dal design pulito ed elegante, progettata per poter godere degli spazi esterni in qualsiasi stagione dell'anno. Le lamelle sono regolabili in diverse posizioni e permettono di proteggere gli occupanti sia dai raggi solari che in caso di pioggia.",
+      "La struttura è stata studiata per un'installazione semplice e veloce ed è interamente realizzata in estruso di alluminio, per offrire robustezza e durabilità nel tempo.",
+      "Il sistema motorizzato delle lamelle, azionabile da telecomando, è completamente a scomparsa nella struttura, particolarmente silenzioso e consente un'ampia rotazione delle lamelle (lunghezza massima fino a 4 m, lunghezza pergola fino a 6 m)."
     ],
-    image: '/facciate-preview.webp',
+    image: '/profili/aluk-pallazzo.jpg',
     sidebar: [
       {
-        title: 'In Alluminio',
-        items: ['SL 50', 'SL 60', 'SG 50', 'AW 86S', 'AW 86B', 'FRS']
+        title: 'Pergole Bioclimatiche AluK',
+        items: ['Pergola Pallazzo']
       }
     ],
     profileDetails: {
-      'SL 50': {
+      'Pergola Pallazzo': {
         brand: 'AluK Group',
-        name: 'Facciata Continua SL 50',
-        image: '/profili/aluk-sl50.jpg',
+        name: 'Pergola Bioclimatica Pallazzo®',
+        image: '/profili/aluk-pallazzo.jpg',
         description:
-          'Sistema a montanti e traversi con ingombro frontale a vista di soli 50 mm, adatto a facciate verticali, inclinate, piane o poligonali con integrazione di moduli apribili.',
-        note: 'Copertine esterne personalizzabili e massima versatilità architettonica.',
+          'Pergola bioclimatica a lamelle orientabili dal design pulito ed elegante, realizzata interamente in estruso di alluminio per vivere gli spazi esterni in ogni stagione proteggendo sia dal sole sia dalla pioggia.',
+        note: 'Sistema motorizzato a scomparsa nella struttura, silenzioso e azionabile comodamente da telecomando.',
         specs: [
-          { label: 'Ingombro a Vista', value: '50 mm su montanti e traversi' },
-          { label: 'Configurazioni', value: 'Verticali, inclinate, poligonali e coperture' },
-          { label: 'Aperture Integrabili', value: 'Finestre a sporgere, anta-ribalta e porte' }
-        ]
-      },
-      'SG 50': {
-        brand: 'AluK Group',
-        name: 'Facciata Strutturale SG 50',
-        image: '/profili/aluk-sg50.png',
-        description:
-          'Sistema di facciata strutturale (Structural Glazing) basato su griglia da 50 mm: il vetro è fissato tramite incollaggio strutturale o sistemi a scomparsa per un effetto tuttovetro continuo.',
-        note: 'Estetica minimale con fuga ridotta tra i moduli vetrati.',
-        specs: [
-          { label: 'Sistema', value: 'Structural Glazing (effetto tuttovetro continuo)' },
-          { label: 'Struttura', value: 'Griglia portante da 50 mm condivisa con serie SL 50' },
-          { label: 'Estetica', value: 'Assenza di profili metallici esterni a vista' }
-        ]
-      },
-      'SL 60': {
-        brand: 'AluK Group',
-        name: 'Facciata Continua SL 60',
-        image: '/profili/aluk-sl60.png',
-        description:
-          'Sistema di facciata continua a montanti e traversi con profilo da 60 mm per grandi specchiature vetrate e carichi strutturali elevati.',
-        note: 'Ideale per grandi superfici vetrate commerciali e residenziali.',
-        specs: [
-          { label: 'Ingombro a Vista', value: '60 mm su montanti e traversi' },
-          { label: 'Portata', value: 'Adatto a vetri di grande dimensione e peso' },
-          { label: 'Normativa', value: 'Marcatura CE · UNI EN 13830' }
-        ]
-      },
-      'AW 86S': {
-        brand: 'AluK Group',
-        name: 'Facciata AW 86S (Cellule)',
-        image: '/profili/aluk-aw86.png',
-        description:
-          'Sistema di facciata continua a cellule (unitized system) di altezza pari all’interpiano. Privilegia le lavorazioni in officina riducendo tempi e costi di posa in cantiere su grandi edifici.',
-        note: 'Conforme alla norma UNI EN 13830 per facciate continue.',
-        specs: [
-          { label: 'Tipologia', value: 'Facciata a cellule pre-assemblate in officina' },
-          { label: 'Tenuta', value: 'Guarnizioni statiche e dinamiche in EPDM' },
-          { label: 'Normativa', value: 'Marcatura CE · UNI EN 13830' }
-        ]
-      },
-      'AW 86B': {
-        brand: 'AluK Group',
-        name: 'Facciata AW 86B (Cellule)',
-        image: '/profili/aluk-aw86.png',
-        description:
-          'Variante del sistema a cellule AW86 concepita per grandi superfici vetrate e quote elevate, con connessioni orizzontali ad alta tenuta e possibilità di incollaggio strutturale del vetro.',
-        note: 'Conforme alla norma UNI EN 13830 per facciate continue.',
-        specs: [
-          { label: 'Tipologia', value: 'Facciata continua a cellule (Unitized System)' },
-          { label: 'Tenuta', value: 'Guarnizioni EPDM su connessione orizzontale' },
-          { label: 'Normativa', value: 'Marcatura CE · UNI EN 13830' }
-        ]
-      },
-      'FRS': {
-        brand: 'AluK Group',
-        name: 'Facciata FRS (Rivestimento & Frangisole)',
-        image: '/profili/aluk-frs.jpg',
-        description:
-          'Sistema AluK per facciate ventilate e rivestimenti architettonici in alluminio, progettato per integrarsi perfettamente con le serie di facciata continua SL e SG.',
-        note: 'Estetica contemporanea ad alta durabilità per edifici commerciali e residenziali.',
-        specs: [
-          { label: 'Tipologia', value: 'Sistema di rivestimento architettonico in alluminio' },
-          { label: 'Integrazione', value: 'Abbinabile a facciate continue SL 50 / SL 60 / SG 50' },
-          { label: 'Finiture', value: 'Ossidato o verniciato in tutta la gamma RAL' }
+          { label: 'Struttura', value: 'Estruso di alluminio ad alta durabilità · Installazione rapida' },
+          { label: 'Dimensioni Max', value: 'Lamelle fino a 4 m · Lunghezza pergola fino a 6 m' },
+          { label: 'Automazione', value: 'Motore a scomparsa silenzioso con telecomando · Lamelle orientabili' }
         ]
       }
     }
@@ -426,9 +370,7 @@ export const productsData = {
     ],
     image: '/porte-blindate-preview.webp',
     sidebar: [
-      { title: 'Metalport', items: ['Serie M2', 'Serie SIKUR', 'Serie BLINDO'] },
-      { title: 'Torterolo & Re', items: ['Serie Gold Plus', 'Serie Gold'] },
-      { title: 'Dierre', items: ['Modello Hibry'] }
+      { title: 'Metalport', items: ['Serie M2', 'Serie SIKUR', 'Serie BLINDO'] }
     ],
     profileDetails: {
       'Serie M2': {
@@ -474,45 +416,6 @@ export const productsData = {
           { label: 'Classe Antieffrazione', value: 'Classe 4 (alta sicurezza certificata)' },
           { label: 'Struttura', value: 'Scocca ultra-rinforzata contro scardinamento e taglio' },
           { label: 'Rivestimenti', value: 'Legno, pantografati, alluminio o stile condominiale' }
-        ]
-      },
-      'Serie Gold Plus': {
-        brand: 'Torterolo & Re',
-        name: 'Porta Blindata Serie Gold Plus',
-        image: '/profili/torterolo-gold-plus.jpg',
-        description:
-          'Porta blindata top di gamma certificata Classe 4 con doppia lamiera in acciaio elettrozincato, rinforzi verticali a omega con inserti in acciaio al manganese antitaglio, deviatori doppi e telaio da 20/10.',
-        note: 'Disponibile con serratura TR400, doppia serratura TR601 o elettronica motorizzata LINX.',
-        specs: [
-          { label: 'Classe Antieffrazione', value: 'Classe 4 (UNI ENV 1627) · Rinforzi al manganese' },
-          { label: 'Isolamento Termico', value: 'Ud tra 1,2 e 1,4 W/m²K' },
-          { label: 'Isolamento Acustico', value: 'Rw tra 40 e 43 dB · Soglia mobile parafreddo' }
-        ]
-      },
-      'Serie Gold': {
-        brand: 'Torterolo & Re',
-        name: 'Porta Blindata Serie Gold',
-        image: '/profili/torterolo-gold.jpg',
-        description:
-          'Porta blindata Torterolo & Re progettata per unire sicurezza certificata, comfort abitativo e ampia possibilità di personalizzazione estetica su pannelli interni ed esterni.',
-        note: 'Telaio e controtelaio registrabili in acciaio 20/10 con cerniere regolabili su due assi.',
-        specs: [
-          { label: 'Struttura', value: 'Doppia lamiera elettrozincata con rinforzi verticali' },
-          { label: 'Serratura', value: 'Cilindro a profilo europeo con defender antitrapano' },
-          { label: 'Dotazione', value: 'Spioncino panoramico e soglia mobile parafreddo' }
-        ]
-      },
-      'Modello Hibry': {
-        brand: 'Dierre',
-        name: 'Porta Blindata Hibry',
-        image: '/profili/dierre-hibry.jpg',
-        description:
-          'Porta blindata smart a doppia funzione (meccanica ed elettronica): si apre avvicinando chiave transponder, card, smartphone o impronta digitale, mantenendo sempre attiva la chiave meccanica di sicurezza.',
-        note: 'Display touch interno per gestione accessi e predisposizione domotica.',
-        specs: [
-          { label: 'Classe Antieffrazione', value: 'Classe 3 di serie · Classe 4 su richiesta' },
-          { label: 'Sistema Chiusura', value: 'Doppia funzione motorizzata + meccanica (cilindro New Power)' },
-          { label: 'Isolamento Acustico', value: 'Fino a 40–46 dB · Apertura Keyless / Touch / Domotica' }
         ]
       }
     }
@@ -781,7 +684,7 @@ export const productsData = {
     description: [
       "Soluzioni per la sicurezza della tua casa, progettate per integrarsi perfettamente con lo stile architettonico senza rinunciare alla massima protezione contro i tentativi di intrusione."
     ],
-    image: '/inferriate-preview.webp',
+    image: '/profili/proart-grata-trend.jpg',
     sidebar: [
       {
         title: 'ProArt — Collezioni Grate',

@@ -8,7 +8,7 @@ const menuData = {
     { label: 'Alluminio E Legno', slug: 'alluminio-e-legno' },
     { label: 'Serramenti In PVC', slug: 'serramenti-in-pvc' },
     { label: 'Verande', slug: 'verande' },
-    { label: 'Facciate', slug: 'facciate' }
+    { label: 'Pergole', slug: 'pergole' }
   ],
   PORTE: [
     { label: 'Porte Blindate', slug: 'porte-blindate' },

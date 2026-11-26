@@ -57,20 +57,20 @@ const COMPANY_STATS = [
 const COLLECTIONS = [
   {
     title: 'Infissi',
-    subtitle: 'Alluminio, PVC, Alluminio-Legno, Verande',
+    subtitle: 'Alluminio, PVC, Alluminio-Legno, Verande, Pergole',
     image: '/alluminio-preview.webp',
     to: '/infissi/alluminio',
   },
   {
     title: 'Porte',
     subtitle: 'Porte Blindate e Porte Interne',
-    image: '/porte-blindate-preview.webp',
+    image: '/porta-blindata-moderna.jpg',
     to: '/porte/porte-blindate',
   },
   {
     title: 'Persiane',
     subtitle: 'Alluminio AluK e Persiane Blindate',
-    image: '/persiane-alluminio-preview.webp',
+    image: '/inferriate-preview.webp',
     to: '/persiane/persiane-alluminio',
   },
   {
@@ -136,7 +136,7 @@ const PARTNERS = [
     category: 'Inferriate',
     brand: 'Pro Art',
     logo: '/proArt.png',
-    image: '/inferriate-preview.webp',
+    image: '/profili/proart-grata-trend.jpg',
     to: '/complementari/inferriate',
   },
   {
