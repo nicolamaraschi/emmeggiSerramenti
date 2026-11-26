@@ -558,7 +558,8 @@ export const productsData = {
     ],
     image: '/persiane-alluminio-preview.webp',
     sidebar: [
-      { title: 'Persiane alluminio', items: ['Classica', 'Storica', 'Scorrevole', 'Scurone'] }
+      { title: 'Persiane alluminio AluK', items: ['Classica', 'Storica', 'Scorrevole', 'Scurone'] },
+      { title: 'Oscuranti Fossati', items: ['Fossati - Giotto', 'Fossati - Raffaello', 'Fossati - Leonardo'] }
     ],
     profileDetails: {
       'Classica': {
@@ -603,6 +604,7 @@ export const productsData = {
       'Scurone': {
         brand: 'AluK Group',
         name: 'Scurone in Alluminio',
+        image: '/profili/fossati-giotto.jpg',
         description:
           'Pannello oscurante cieco o dogato (verticale od orizzontale) per oscuramento totale, protezione termica aggiuntiva e maggiore robustezza strutturale.',
         note: 'Perfetto sia per case indipendenti sia per contesti rustici o alpini.',
@@ -610,6 +612,45 @@ export const productsData = {
           { label: 'Oscuramento', value: 'Totale, con doghe verticali o orizzontali' },
           { label: 'Struttura', value: 'Alluminio rinforzato ad alta stabilità' },
           { label: 'Configurazioni', value: 'A battente, a libro o su cardini a muro' }
+        ]
+      },
+      'Fossati - Giotto': {
+        brand: 'Fossati Serramenti',
+        name: 'Antone Dogato Giotto',
+        image: '/profili/fossati-giotto.jpg',
+        description:
+          'Antone dogato in alluminio verniciato con intelaiatura portante nascosta sul lato esterno per un risultato visivo pulito ed elegante. Doghe disponibili in orientamento verticale o orizzontale.',
+        note: 'Classicità senza tempo con profili estrusi di alta qualità.',
+        specs: [
+          { label: 'Tipologia', value: 'Antone dogato cieco in alluminio verniciato' },
+          { label: 'Design', value: 'Intelaiatura portante nascosta sul lato esterno' },
+          { label: 'Finiture', value: 'Colori RAL opachi/ruvidi ed effetto legno sublimati' }
+        ]
+      },
+      'Fossati - Raffaello': {
+        brand: 'Fossati Serramenti',
+        name: 'Persiana Raffaello',
+        image: '/profili/fossati-raffaello.jpg',
+        description:
+          'Il sistema di oscuranti in alluminio più completo di Fossati: disponibile con stecca aperta fissa, orientabile o storica, oppure con doghe verticali o orizzontali intelaiate nel profilo perimetrale.',
+        note: 'Massima versatilità architettonica per ogni contesto.',
+        specs: [
+          { label: 'Lamelle', value: 'Stecca aperta fissa, orientabile, storica o doghe' },
+          { label: 'Struttura', value: 'Profili in alluminio estruso ad alta resistenza' },
+          { label: 'Finiture', value: 'Ampia scelta RAL ed effetto legno' }
+        ]
+      },
+      'Fossati - Leonardo': {
+        brand: 'Fossati Serramenti',
+        name: 'Persiana Scorrevole Leonardo',
+        image: '/profili/fossati-leonardo.jpg',
+        description:
+          'Oscurante scorrevole in alluminio disponibile sia a scorrimento esterno muro (con binario e mantovana superiore) sia a scorrimento a scomparsa interno muro.',
+        note: 'Squadrette angolari rinforzate in lega di alluminio pressofuso.',
+        specs: [
+          { label: 'Apertura', value: 'Scorrevole esterno muro o a scomparsa interno muro' },
+          { label: 'Meccanica', value: 'Binario superiore con mantovana o guida a scomparsa' },
+          { label: 'Durata', value: 'Componenti resistenti agli agenti atmosferici' }
         ]
       }
     }
@@ -627,8 +668,23 @@ export const productsData = {
     ],
     image: '/persiane-blindate-preview.webp',
     sidebar: [
-      { title: 'Persiane In Acciaio', items: [] }
-    ]
+      { title: 'Persiane In Acciaio', items: ['Persiana Blindata in Acciaio'] }
+    ],
+    profileDetails: {
+      'Persiana Blindata in Acciaio': {
+        brand: 'Sicurezza in Acciaio',
+        name: 'Persiana Blindata in Acciaio Zincato',
+        image: '/profili/persiana-blindata-acciaio.jpg',
+        description:
+          'Persiana di sicurezza realizzata interamente in acciaio zincato verniciato a polvere per esterni, con ovaline antistrappo, rostri fissi lato cerniere e serratura a triplice espansione.',
+        note: 'Disponibile a battente, a libro o con telaio perimetrale rinforzato.',
+        specs: [
+          { label: 'Materiale', value: 'Acciaio zincato verniciato a forno (RAL o effetto legno)' },
+          { label: 'Sicurezza', value: 'Rostri antistrappo, perni antitaglio e serratura triplice' },
+          { label: 'Lamelle', value: 'Fisse o orientabili con anima in acciaio' }
+        ]
+      }
+    }
   },
   'inferriate': {
     title: 'Inferriate',
@@ -639,7 +695,24 @@ export const productsData = {
       "Soluzioni per la sicurezza della tua casa, progettate per integrarsi perfettamente con lo stile architettonico senza rinunciare alla massima protezione contro i tentativi di intrusione."
     ],
     image: '/inferriate-preview.webp',
-    sidebar: []
+    sidebar: [
+      { title: 'Grate di Sicurezza', items: ['Inferriate di Sicurezza su Misura'] }
+    ],
+    profileDetails: {
+      'Inferriate di Sicurezza su Misura': {
+        brand: 'Pro Art & Metalport',
+        name: 'Inferriate di Sicurezza',
+        image: '/profili/inferriata-sicurezza.jpg',
+        description:
+          'Inferriate fisse, apribili o snodate in acciaio zincato verniciato a polvere, progettate su misura per proteggere finestre e portefinestre senza rinunciare all’eleganza architettonica.',
+        note: 'Disponibili modelli lineari moderni o con decori classici e snodo per persiane.',
+        specs: [
+          { label: 'Materiale', value: 'Acciaio pieno zincato e verniciato per esterni' },
+          { label: 'Tipologie', value: 'Fissa, apribile a battente, snodata salva-spazio' },
+          { label: 'Sicurezza', value: 'Serratura a cilindro europeo con rostri antistrappo' }
+        ]
+      }
+    }
   },
   'zanzariere': {
     title: 'Zanzariere',
