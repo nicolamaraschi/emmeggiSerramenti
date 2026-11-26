@@ -302,6 +302,32 @@ export const productsData = {
           { label: 'Isolamento', value: 'Barrette alveolari con listelli isolanti integrati' },
           { label: 'Vetrature', value: 'Vetri da 32 a 50 mm' }
         ]
+      },
+      'Top 72': {
+        brand: 'Sistemi PVC',
+        name: 'Veranda in PVC Top 72',
+        image: '/profili/fossati-linea76.jpg',
+        description:
+          'Sistema per verande in PVC multicamera con telaio da 72–76 mm e guarnizioni perimetrali ad alta tenuta, ideale per chiudere terrazzi e porticati con ottimo isolamento termico.',
+        note: 'Manutenzione minima e ampia disponibilità di finiture pellicolate.',
+        specs: [
+          { label: 'Materiale', value: 'PVC multicamera rinforzato in acciaio' },
+          { label: 'Isolamento', value: 'Doppio vetro basso-emissivo ad alta efficienza' },
+          { label: 'Applicazione', value: 'Chiusura verande, logge e balconi' }
+        ]
+      },
+      'Top 90': {
+        brand: 'Sistemi PVC',
+        name: 'Veranda in PVC Top 90',
+        image: '/profili/fossati-solaris.jpg',
+        description:
+          'Sistema top di gamma in PVC ad elevato spessore e tripla guarnizione per verande abitative ad uso continuativo tutto l’anno, con possibilità di triplo vetro.',
+        note: 'Massime prestazioni termo-acustiche per giardini d’inverno abitabili.',
+        specs: [
+          { label: 'Materiale', value: 'PVC ad alto spessore con tripla guarnizione' },
+          { label: 'Vetrature', value: 'Doppio o triplo vetro ad alto abbattimento acustico' },
+          { label: 'Comfort', value: 'Abitabilità 4 stagioni senza ponti termici' }
+        ]
       }
     }
   },
@@ -386,6 +412,19 @@ export const productsData = {
           { label: 'Tipologia', value: 'Facciata continua a cellule (Unitized System)' },
           { label: 'Tenuta', value: 'Guarnizioni EPDM su connessione orizzontale' },
           { label: 'Normativa', value: 'Marcatura CE · UNI EN 13830' }
+        ]
+      },
+      'FRS': {
+        brand: 'AluK Group',
+        name: 'Facciata FRS (Rivestimento & Frangisole)',
+        image: '/profili/aluk-frs.jpg',
+        description:
+          'Sistema AluK per facciate ventilate e rivestimenti architettonici in alluminio, progettato per integrarsi perfettamente con le serie di facciata continua SL e SG.',
+        note: 'Estetica contemporanea ad alta durabilità per edifici commerciali e residenziali.',
+        specs: [
+          { label: 'Tipologia', value: 'Sistema di rivestimento architettonico in alluminio' },
+          { label: 'Integrazione', value: 'Abbinabile a facciate continue SL 50 / SL 60 / SG 50' },
+          { label: 'Finiture', value: 'Ossidato o verniciato in tutta la gamma RAL' }
         ]
       }
     }
@@ -752,6 +791,32 @@ export const productsData = {
           { label: 'Ingombro Cassonetto', value: '43 mm in vista · 50 mm versione Incasso' },
           { label: 'Resistenza al Vento', value: 'Classe 4 certificata' },
           { label: 'Dimensioni Max', value: '1 anta fino a 1500×2800 mm · 2 ante fino a 3000×2800 mm' }
+        ]
+      },
+      'Susy Elite': {
+        brand: 'Zanzar Sistem',
+        name: 'Zanzariera Susy Elite',
+        image: '/profili/zanzar-susy.jpg',
+        description:
+          'Zanzariera avvolgibile laterale a molla per porte e portefinestre con cassonetto da 50 mm, chiusura magnetica integrata e guida inferiore ribassata asportabile e calpestabile da soli 15 mm.',
+        note: 'Disponibile a 1 o 2 ante, anche con freno rallentatore Adagio e rete Sunox antibatterica.',
+        specs: [
+          { label: 'Ingombro Cassonetto', value: '50 mm · Guida inferiore calpestabile 15 mm' },
+          { label: 'Chiusura', value: 'Magnetica a tutta altezza per perfetta aderenza' },
+          { label: 'Rete', value: 'Fibra di vetro, a fasce alta visibilità o Sunox antibatterica' }
+        ]
+      },
+      'Beta': {
+        brand: 'Bettio & Zanzar',
+        name: 'Zanzariera Laterale Beta',
+        image: '/profili/bettio-miniscenica.jpg',
+        description:
+          'Zanzariera laterale avvolgibile a molla per portefinestre caratterizzata da un elegante cassonetto stondato, completamente reversibile e dotata di cuffie telescopiche per una posa perfetta.',
+        note: 'Disponibile a battente singolo o doppio con blocco anta e frizione opzionale.',
+        specs: [
+          { label: 'Design', value: 'Cassonetto stondato con movimento laterale fluido' },
+          { label: 'Installazione', value: 'Reversibile destra/sinistra con cuffie telescopiche' },
+          { label: 'Configurazione', value: '1 anta o 2 ante con frizione rallentata opzionale' }
         ]
       }
     }

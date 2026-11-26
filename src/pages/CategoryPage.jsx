@@ -145,7 +145,7 @@ export default function CategoryPage() {
               <img
                 src={activeProfileData?.image || data.image}
                 alt={activeProfileData ? activeProfileData.name : data.headline}
-                className="category-image"
+                className={activeProfileData ? 'category-image category-image-profile' : 'category-image'}
               />
               <div className="image-caption">
                 {activeProfileData ? `${activeProfileData.brand} — ${activeProfileData.name}` : data.title}
