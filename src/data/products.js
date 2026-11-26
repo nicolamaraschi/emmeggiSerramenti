@@ -90,6 +90,8 @@ export const productsData = {
         brand: 'Fossati Serramenti',
         name: 'Thermic X',
         image: '/profili/fossati-thermicx.jpg',
+        profileImage: '/profili/fossati-thermicx-profilo.jpg',
+        profileImageLabel: 'Sezione Profilo Legno-Alluminio',
         description:
           'Coniuga il calore e il pregio del legno all’interno con l’estrema resistenza e l’assenza di manutenzione dell’alluminio all’esterno, per i più elevati standard di isolamento termico e acustico.',
         note: 'Disponibile anche nella versione ThermicX PLUS con triplo vetro.',
@@ -118,11 +120,11 @@ export const productsData = {
       },
       {
         title: 'Scorrevoli',
-        items: []
+        items: ['Fossati - Meridiana 82', 'Fossati - Meridiana Zero', 'Fossati - Scorrevole Complanare']
       },
       {
         title: 'Portoncini',
-        items: []
+        items: ['Fossati - Linea 8000']
       }
     ],
     profileDetails: {
@@ -130,6 +132,8 @@ export const productsData = {
         brand: 'Fossati Serramenti',
         name: 'Linea 76',
         image: '/profili/fossati-linea76.jpg',
+        profileImage: '/profili/fossati-linea76-profilo.jpg',
+        profileImageLabel: 'Sezione Profilo Linea 76',
         description:
           'Alta efficienza energetica intesa come isolamento termico e comfort abitativo. Profilo in PVC multicamera da 76 mm con rinforzi in acciaio dal design pulito e contemporaneo.',
         note: 'Disponibile anche nelle versioni PLUS, ALU e ALU PLUS.',
@@ -143,6 +147,8 @@ export const productsData = {
         brand: 'Fossati Serramenti',
         name: 'Solaris',
         image: '/profili/fossati-solaris.jpg',
+        profileImage: '/profili/fossati-solaris-profilo.jpg',
+        profileImageLabel: 'Sezione Profilo Solaris 82 mm',
         description:
           'Profilo in PVC multicamera da 82 mm con tripla guarnizione di battuta TPE/EPDM e rinforzi in acciaio, studiato per massimizzare la luce naturale, la protezione dagli agenti esterni e il risparmio energetico.',
         note: 'Profilo da 82 mm con tripla guarnizione TPE/EPDM ad alte prestazioni.',
@@ -156,6 +162,8 @@ export const productsData = {
         brand: 'Fossati Serramenti',
         name: 'Icon',
         image: '/profili/fossati-icon.jpg',
+        profileImage: '/profili/fossati-icon-finestra.jpg',
+        profileImageLabel: 'Dettaglio Finestra Icon',
         description:
           'Profili in PVC estruso di Classe A da 76 mm con mescole di Classe S (climi severi) e ferramenta anta-ribalta con chiusura a nottolini registrabili. Unione di design essenziale, solidità e affidabilità.',
         note: 'Profilo in PVC Classe A da 76 mm per climi severi.',
@@ -163,6 +171,58 @@ export const productsData = {
           { label: 'Isolamento Termico', value: 'Uw fino a 1,3 W/mqK (Ug 1,0)' },
           { label: 'Isolamento Acustico', value: 'Rw fino a 42 dB' },
           { label: 'Sicurezza', value: 'Fino alla Classe RC2' }
+        ]
+      },
+      'Fossati - Meridiana 82': {
+        brand: 'Fossati Serramenti',
+        name: 'HST Meridiana 82 (Alzante Scorrevole)',
+        image: '/profili/fossati-meridiana82.jpg',
+        description:
+          'Alzante scorrevole in PVC dal design essenziale e contemporaneo, capace di dialogare con ambienti moderni e classici. Il profilo anta da 86 mm riduce l’impatto visivo e amplia la superficie vetrata, mentre le guarnizioni maggiorate garantiscono elevate prestazioni di isolamento.',
+        note: 'Disponibile anche nelle versioni PLUS e ALU.',
+        specs: [
+          { label: 'Tipologia', value: 'Alzante scorrevole in PVC per grandi aperture' },
+          { label: 'Profilo Anta', value: '86 mm a ridotto impatto visivo' },
+          { label: 'Isolamento', value: 'Guarnizioni maggiorate · Massimo comfort termico e acustico' }
+        ]
+      },
+      'Fossati - Meridiana Zero': {
+        brand: 'Fossati Serramenti',
+        name: 'HST Meridiana Zero',
+        image: '/profili/fossati-meridiana-zero.jpg',
+        description:
+          'Evoluzione minimalista dello scorrevole alzante in PVC: elimina l’anta fissa laterale per offrire una trasparenza panoramica ancora maggiore e una connessione visiva totale tra interno ed esterno.',
+        note: 'Disponibile anche nella versione PLUS ad alto isolamento.',
+        specs: [
+          { label: 'Design', value: 'Anta fissa laterale eliminata per massima superficie vetrata' },
+          { label: 'Movimentazione', value: 'Alzante scorrevole fluido e silenzioso' },
+          { label: 'Versioni', value: 'Standard e PLUS' }
+        ]
+      },
+      'Fossati - Scorrevole Complanare': {
+        brand: 'Fossati Serramenti',
+        name: 'Scorrevole Complanare in PVC',
+        image: '/profili/fossati-meridiana82.jpg',
+        description:
+          'Ideale per aperture di media ampiezza, verande e terrazze. Trasforma gli spazi in ambienti sicuri e perfettamente isolati, con possibilità di apertura ad anta-ribalta per il ricambio d’aria in totale sicurezza.',
+        note: 'Luminoso, elegante e dotato di apertura a ribalta integrata.',
+        specs: [
+          { label: 'Tipologia', value: 'Scorrevole complanare traslante in PVC' },
+          { label: 'Apertura', value: 'Scorrimento complanare + funzione anta-ribalta' },
+          { label: 'Applicazione', value: 'Ideale per aperture medie, terrazze e verande' }
+        ]
+      },
+      'Fossati - Linea 8000': {
+        brand: 'Fossati Serramenti',
+        name: 'Portoncini Linea 8000',
+        image: '/profili/fossati-portoncini.jpg',
+        description:
+          'Portoncini d’ingresso su misura progettati per coniugare eleganza, comfort termico ed elevata sicurezza quotidiana. Disponibili negli allestimenti Basic e Security con serratura multipunto FUHR e cerniere Dr. Hahn.',
+        note: 'Allestimenti Basic (Multisafe 859) e Security (Autosafe 835 automatica).',
+        specs: [
+          { label: 'Serratura', value: 'Multipunto FUHR con ganci e punzoni (manuale o automatica)' },
+          { label: 'Cilindro', value: 'Profilo europeo UNI EN ISO 1303 antitrapano e antibumping (5 chiavi)' },
+          { label: 'Cerniere', value: 'Dr. Hahn a 3 ali regolabili in 3D · Portata fino a 160 kg' }
         ]
       }
     }
@@ -232,6 +292,30 @@ export const productsData = {
       }
     ],
     profileDetails: {
+      'SL 50': {
+        brand: 'AluK Group',
+        name: 'Facciata Continua SL 50',
+        description:
+          'Sistema a montanti e traversi con ingombro frontale a vista di soli 50 mm, adatto a facciate verticali, inclinate, piane o poligonali con integrazione di moduli apribili.',
+        note: 'Copertine esterne personalizzabili e massima versatilità architettonica.',
+        specs: [
+          { label: 'Ingombro a Vista', value: '50 mm su montanti e traversi' },
+          { label: 'Configurazioni', value: 'Verticali, inclinate, poligonali e coperture' },
+          { label: 'Aperture Integrabili', value: 'Finestre a sporgere, anta-ribalta e porte' }
+        ]
+      },
+      'SG 50': {
+        brand: 'AluK Group',
+        name: 'Facciata Strutturale SG 50',
+        description:
+          'Sistema di facciata strutturale (Structural Glazing) basato su griglia da 50 mm: il vetro è fissato tramite incollaggio strutturale o sistemi a scomparsa per un effetto tuttovetro continuo.',
+        note: 'Estetica minimale con fuga ridotta tra i moduli vetrati.',
+        specs: [
+          { label: 'Sistema', value: 'Structural Glazing (effetto tuttovetro continuo)' },
+          { label: 'Struttura', value: 'Griglia portante da 50 mm condivisa con serie SL 50' },
+          { label: 'Estetica', value: 'Assenza di profili metallici esterni a vista' }
+        ]
+      },
       'AW 86S': {
         brand: 'AluK Group',
         name: 'Facciata AW 86S (Cellule)',
@@ -268,10 +352,48 @@ export const productsData = {
     ],
     image: '/porte-blindate-preview.webp',
     sidebar: [
+      { title: 'Metalport', items: ['Serie M2', 'Serie SIKUR', 'Serie BLINDO'] },
       { title: 'Torterolo & Re', items: ['Serie Gold Plus', 'Serie Gold'] },
-      { title: 'Dierre', items: ['Modello Hibry'] },
-      { title: 'Metalport', items: ['Serie M2', 'Serie SIKUR', 'Serie BLINDO'] }
-    ]
+      { title: 'Dierre', items: ['Modello Hibry'] }
+    ],
+    profileDetails: {
+      'Serie M2': {
+        brand: 'Metalportblindate',
+        name: 'Porta Blindata Serie M2',
+        description:
+          'Porta blindata certificata Classe 3 antieffrazione con doppia lamiera in acciaio pressopiegata da 15/10, telaio da 20/10 e coibentazione interna in lana di roccia ad alta densità.',
+        note: 'Ottimo equilibrio tra sicurezza residenziale, isolamento termico e acustico.',
+        specs: [
+          { label: 'Classe Antieffrazione', value: 'Classe 3 (UNI EN 1627) · 12 punti di chiusura' },
+          { label: 'Isolamento Termico', value: 'Ud < 1,3 W/m²K (lana di roccia + Neopor)' },
+          { label: 'Isolamento Acustico', value: 'Fino a 40 dB · Defender antistrappo e antitrapano' }
+        ]
+      },
+      'Serie SIKUR': {
+        brand: 'Metalportblindate',
+        name: 'Porta Blindata Serie SIKUR',
+        description:
+          'Linea ad alte prestazioni in Classe 3 con 18–19 punti di chiusura perimetrali, 3 cerniere pesanti regolabili, defender speciale e piastra al manganese a protezione della serratura.',
+        note: 'Predisponibile con kit termo-acustico, cerniere a scomparsa o serratura motorizzata.',
+        specs: [
+          { label: 'Classe Antieffrazione', value: 'Classe 3 · 18–19 punti di chiusura' },
+          { label: 'Protezione Serratura', value: 'Defender speciale + piastra al manganese antitrapano' },
+          { label: 'Isolamento', value: 'Ud < 1,4 W/m²K · Fonoisolamento ~38 dB' }
+        ]
+      },
+      'Serie BLINDO': {
+        brand: 'Metalportblindate',
+        name: 'Porta Blindata Serie BLINDO',
+        description:
+          'Soluzione top di gamma certificata Classe 4 per ingressi esposti, ville indipendenti e piani terra. Struttura ultra-rinforzata progettata contro tentativi di scasso prolungati e utensili pesanti.',
+        note: 'Ampia personalizzazione con pannelli pantografati, legno o alluminio coibentato.',
+        specs: [
+          { label: 'Classe Antieffrazione', value: 'Classe 4 (alta sicurezza certificata)' },
+          { label: 'Struttura', value: 'Scocca ultra-rinforzata contro scardinamento e taglio' },
+          { label: 'Rivestimenti', value: 'Legno, pantografati, alluminio o stile condominiale' }
+        ]
+      }
+    }
   },
   'porte-interne': {
     title: 'Porte Interne',
@@ -284,8 +406,46 @@ export const productsData = {
     ],
     image: '/porte-interne-preview.webp',
     sidebar: [
-      { title: 'Porteleader', items: ['Porte Laccate', 'Porte in Laminato', 'Porte in Vetro', 'Accessori'] }
-    ]
+      { title: 'Bertolotto & Parma Porte', items: ['Porte Laccate', 'Porte in Laminato', 'Porte in Vetro'] }
+    ],
+    profileDetails: {
+      'Porte Laccate': {
+        brand: 'Bertolotto Porte',
+        name: 'Collezioni Laccate a Mano',
+        description:
+          'Porte interne laccate certificate CATAS (linee Millerighe, PantoNext, PantoClassica, CL e Baltimora) con verniciatura artigianale, disponibili cieche o con inserti in vetro coordinati.',
+        note: 'Disponibili a battente, scorrevoli interno/esterno muro e filomuro.',
+        specs: [
+          { label: 'Collezioni', value: 'Millerighe, PantoNext, PantoQuadra, CL, Baltimora' },
+          { label: 'Finiture', value: 'Laccature opache/lucide in tutte le tinte RAL e NCS' },
+          { label: 'Aperture', value: 'Battente, scorrevole a scomparsa, a libro, filomuro' }
+        ]
+      },
+      'Porte in Laminato': {
+        brand: 'Bertolotto Porte',
+        name: 'Collezioni in Laminato',
+        description:
+          'Superfici antigraffio e idrofughe con venature tattili ed effetto legno naturale (collezioni Materik, Grafite, Trame e Textile). Pratiche, resistenti e ideali per ogni ambiente domestico.',
+        note: 'Configurabili anche con inserti geometrici in cristallo di sicurezza.',
+        specs: [
+          { label: 'Collezioni', value: 'Materik, Grafite, Trame, Textile' },
+          { label: 'Resistenza', value: 'Superfici antigraffio, facili da pulire e idrofughe' },
+          { label: 'Personalizzazione', value: 'Finiture effetto legno, materiche e inserti vetro' }
+        ]
+      },
+      'Porte in Vetro': {
+        brand: 'Bertolotto Porte',
+        name: 'Porte in Vetro e Alluminio',
+        description:
+          'Soluzioni luminose con cristalli temperati di sicurezza o stratificati da 8 mm (linee Alaska e Glass Design), perfette per dividere gli spazi valorizzando la luce naturale.',
+        note: 'Vetri trasparenti, extraclear, acidati, sabbiati o decorati.',
+        specs: [
+          { label: 'Cristallo', value: 'Vetro temperato o stratificato di sicurezza spessore 8 mm' },
+          { label: 'Collezioni', value: 'Alaska (con telaio personalizzabile), Glass Design' },
+          { label: 'Lavorazioni', value: 'Trasparente, satinato, sabbiato, inciso o specchiato' }
+        ]
+      }
+    }
   },
   'persiane-alluminio': {
     title: 'Persiane alluminio Aluk',
@@ -300,7 +460,57 @@ export const productsData = {
     image: '/persiane-alluminio-preview.webp',
     sidebar: [
       { title: 'Persiane alluminio', items: ['Classica', 'Storica', 'Scorrevole', 'Scurone'] }
-    ]
+    ],
+    profileDetails: {
+      'Classica': {
+        brand: 'AluK Group',
+        name: 'Persiana Classica',
+        description:
+          'Persiana in alluminio dalle linee tradizionali adatta sia a contesti residenziali moderni che classici, con lamelle fisse o orientabili per regolare luce e ventilazione senza manutenzione.',
+        note: 'Disponibile in colori RAL e finiture effetto legno ad alta durata.',
+        specs: [
+          { label: 'Materiale', value: 'Alluminio estruso resistente agli agenti atmosferici' },
+          { label: 'Lamelle', value: 'Fisse o orientabili con meccanismo di regolazione' },
+          { label: 'Manutenzione', value: 'Praticamente nulla nel tempo' }
+        ]
+      },
+      'Storica': {
+        brand: 'AluK Group',
+        name: 'Persiana Storica',
+        description:
+          'Studiata per ristrutturazioni in centri storici o edifici vincolati, riproduce fedelmente l’estetica delle persiane tradizionali in legno con tutta la durata e sicurezza dell’alluminio.',
+        note: 'Finiture effetto legno e ferramenta tradizionale su richiesta.',
+        specs: [
+          { label: 'Destinazione', value: 'Centri storici, facciate vincolate e ristrutturazioni' },
+          { label: 'Estetica', value: 'Disegno fedele alla tradizione del legno' },
+          { label: 'Durata', value: 'Verniciatura certificata per esterni' }
+        ]
+      },
+      'Scorrevole': {
+        brand: 'AluK Group',
+        name: 'Persiana Scorrevole',
+        description:
+          'Sistema oscurante a scorrimento esterno o interno muro, ideale per aperture ampie, balconi e facciate moderne dove è necessario ottimizzare gli ingombri di apertura.',
+        note: 'Binari di scorrimento fluidi e silenziosi in alluminio.',
+        specs: [
+          { label: 'Apertura', value: 'Scorrimento lineare su binario superiore protetto' },
+          { label: 'Vantaggio', value: 'Zero ingombro di rotazione su terrazzi e balconi' },
+          { label: 'Finiture', value: 'Ampia gamma tinte RAL e finiture legno' }
+        ]
+      },
+      'Scurone': {
+        brand: 'AluK Group',
+        name: 'Scurone in Alluminio',
+        description:
+          'Pannello oscurante cieco o dogato (verticale od orizzontale) per oscuramento totale, protezione termica aggiuntiva e maggiore robustezza strutturale.',
+        note: 'Perfetto sia per case indipendenti sia per contesti rustici o alpini.',
+        specs: [
+          { label: 'Oscuramento', value: 'Totale, con doghe verticali o orizzontali' },
+          { label: 'Struttura', value: 'Alluminio rinforzato ad alta stabilità' },
+          { label: 'Configurazioni', value: 'A battente, a libro o su cardini a muro' }
+        ]
+      }
+    }
   },
   'persiane-blindate': {
     title: 'Persiane Blindate',
@@ -340,11 +550,34 @@ export const productsData = {
     ],
     image: '/zanzariere-preview.webp',
     sidebar: [
-      { title: 'Per porte', items: ['Scenica', 'Miniscenica', 'Susy Elite', 'Beta'] },
-      { title: 'Per finestre', items: [] },
-      { title: 'Per balcone', items: [] },
-      { title: 'Fisse', items: [] }
-    ]
+      { title: 'Bettio — Per porte e finestre', items: ['Scenica', 'Miniscenica', 'Susy Elite', 'Beta'] }
+    ],
+    profileDetails: {
+      'Scenica': {
+        brand: 'Bettio',
+        name: 'Zanzariera Scenica®',
+        description:
+          'Zanzariera avvolgibile a scorrimento laterale totalmente priva di guide a pavimento e profili di riscontro: la barra maniglia si ferma in qualsiasi posizione per un passaggio sicuro e senza barriere.',
+        note: 'Sistema antivento brevettato Bettio con rete in fibra di vetro e PVC.',
+        specs: [
+          { label: 'Barriere a Pavimento', value: 'Assenti (ideale per bambini, anziani e disabili)' },
+          { label: 'Resistenza al Vento', value: 'Classe 4 con bottoni antivento saldati' },
+          { label: 'Dimensioni Max', value: 'Fino a 3000 × 2800 mm (2 ante)' }
+        ]
+      },
+      'Miniscenica': {
+        brand: 'Bettio',
+        name: 'Miniscenica® evo',
+        description:
+          'Tutta la tecnologia senza barriere di Scenica in un ingombro ridottissimo di soli 43 mm (50 mm nella versione ad incasso). Completamente reversibile destra/sinistra con installazione facilitata.',
+        note: 'Disponibile in versione in vista (43 mm) o ad incasso (50 mm).',
+        specs: [
+          { label: 'Ingombro Cassonetto', value: '43 mm in vista · 50 mm versione Incasso' },
+          { label: 'Resistenza al Vento', value: 'Classe 4 certificata' },
+          { label: 'Dimensioni Max', value: '1 anta fino a 1500×2800 mm · 2 ante fino a 3000×2800 mm' }
+        ]
+      }
+    }
   },
   'tende-da-sole': {
     title: 'Tende da Sole',
@@ -357,13 +590,73 @@ export const productsData = {
     ],
     image: '/tende-da-sole-preview.webp',
     sidebar: [
-      { title: 'Tende da sole a bracci', items: ['Con cassonetto', 'Senza cassonetto'] },
-      { title: 'Tende da sole a caduta', items: [] },
-      { title: 'Per balcone', items: [] },
-      { title: 'Capottine', items: [] },
-      { title: 'Pensiline New entry', items: [] },
+      { title: 'Tende da sole a bracci (Brianzatende)', items: ['Con cassonetto', 'Senza cassonetto'] },
+      { title: 'Tende a caduta & Pergole', items: ['Tende a caduta TS115', 'Pergole Bioclimatiche'] },
       { title: 'Motorizzazioni', items: ['Motori Somfy'] }
-    ]
+    ],
+    profileDetails: {
+      'Con cassonetto': {
+        brand: 'Brianzatende',
+        name: 'Tende a Bracci con Cassonetto',
+        description:
+          'Tende da sole estensibili con cassonetto a scomparsa totale o parziale (linee Ponant R51, Elegance R90/R93, Abrego) che protegge telo e meccanismi da pioggia, vento e smog tutto l’anno.',
+        note: 'Motorizzabili con motori Somfy e sensori vento/sole.',
+        specs: [
+          { label: 'Modelli Principali', value: 'Ponant R51, Elegance R90/R93, Abrego R41/R42, T87CT' },
+          { label: 'Protezione Telo', value: 'Cassonetto a scomparsa totale o parziale' },
+          { label: 'Automazione', value: 'Compatibile con motori Somfy e luci LED' }
+        ]
+      },
+      'Senza cassonetto': {
+        brand: 'Brianzatende',
+        name: 'Tende a Bracci su Barra Quadra',
+        description:
+          'Strutture robuste su barra quadra 40×40 mm con bracci estensibili in alluminio (linee Mistral, Design LED e Levante), ideali per terrazzi ampi e installazioni sotto balcone o sporto di gronda.',
+        note: 'Disponibili anche versioni giganti per coperture di grandi superfici.',
+        specs: [
+          { label: 'Modelli Principali', value: 'Mistral R82/R86, Mistral Forged, Design LED, Levante' },
+          { label: 'Struttura', value: 'Barra quadra 40×40 mm e bracci ad alta resistenza' },
+          { label: 'Optional', value: 'Illuminazione LED integrata e motorizzazione Somfy' }
+        ]
+      },
+      'Tende a caduta TS115': {
+        brand: 'Brianzatende',
+        name: 'Tende a Caduta Verticale',
+        description:
+          'Schermature verticali per balconi, finestre e verande (modelli TS115 e sistemi Zip Flat), perfette contro sole basso, vento e per garantire la massima privacy.',
+        note: 'Disponibili a caduta libera, con guide laterali o sistema Zip antivento.',
+        specs: [
+          { label: 'Modelli', value: 'TS115 a cassonetto, Zip Flat con guide laterali' },
+          { label: 'Funzione', value: 'Protezione sole basso, vento e privacy' },
+          { label: 'Movimentazione', value: 'Manuale ad argano o motorizzata Somfy' }
+        ]
+      },
+      'Pergole Bioclimatiche': {
+        brand: 'Brianzatende',
+        name: 'Pergole Bioclimatiche & Pergolati',
+        description:
+          'Strutture in alluminio addossate o autoportanti con lamelle orientabili da 0° a 140° o teli retraibili impermeabili (Pergolife / Pergotesa), per vivere terrazzi e giardini in ogni stagione.',
+        note: 'Personalizzabili con chiusure laterali, vetrate panoramiche e LED.',
+        specs: [
+          { label: 'Copertura', value: 'Lamelle orientabili 0°–140° o telo PVC retraibile' },
+          { label: 'Installazione', value: 'Addossata a parete o autoportante' },
+          { label: 'Comfort', value: 'Regolazione naturale di luce, ventilazione e pioggia' }
+        ]
+      },
+      'Motori Somfy': {
+        brand: 'Somfy',
+        name: 'Motorizzazioni Somfy per Tende',
+        image: '/immagineProdottolsomfy.webp',
+        description:
+          'Motori tubolari Somfy silenziosi e affidabili per aprire e chiudere le tende da sole con telecomando, interruttore o smartphone, con possibilità di sensori automatici vento e sole.',
+        note: 'Affidabilità certificata e lunga durata nel tempo.',
+        specs: [
+          { label: 'Controllo', value: 'Telecomando radio, comando a parete o app smart' },
+          { label: 'Sensori', value: 'Sensore vento/sole per chiusura automatica di sicurezza' },
+          { label: 'Qualità', value: 'Motori silenziosi progettati per uso intensivo' }
+        ]
+      }
+    }
   },
   'tapparelle': {
     title: 'Tapparelle',
@@ -377,10 +670,71 @@ export const productsData = {
     ],
     image: '/tapparelle-preview.webp',
     sidebar: [
-      { title: 'In Acciaio', items: ['Tapparelle in Acciaio'] },
-      { title: 'In Alluminio', items: [] },
-      { title: 'In PVC', items: [] },
+      { title: 'Avvolgibili Plasticino', items: ['Tapparelle in Acciaio', 'Tapparelle in Alluminio', 'Tapparelle in PVC', 'Orienta & New Solar'] },
       { title: 'Motorizzazioni', items: ['Motori Somfy'] }
-    ]
+    ],
+    profileDetails: {
+      'Tapparelle in Acciaio': {
+        brand: 'Plasticino',
+        name: 'Avvolgibili in Acciaio Coibentato',
+        description:
+          'Teli avvolgibili in acciaio coibentato ad alta densità per chi cerca la massima resistenza meccanica, protezione antieffrazione e durata nel tempo.',
+        note: 'Ampia scelta di colorazioni e compatibilità con motori Somfy.',
+        specs: [
+          { label: 'Materiale', value: 'Acciaio coibentato ad alta densità' },
+          { label: 'Sicurezza', value: 'Elevata resistenza antieffrazione e grandine' },
+          { label: 'Movimentazione', value: 'Manuale o motorizzata Somfy' }
+        ]
+      },
+      'Tapparelle in Alluminio': {
+        brand: 'Plasticino',
+        name: 'Avvolgibili in Alluminio',
+        description:
+          'Soluzione leggera, indeformabile e resistente agli agenti atmosferici. L’alluminio coibentato offre ottimo isolamento termico e acustico con un’estetica sempre impeccabile.',
+        note: 'Disponibili in numerose finiture tinta unita ed effetto legno.',
+        specs: [
+          { label: 'Materiale', value: 'Alluminio coibentato (leggero e robusto)' },
+          { label: 'Manutenzione', value: 'Nulla, inalterabile al sole e alle intemperie' },
+          { label: 'Installazione', value: 'Su guide in alluminio con spazzolino antivento' }
+        ]
+      },
+      'Tapparelle in PVC': {
+        brand: 'Plasticino',
+        name: 'Avvolgibili in PVC',
+        description:
+          'Leggeri, isolanti ed economici, i teli avvolgibili in PVC Plasticino resistono agli agenti atmosferici senza richiedere verniciatura o manutenzione.',
+        note: 'Ottimo isolamento termico e ampia gamma colori.',
+        specs: [
+          { label: 'Materiale', value: 'PVC estruso di alta qualità' },
+          { label: 'Vantaggi', value: 'Leggerezza, isolamento e zero verniciatura' },
+          { label: 'Compatibilità', value: 'Ideale per sostituzioni su cassonetti esistenti' }
+        ]
+      },
+      'Orienta & New Solar': {
+        brand: 'Plasticino',
+        name: 'Tapparelle Frangisole Orienta & New Solar',
+        description:
+          'Sistemi innovativi a metà tra tapparella e persiana frangisole: permettono di orientare o distanziare le stecche per dosare luce naturale e ricambio d’aria mantenendo privacy e sicurezza.',
+        note: 'Si installano nelle stesse guide di un normale avvolgibile.',
+        specs: [
+          { label: 'Modelli', value: 'Orienta (stecche orientabili) · New Solar (frangisole)' },
+          { label: 'Funzione', value: 'Regolazione luce, aerazione e protezione solare' },
+          { label: 'Sicurezza', value: 'Versioni antieffrazione con blocco stecche' }
+        ]
+      },
+      'Motori Somfy': {
+        brand: 'Somfy',
+        name: 'Motori Somfy per Tapparelle',
+        image: '/immagineProdottolsomfy.webp',
+        description:
+          'Motorizzazioni tubolari Somfy silenziose e durature per automatizzare singole tapparelle o l’intera abitazione con comandi centralizzati a muro, telecomando o domotica.',
+        note: 'Rilevamento ostacoli e blocco antisollevamento su versioni dedicate.',
+        specs: [
+          { label: 'Silenziosità', value: 'Movimentazione fluida e discreta' },
+          { label: 'Controllo', value: 'Pulsante a parete, telecomando o scenario centralizzato' },
+          { label: 'Affidabilità', value: 'Qualità e garanzia Somfy' }
+        ]
+      }
+    }
   }
 };

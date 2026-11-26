@@ -140,15 +140,37 @@ export default function CategoryPage() {
 
         {/* Content Area: Image + Text Side-by-Side (or Selected Profile Detail) */}
         <main className="category-content">
-          <div className="category-image-container">
-            <img
-              src={activeProfileData?.image || data.image}
-              alt={activeProfileData ? activeProfileData.name : data.headline}
-              className="category-image"
-            />
-            <div className="image-caption">
-              {activeProfileData ? `${activeProfileData.brand} — ${activeProfileData.name}` : data.title}
+          <div className="flex flex-col gap-5">
+            <div className="category-image-container">
+              <img
+                src={activeProfileData?.image || data.image}
+                alt={activeProfileData ? activeProfileData.name : data.headline}
+                className="category-image"
+              />
+              <div className="image-caption">
+                {activeProfileData ? `${activeProfileData.brand} — ${activeProfileData.name}` : data.title}
+              </div>
             </div>
+
+            {activeProfileData?.profileImage && (
+              <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm">
+                <div className="flex items-center justify-between border-b border-neutral-200 bg-[#f6f5f2] px-4 py-2.5">
+                  <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand">
+                    {activeProfileData.profileImageLabel || 'Sezione / Dettaglio Profilo'}
+                  </span>
+                  <span className="text-xs font-medium text-neutral-500">
+                    {activeProfileData.name}
+                  </span>
+                </div>
+                <div className="flex items-center justify-center bg-white p-4">
+                  <img
+                    src={activeProfileData.profileImage}
+                    alt={`Dettaglio profilo ${activeProfileData.name}`}
+                    className="max-h-64 w-auto object-contain"
+                  />
+                </div>
+              </div>
+            )}
           </div>
           
           <div className="category-text-content">
