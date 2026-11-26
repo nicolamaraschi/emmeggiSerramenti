@@ -53,7 +53,7 @@ export const productsData = {
       },
       'Aluk C77K – CS con anta nascosta': {
         brand: 'AluK Group',
-        name: 'Serie C77K / 77IW',
+        name: 'Serie C77K',
         image: '/profili/aluk-c77k.jpg',
         description:
           'Massima espressione tra le serie a battente AluK per isolamento termico e statica. Il taglio termico con barrette alveolari e listelli isolanti riduce al minimo le dispersioni, garantendo prestazioni elevate anche su serramenti di grandi dimensioni.',
@@ -243,7 +243,7 @@ export const productsData = {
     sidebar: [
       {
         title: 'In Alluminio',
-        items: ['45V', 'BSF70', '67IW', '77IW']
+        items: ['45V', 'BSF70', '67IW']
       },
       {
         title: 'In PVC',
@@ -288,19 +288,6 @@ export const productsData = {
           { label: 'Profondità Profili', value: 'Stipite 66,5 mm · Battente 76,5 mm' },
           { label: 'Taglio Termico', value: 'Barrette alveolari da 28,5 mm' },
           { label: 'Vetrature', value: 'Da 22 a 50 mm con guarnizioni EPDM' }
-        ]
-      },
-      '77IW': {
-        brand: 'AluK Group',
-        name: 'Sistema 77IW',
-        image: '/profili/aluk-c77k.jpg',
-        description:
-          'Sistema a battente top di gamma AluK per isolamento termico e robustezza statica, con listelli isolanti nella camera di taglio termico e di alloggiamento del vetrocamera.',
-        note: 'Progettato per grandi aperture vetrate e massimo comfort.',
-        specs: [
-          { label: 'Profondità Profili', value: 'Stipite 77 mm · Battente 87 mm' },
-          { label: 'Isolamento', value: 'Barrette alveolari con listelli isolanti integrati' },
-          { label: 'Vetrature', value: 'Vetri da 32 a 50 mm' }
         ]
       },
       'Top 72': {
@@ -707,9 +694,70 @@ export const productsData = {
     ],
     image: '/persiane-blindate-preview.webp',
     sidebar: [
+      {
+        title: 'ProArt — Scuri & Persiane Blindate',
+        items: [
+          'Scuri Blindati Pivot',
+          'Scuri Blindati Slide OutWall',
+          'Scuri Blindati Slide InBox',
+          'Scuri Blindati Slide InShade'
+        ]
+      },
       { title: 'Persiane In Acciaio', items: ['Persiana Blindata in Acciaio'] }
     ],
     profileDetails: {
+      'Scuri Blindati Pivot': {
+        brand: 'ProArt · Alladin®',
+        name: 'Scuri Blindati Pivot (Battente / Pacchetto / Libro)',
+        image: '/profili/proart-scuri-pivot.jpg',
+        description:
+          'Scuro e persiana blindata ProArt con profilo strutturale Elegant 30/10 mm, sistema integrato One-Block, cardini saldati con rotazione su cuscinetti a sfera e perni di bloccaggio regolabili Ø 18 mm.',
+        note: 'Disponibile in Collezione Persiane (Stecca ovale / storica) e Collezione Dogati (verticale / orizzontale).',
+        specs: [
+          { label: 'Struttura & Sicurezza', value: 'Profilo a "C" 45/10 mm · Sistema One-Block · Perno Ø 18 mm' },
+          { label: 'Aperture', value: '1–4 ante a battente, a pacchetto o a libro' },
+          { label: 'Serratura & Finiture', value: 'Cilindro europeo Iseo · Verniciatura Triplex nebbie saline' }
+        ]
+      },
+      'Scuri Blindati Slide OutWall': {
+        brand: 'ProArt · Alladin®',
+        name: 'Scuri Blindati Slide OutWall',
+        image: '/profili/proart-scuri-outwall.jpg',
+        description:
+          'Scuro blindato scorrevole esterno muro completo di mantovana superiore e sistema appeso One-Block con guida inferiore in tubolare. Ideale per facciate moderne senza ingombro di apertura.',
+        note: 'Disponibile a 1 o 2 ante in versione Dogato o Persiana.',
+        specs: [
+          { label: 'Apertura', value: 'Scorrevole esterno muro con mantovana e sistema appeso' },
+          { label: 'Sicurezza', value: 'Profilo a "C" 45/10 mm · Serratura cilindro europeo Iseo' },
+          { label: 'Verniciatura', value: 'Certificata e testata alle nebbie saline (Triplex)' }
+        ]
+      },
+      'Scuri Blindati Slide InBox': {
+        brand: 'ProArt · Alladin®',
+        name: 'Scuri Blindati Slide InBox',
+        image: '/profili/proart-scuri-inbox.jpg',
+        description:
+          'Scuro blindato scorrevole a scomparsa in controcassa interna muro, studiato per garantire la massima pulizia architettonica della facciata mantenendo la sicurezza strutturale ProArt.',
+        note: 'Ruote su cuscinetti ad alta portata e guida inferiore One-Block.',
+        specs: [
+          { label: 'Apertura', value: 'Scorrevole a scomparsa interno muro (InBox)' },
+          { label: 'Meccanica', value: 'Ruote su cuscinetti · Guida inferiore One-Block' },
+          { label: 'Design', value: 'Doghe verticali/orizzontali o stecca ovale/storica' }
+        ]
+      },
+      'Scuri Blindati Slide InShade': {
+        brand: 'ProArt · Alladin®',
+        name: 'Scuri Blindati Slide InShade',
+        image: '/profili/proart-scuri-inshade.jpg',
+        description:
+          'Scuro blindato scorrevole progettato per l’inserimento in vani esistenti e contesti storici, con guida superiore incassata, guida inferiore One-Block e montaggio su cuscinetti.',
+        note: 'Soluzione ideale per ristrutturazioni in centri storici.',
+        specs: [
+          { label: 'Apertura', value: 'Scorrevole in luce su vani esistenti' },
+          { label: 'Binario', value: 'Guida superiore incassata + guida inferiore One-Block' },
+          { label: 'Sicurezza', value: 'Profilo a "C" 45/10 mm · Serratura cilindro europeo Iseo' }
+        ]
+      },
       'Persiana Blindata in Acciaio': {
         brand: 'Sicurezza in Acciaio',
         name: 'Persiana Blindata in Acciaio Zincato',
@@ -735,20 +783,100 @@ export const productsData = {
     ],
     image: '/inferriate-preview.webp',
     sidebar: [
-      { title: 'Grate di Sicurezza', items: ['Inferriate di Sicurezza su Misura'] }
+      {
+        title: 'ProArt — Collezioni Grate',
+        items: [
+          'Collezione Trend',
+          'Collezione Storica',
+          'Collezione Liberty',
+          'Collezione Luxury'
+        ]
+      },
+      {
+        title: 'ProArt — Sistemi di Apertura',
+        items: [
+          'Grata Cardine & Dual',
+          'Grata Pivot & Slide'
+        ]
+      }
     ],
     profileDetails: {
-      'Inferriate di Sicurezza su Misura': {
-        brand: 'Pro Art & Metalport',
-        name: 'Inferriate di Sicurezza',
+      'Collezione Trend': {
+        brand: 'ProArt · Alladin®',
+        name: 'Grate Collezione Trend',
+        image: '/profili/proart-grata-trend.jpg',
+        description:
+          'La nuova generazione della sicurezza minimalista: profili puliti, saldature su linea quadrata e ingombri contenuti per ambienti moderni. Modelli: Semplice, Trend, Blade, Axis, Alida e Alladin Decor.',
+        note: 'Disponibile per finestre e portefinestre con sistema anti-effrazione certificato.',
+        specs: [
+          { label: 'Modelli', value: 'Semplice, Trend, Blade, Axis, Alida, Alladin Decor' },
+          { label: 'Struttura', value: 'Profilo Classic 15/10 mm o Elegant 30/10 mm' },
+          { label: 'Finiture', value: 'Verniciatura a forno certificata anti-corrosione (Triplex)' }
+        ]
+      },
+      'Collezione Storica': {
+        brand: 'ProArt · Alladin®',
+        name: 'Grate Collezione Storica',
+        image: '/profili/proart-grata-storica.jpg',
+        description:
+          'Semplicità funzionale e forme geometriche collaudate – tondi, quadri e decori classici evergreen. Include: Alba, Matilde, Ambra, Arrigo, India, Inglese, Visconteo, Brand, Stilo, Pantografo, Rombi, Milanesio e Oscar.',
+        note: 'Ante intere brevettate Alladin® senza snodi che spezzano il disegno.',
+        specs: [
+          { label: 'Modelli Principali', value: 'Alba, Arrigo, India, Inglese, Visconteo, Pantografo, Rombi' },
+          { label: 'Sicurezza', value: 'Perno di bloccaggio Ø 18 mm e cardini su cuscinetti' },
+          { label: 'Normativa', value: 'Conforme ai requisiti assicurativi ANIA' }
+        ]
+      },
+      'Collezione Liberty': {
+        brand: 'ProArt · Alladin®',
+        name: 'Grate Collezione Liberty',
+        image: '/profili/proart-grata-liberty.jpg',
+        description:
+          'Leggerezza e arredo con un tocco vintage che armonizza robustezza funzionale e decori di ispirazione Liberty. Modelli: Sforza, Fiore, Noce, Impero, Cerchi e Tulipano.',
+        note: 'Ideale per ville d’epoca, contesti storici e facciate classiche.',
+        specs: [
+          { label: 'Modelli', value: 'Sforza, Fiore, Noce, Impero, Cerchi, Tulipano' },
+          { label: 'Lavorazione', value: 'Assemblaggio robotizzato ad alta precisione, saldature invisibili' },
+          { label: 'Aperture', value: 'Cardine, Dual, Sbalzo, Pivot, Slide o Fissa' }
+        ]
+      },
+      'Collezione Luxury': {
+        brand: 'ProArt · Alladin®',
+        name: 'Grate Collezione Luxury',
+        image: '/profili/proart-grata-luxury.jpg',
+        description:
+          'Linea esclusiva ad alto valore estetico per valorizzare ingressi e grandi vetrate senza rinunciare alla massima protezione. Modelli: Ferri, Storico, Mosaico e Salisburghese.',
+        note: 'Design ricercato personalizzabile su misura per finestre e portefinestre.',
+        specs: [
+          { label: 'Modelli', value: 'Ferri, Storico, Mosaico, Salisburghese' },
+          { label: 'Struttura', value: 'Profilo strutturale rinforzato con sistema One-Block' },
+          { label: 'Protezione', value: 'Trattamento supplementare Triplex anti-nebbie saline' }
+        ]
+      },
+      'Grata Cardine & Dual': {
+        brand: 'ProArt · Alladin®',
+        name: 'Sistemi Grata Cardine, Dual & Sbalzo',
         image: '/profili/inferriata-sicurezza.jpg',
         description:
-          'Inferriate fisse, apribili o snodate in acciaio zincato verniciato a polvere, progettate su misura per proteggere finestre e portefinestre senza rinunciare all’eleganza architettonica.',
-        note: 'Disponibili modelli lineari moderni o con decori classici e snodo per persiane.',
+          'Sistemi di apertura a battente con cardini su cuscinetti a sfera: Classic Grata Cardine, Grata Dual / Dual Jolly (apertura interna ed esterna anche in presenza di persiane) e Grata Sbalzo.',
+        note: 'Possibilità di sportello alla genovese e zanzariera plissettata o magnetica integrata.',
         specs: [
-          { label: 'Materiale', value: 'Acciaio pieno zincato e verniciato per esterni' },
-          { label: 'Tipologie', value: 'Fissa, apribile a battente, snodata salva-spazio' },
-          { label: 'Sicurezza', value: 'Serratura a cilindro europeo con rostri antistrappo' }
+          { label: 'Sistemi', value: 'Grata Cardine · Grata Dual / Dual Jolly · Grata Sbalzo' },
+          { label: 'Meccanica', value: 'Cardini saldati su cuscinetti · Perno regolabile Ø 18 mm' },
+          { label: 'Optional', value: 'Sportello alla genovese · Zanzariera integrabile' }
+        ]
+      },
+      'Grata Pivot & Slide': {
+        brand: 'ProArt · Alladin®',
+        name: 'Sistemi Grata Pivot & Slide',
+        image: '/profili/proart-grata-trend.jpg',
+        description:
+          'Soluzioni scorrevoli e a bilico per ottimizzare gli spazi: Grata Pivot, Grata Slide InBox (a scomparsa), Slide OutWall (esterno muro) e Slide InFrame, oltre a versioni Fissi e Spanciati.',
+        note: 'Sistema di chiusura strutturale integrata One-Block.',
+        specs: [
+          { label: 'Sistemi', value: 'Grata Pivot · Slide InBox / OutWall / InFrame · Fissi e Spanciati' },
+          { label: 'Struttura', value: 'Profilo Elegant 30/10 mm con guida One-Block' },
+          { label: 'Sicurezza', value: 'Serratura cilindro europeo con rostri antistrappo' }
         ]
       }
     }
@@ -894,12 +1022,12 @@ export const productsData = {
         name: 'Motorizzazioni Somfy per Tende',
         image: '/immagineProdottolsomfy.webp',
         description:
-          'Motori tubolari Somfy silenziosi e affidabili per aprire e chiudere le tende da sole con telecomando, interruttore o smartphone, con possibilità di sensori automatici vento e sole.',
-        note: 'Affidabilità certificata e lunga durata nel tempo.',
+          'Motori tubolari Somfy (gamma Altus RTS / Altus io e LT) silenziosi, certificati IP44 e progettati per aprire e chiudere tende da sole con comando a parete Smoove, telecomando Situo / Telis o app TaHoma® switch.',
+        note: 'Compatibili con sensori automatici vento e sole e integrazione Alexa / Google Assistant.',
         specs: [
-          { label: 'Controllo', value: 'Telecomando radio, comando a parete o app smart' },
-          { label: 'Sensori', value: 'Sensore vento/sole per chiusura automatica di sicurezza' },
-          { label: 'Qualità', value: 'Motori silenziosi progettati per uso intensivo' }
+          { label: 'Motorizzazioni', value: 'Gamma Altus RTS / io (4–100 Nm) e LT 50/60 · IP44' },
+          { label: 'Controllo', value: 'Comandi a parete Smoove, telecomandi Situo / Telis, TaHoma® switch' },
+          { label: 'Automazione', value: 'Finecorsa elettronici, sensori vento/sole e programmazione oraria' }
         ]
       }
     }
@@ -916,7 +1044,7 @@ export const productsData = {
     ],
     image: '/tapparelle-preview.webp',
     sidebar: [
-      { title: 'Avvolgibili Plasticino', items: ['Tapparelle in Acciaio', 'Tapparelle in Alluminio', 'Tapparelle in PVC', 'Orienta & New Solar'] },
+      { title: 'Avvolgibili Plasticino', items: ['Tapparelle in Acciaio', 'Tapparelle in Alluminio', 'Tapparelle in PVC', 'Orienta & New Solar', 'Guide & Scorrimento'] },
       { title: 'Motorizzazioni', items: ['Motori Somfy'] }
     ],
     profileDetails: {
@@ -925,12 +1053,12 @@ export const productsData = {
         name: 'Avvolgibili in Acciaio Coibentato',
         image: '/profili/plasticino-avvolgibili.jpg',
         description:
-          'Teli avvolgibili in acciaio coibentato ad alta densità per chi cerca la massima resistenza meccanica, protezione antieffrazione e durata nel tempo.',
-        note: 'Ampia scelta di colorazioni e compatibilità con motori Somfy.',
+          'Teli avvolgibili in acciaio coibentato ad alta densità (profili Plasticino serie A01, A10, A18, A40) per chi cerca la massima resistenza meccanica, protezione antieffrazione e durata nel tempo.',
+        note: 'Certificati CE EN 13659 con 3 anni di garanzia e compatibilità con guide in acciaio o alluminio estruso.',
         specs: [
-          { label: 'Materiale', value: 'Acciaio coibentato ad alta densità' },
-          { label: 'Sicurezza', value: 'Elevata resistenza antieffrazione e grandine' },
-          { label: 'Movimentazione', value: 'Manuale o motorizzata Somfy' }
+          { label: 'Profili & Stecche', value: 'Acciaio coibentato A01/A10 (14×50 mm), A18 (13,5×55 mm), A40 (13,5×57 mm)' },
+          { label: 'Sicurezza', value: 'Elevata resistenza antieffrazione, grandine e vento' },
+          { label: 'Movimentazione', value: 'Manuale o motorizzata Somfy Altus / Oximo / LT' }
         ]
       },
       'Tapparelle in Alluminio': {
@@ -938,12 +1066,12 @@ export const productsData = {
         name: 'Avvolgibili in Alluminio',
         image: '/profili/plasticino-avvolgibili.jpg',
         description:
-          'Soluzione leggera, indeformabile e resistente agli agenti atmosferici. L’alluminio coibentato offre ottimo isolamento termico e acustico con un’estetica sempre impeccabile.',
-        note: 'Disponibili in numerose finiture tinta unita ed effetto legno.',
+          'Soluzione leggera, indeformabile e resistente agli agenti atmosferici (stecche Plasticino serie TA01, TA10, TA15, TA25). L’alluminio coibentato offre ottimo isolamento termico e acustico con zero manutenzione.',
+        note: 'Disponibili in numerose finiture anodizzate, tinta unita RAL ed effetto legno.',
         specs: [
-          { label: 'Materiale', value: 'Alluminio coibentato (leggero e robusto)' },
-          { label: 'Manutenzione', value: 'Nulla, inalterabile al sole e alle intemperie' },
-          { label: 'Installazione', value: 'Su guide in alluminio con spazzolino antivento' }
+          { label: 'Profili & Stecche', value: 'Alluminio coibentato TA10 (13×45 mm), TA01/TA15/TA25 (13×55 mm)' },
+          { label: 'Manutenzione', value: 'Nulla, inalterabile al sole e alle intemperie · CE EN 13659' },
+          { label: 'Installazione', value: 'Su guide in alluminio estruso 30×25×30 o 28×19×28 con spazzolino antivento' }
         ]
       },
       'Tapparelle in PVC': {
@@ -952,11 +1080,11 @@ export const productsData = {
         image: '/profili/plasticino-avvolgibili.jpg',
         description:
           'Leggeri, isolanti ed economici, i teli avvolgibili in PVC Plasticino resistono agli agenti atmosferici senza richiedere verniciatura o manutenzione.',
-        note: 'Ottimo isolamento termico e ampia gamma colori.',
+        note: 'Ottimo isolamento termico e ampia gamma colori; ideali per sostituzioni su guide esistenti.',
         specs: [
-          { label: 'Materiale', value: 'PVC estruso di alta qualità' },
-          { label: 'Vantaggi', value: 'Leggerezza, isolamento e zero verniciatura' },
-          { label: 'Compatibilità', value: 'Ideale per sostituzioni su cassonetti esistenti' }
+          { label: 'Materiale', value: 'PVC estruso di alta qualità certificato CE EN 13659' },
+          { label: 'Vantaggi', value: 'Leggerezza, isolamento termico e zero verniciatura' },
+          { label: 'Compatibilità', value: 'Guide ribassate 28×17×28 o standard da sostituzione 28×19×28' }
         ]
       },
       'Orienta & New Solar': {
@@ -965,24 +1093,39 @@ export const productsData = {
         image: '/profili/plasticino-orienta.jpg',
         description:
           'Sistemi innovativi a metà tra tapparella e persiana frangisole: permettono di orientare o distanziare le stecche per dosare luce naturale e ricambio d’aria mantenendo privacy e sicurezza.',
-        note: 'Si installano nelle stesse guide di un normale avvolgibile.',
+        note: 'Scorrono in guide dedicate Orienta GOSF/GOSB (30,8×26,6×30,8 mm) con spazzolino e spaccatura.',
         specs: [
           { label: 'Modelli', value: 'Orienta (stecche orientabili) · New Solar (frangisole)' },
-          { label: 'Funzione', value: 'Regolazione luce, aerazione e protezione solare' },
-          { label: 'Sicurezza', value: 'Versioni antieffrazione con blocco stecche' }
+          { label: 'Guide Dedicate', value: 'Estruso Orienta GOSF (finestra) / GOSB (portafinestra) 30,8×26,6×30,8 mm' },
+          { label: 'Sicurezza', value: 'Versioni antieffrazione con blocco stecche e regolazione luce/aria' }
+        ]
+      },
+      'Guide & Scorrimento': {
+        brand: 'Plasticino',
+        name: 'Apparati di Scorrimento & Guide',
+        image: '/profili/plasticino-guide.jpg',
+        description:
+          'Guide in alluminio estruso anodizzato o verniciato RAL, ferro zincato e acciaio inox complete di spaccatura, foratura su misura e spazzolino antivento per scorrimento silenzioso e stabile.',
+        note: 'Disponibili per incasso, esterno muro, sostituzione (28×19×28), ribassate (28×17×28) e versioni a sporgere.',
+        specs: [
+          { label: 'Alluminio Estruso', value: 'Sezioni 30×25×30 (standard), 28×19×28 (sostituzione), 28×17×28 (ribassata)' },
+          { label: 'Acciaio & Inox', value: 'Guide in ferro zincato o acciaio inox con spazzolino antivento' },
+          { label: 'Finiture', value: 'Argento, Bronzo, Elox, Bianco, Avorio, Verde, Marrone e RAL a richiesta' }
         ]
       },
       'Motori Somfy': {
         brand: 'Somfy',
         name: 'Motori Somfy per Tapparelle',
-        image: '/immagineProdottolsomfy.webp',
+        image: '/profili/somfy-tapparelle.jpg',
+        profileImage: '/immagineProdottolsomfy.webp',
+        profileImageLabel: 'Motore tubolare Somfy (dettaglio)',
         description:
-          'Motorizzazioni tubolari Somfy silenziose e durature per automatizzare singole tapparelle o l’intera abitazione con comandi centralizzati a muro, telecomando o domotica.',
-        note: 'Rilevamento ostacoli e blocco antisollevamento su versioni dedicate.',
+          'Motorizzazioni tubolari Somfy (Altus RTS / io, LT 50/60/80 e Oximo WireFree) certificate IP44 con finecorsa elettronici e tempo termico di protezione, comandabili da pulsante a muro Smoove, telecomando Situo / Telis o app smart TaHoma® switch.',
+        note: 'Possibilità di controllo centralizzato, programmazione oraria e comandi vocali Alexa / Google Assistant.',
         specs: [
-          { label: 'Silenziosità', value: 'Movimentazione fluida e discreta' },
-          { label: 'Controllo', value: 'Pulsante a parete, telecomando o scenario centralizzato' },
-          { label: 'Affidabilità', value: 'Qualità e garanzia Somfy' }
+          { label: 'Serie Motori', value: 'Altus RTS / io (4–100 Nm) · LT 50/60/80 · Oximo WireFree · IP44' },
+          { label: 'Comandi & Smart', value: 'Smoove a parete · Situo 1/5 & Telis 6/16 · Hub TaHoma® switch' },
+          { label: 'Sicurezza', value: 'Protezione termica 4 min, finecorsa elettronici e blocco antisollevamento' }
         ]
       }
     }
