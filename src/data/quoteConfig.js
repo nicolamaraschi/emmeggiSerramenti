@@ -25,6 +25,8 @@ export const PRODUCT_GROUPS = [
       slug,
       label: productsData[slug].title,
       category: productsData[slug].category,
+      image: productsData[slug].image,
+      subtitle: productsData[slug].subtitle || productsData[slug].headline,
     })),
 }));
 
@@ -217,6 +219,35 @@ export const COLOR_OPTIONS_BY_PRODUCT = {
     'Da definire in consulenza',
   ],
 };
+
+export function getColorSwatchStyle(label) {
+  const lower = (label || '').toLowerCase();
+  if (lower.includes('bianco') && lower.includes('legno')) {
+    return { background: 'linear-gradient(135deg, #ffffff 50%, #9b6b43 50%)' };
+  }
+  if (lower.includes('bianco')) {
+    return { background: '#ffffff' };
+  }
+  if (lower.includes('legno')) {
+    return { background: 'linear-gradient(135deg, #c28e5c 0%, #8b5a2b 100%)' };
+  }
+  if (lower.includes('antracite') || lower.includes('tortora')) {
+    return { background: 'linear-gradient(135deg, #4b5058 0%, #2b2e33 100%)' };
+  }
+  if (lower.includes('bronzo') || lower.includes('marrone')) {
+    return { background: 'linear-gradient(135deg, #6e5241 0%, #443127 100%)' };
+  }
+  if (lower.includes('argento') || lower.includes('anodizzato')) {
+    return { background: 'linear-gradient(135deg, #e2e5e9 0%, #aeb5be 100%)' };
+  }
+  if (lower.includes('ral')) {
+    return { background: 'conic-gradient(#e65c00, #eab308, #22c55e, #3b82f6, #6b7280, #e65c00)' };
+  }
+  if (lower.includes('tempotest') || lower.includes('rigato')) {
+    return { background: 'repeating-linear-gradient(90deg, #e8dfd1 0 5px, #b45309 5px 10px)' };
+  }
+  return { background: 'linear-gradient(135deg, #f3f1ed 0%, #e5e0d8 100%)' };
+}
 
 export const ITALIAN_PROVINCES = [
   'MI - Milano',

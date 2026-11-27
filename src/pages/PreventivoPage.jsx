@@ -18,6 +18,7 @@ import { productsData } from '../data/products';
 import {
   COLOR_OPTIONS,
   COLOR_OPTIONS_BY_PRODUCT,
+  getColorSwatchStyle,
   getStep2ConfigForProduct,
   ITALIAN_PROVINCES,
   PRODUCT_GROUPS,
@@ -64,6 +65,7 @@ export default function PreventivoPage() {
 
   // Step 1
   const [productSlug, setProductSlug] = useState(validInitialSlug);
+  const [activeCategoryFilter, setActiveCategoryFilter] = useState('Tutti');
   const [color, setColor] = useState('');
 
   // Step 2
@@ -233,6 +235,7 @@ export default function PreventivoPage() {
     setStep(1);
     setError('');
     setProductSlug('');
+    setActiveCategoryFilter('Tutti');
     setColor('');
     setRows([{ ...EMPTY_ROW }]);
     setCustomer({
@@ -361,66 +364,162 @@ export default function PreventivoPage() {
 
               {/* STEP 1: PRODOTTI */}
               {step === 1 && (
-                <div className="space-y-6">
-                  <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                    <div>
-                      <label htmlFor="quote-product" className={labelBase}>
-                        Prodotto *
+                <div className="space-y-8">
+                  {/* Visual Product Picker */}
+                  <div>
+                    <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                      <label className="text-xs font-semibold uppercase tracking-wider text-neutral-600">
+                        1. Scegli il prodotto *
                       </label>
-                      <select
-                        id="quote-product"
-                        value={productSlug}
-                        onChange={(e) => {
-                          const nextSlug = e.target.value;
-                          const nextCfg = getStep2ConfigForProduct(nextSlug);
-                          setProductSlug(nextSlug);
-                          setColor('');
-                          setRows([{ ...EMPTY_ROW, detail: nextCfg.details[0] || '' }]);
-                          setError('');
-                        }}
-                        className={inputBase}
-                      >
-                        <option value="">Seleziona prodotto</option>
-                        {PRODUCT_GROUPS.map((group) => (
-                          <optgroup key={group.category} label={group.category}>
-                            {group.items.map((item) => (
-                              <option key={item.slug} value={item.slug}>
-                                {item.label}
-                              </option>
-                            ))}
-                          </optgroup>
-                        ))}
-                      </select>
+                      <div className="flex flex-wrap gap-1.5" role="tablist" aria-label="Filtra per categoria">
+                        {['Tutti', ...PRODUCT_GROUPS.map((g) => g.category)].map((cat) => {
+                          const isTabActive = activeCategoryFilter === cat;
+                          return (
+                            <button
+                              key={cat}
+                              type="button"
+                              onClick={() => setActiveCategoryFilter(cat)}
+                              className={`cursor-pointer rounded-full px-3 py-1 text-xs font-medium transition ${
+                                isTabActive
+                                  ? 'bg-neutral-900 text-white shadow-xs'
+                                  : 'bg-[#f6f5f2] text-neutral-600 hover:bg-neutral-200/70 hover:text-neutral-900'
+                              }`}
+                            >
+                              {cat}
+                            </button>
+                          );
+                        })}
+                      </div>
                     </div>
 
-                    <div>
-                      <label htmlFor="quote-color" className={labelBase}>
-                        Colore / Finitura *
-                      </label>
-                      <select
-                        id="quote-color"
-                        value={color}
-                        onChange={(e) => {
-                          setColor(e.target.value);
-                          setError('');
-                        }}
-                        className={inputBase}
-                      >
-                        <option value="">Seleziona colore</option>
-                        {colorOptions.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
+                    <div className="space-y-6">
+                      {PRODUCT_GROUPS.filter(
+                        (group) => activeCategoryFilter === 'Tutti' || group.category === activeCategoryFilter
+                      ).map((group) => (
+                        <div key={group.category}>
+                          {activeCategoryFilter === 'Tutti' && (
+                            <p className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.18em] text-neutral-400">
+                              {group.category}
+                            </p>
+                          )}
+                          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+                            {group.items.map((item) => {
+                              const isSelected = productSlug === item.slug;
+                              return (
+                                <button
+                                  key={item.slug}
+                                  type="button"
+                                  onClick={() => {
+                                    const nextCfg = getStep2ConfigForProduct(item.slug);
+                                    setProductSlug(item.slug);
+                                    setColor('');
+                                    setRows([{ ...EMPTY_ROW, detail: nextCfg.details[0] || '' }]);
+                                    setError('');
+                                  }}
+                                  className={`group relative flex cursor-pointer flex-col overflow-hidden rounded-xl border text-left transition-all duration-200 ${
+                                    isSelected
+                                      ? 'border-brand bg-brand/[0.04] ring-2 ring-brand/25 shadow-sm'
+                                      : 'border-neutral-200 bg-white hover:border-neutral-300 hover:shadow-sm'
+                                  }`}
+                                >
+                                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#f6f5f2]">
+                                    <img
+                                      src={item.image}
+                                      alt={item.label}
+                                      loading="lazy"
+                                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    />
+                                    {isSelected && (
+                                      <span className="absolute top-2 right-2 flex h-6 w-6 items-center justify-center rounded-full bg-brand text-white shadow-sm">
+                                        <Check className="h-3.5 w-3.5" />
+                                      </span>
+                                    )}
+                                  </div>
+                                  <div className="flex flex-1 flex-col justify-between p-3">
+                                    <span
+                                      className={`text-sm font-semibold leading-snug ${
+                                        isSelected ? 'text-brand' : 'text-neutral-900'
+                                      }`}
+                                    >
+                                      {item.label}
+                                    </span>
+                                    <span className="mt-1 line-clamp-1 text-[11px] text-neutral-500">
+                                      {group.category}
+                                    </span>
+                                  </div>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
 
-                  <div className="flex justify-end pt-2">
+                  {/* Color / Finish Swatches */}
+                  <div className="border-t border-neutral-200 pt-6">
+                    <label className="mb-3 block text-xs font-semibold uppercase tracking-wider text-neutral-600">
+                      2. Scegli Colore / Finitura *
+                    </label>
+                    <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+                      {colorOptions.map((opt) => {
+                        const isColorSelected = color === opt;
+                        return (
+                          <button
+                            key={opt}
+                            type="button"
+                            onClick={() => {
+                              setColor(opt);
+                              setError('');
+                            }}
+                            className={`flex cursor-pointer items-center gap-3 rounded-xl border px-3.5 py-2.5 text-left text-sm transition ${
+                              isColorSelected
+                                ? 'border-brand bg-brand/[0.06] font-semibold text-neutral-900 ring-1 ring-brand/30'
+                                : 'border-neutral-200 bg-[#faf9f7] text-neutral-700 hover:border-neutral-300 hover:bg-white'
+                            }`}
+                          >
+                            <span
+                              className="h-5 w-5 shrink-0 rounded-full border border-neutral-300 shadow-inner"
+                              style={getColorSwatchStyle(opt)}
+                              aria-hidden="true"
+                            />
+                            <span className="flex-1 leading-tight">{opt}</span>
+                            {isColorSelected && <Check className="h-4 w-4 shrink-0 text-brand" />}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Live Selection Bar + Next CTA */}
+                  <div className="flex flex-col items-stretch justify-between gap-4 rounded-xl border border-neutral-200 bg-[#f6f5f2] p-4 sm:flex-row sm:items-center">
+                    {selectedProduct ? (
+                      <div className="flex items-center gap-3.5">
+                        <img
+                          src={selectedProduct.image}
+                          alt={selectedProduct.title}
+                          className="h-12 w-16 shrink-0 rounded-lg border border-neutral-200 object-cover"
+                        />
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-wider text-brand">
+                            {selectedProduct.category}
+                          </p>
+                          <p className="text-sm font-semibold text-neutral-900">
+                            {selectedProduct.title}
+                            {color && <span className="font-normal text-neutral-600"> · {color}</span>}
+                          </p>
+                        </div>
+                      </div>
+                    ) : (
+                      <p className="text-xs text-neutral-500">
+                        Seleziona un prodotto e una finitura per procedere con misure e quantità.
+                      </p>
+                    )}
+
                     <button
                       type="button"
                       onClick={() => goToStep(2)}
-                      className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-brand px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-hover"
+                      className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-lg bg-brand px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-hover"
                     >
                       Avanti
                       <ArrowRight className="h-4 w-4" />
@@ -433,11 +532,27 @@ export default function PreventivoPage() {
               {step === 2 && (
                 <div className="space-y-6">
                   {/* Selected Summary */}
-                  <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-neutral-200 bg-[#f6f5f2] px-4 py-3 text-xs text-neutral-600">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-semibold text-neutral-900">{selectedProduct?.title}</span>
-                      <span className="text-neutral-400">•</span>
-                      <span>{color}</span>
+                  <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-neutral-200 bg-[#f6f5f2] px-4 py-3 text-xs text-neutral-600">
+                    <div className="flex items-center gap-3">
+                      {selectedProduct?.image && (
+                        <img
+                          src={selectedProduct.image}
+                          alt={selectedProduct.title}
+                          className="h-10 w-14 shrink-0 rounded-lg border border-neutral-200 object-cover"
+                        />
+                      )}
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-sm font-semibold text-neutral-900">{selectedProduct?.title}</span>
+                        <span className="text-neutral-400">•</span>
+                        <span className="inline-flex items-center gap-1.5 font-medium text-neutral-700">
+                          <span
+                            className="h-3.5 w-3.5 rounded-full border border-neutral-300"
+                            style={getColorSwatchStyle(color)}
+                            aria-hidden="true"
+                          />
+                          {color}
+                        </span>
+                      </div>
                     </div>
                     <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-neutral-500">
                       <Ruler className="h-3.5 w-3.5 text-brand" />
@@ -590,6 +705,33 @@ export default function PreventivoPage() {
               {/* STEP 3: INFORMAZIONI */}
               {step === 3 && (
                 <div className="space-y-5">
+                  {selectedProduct && (
+                    <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-neutral-200 bg-[#f6f5f2] px-4 py-3">
+                      <div className="flex items-center gap-3">
+                        <img
+                          src={selectedProduct.image}
+                          alt={selectedProduct.title}
+                          className="h-11 w-14 shrink-0 rounded-lg border border-neutral-200 object-cover"
+                        />
+                        <div>
+                          <p className="text-sm font-semibold text-neutral-900">
+                            {selectedProduct.title} · <span className="font-normal text-neutral-600">{color}</span>
+                          </p>
+                          <p className="text-xs text-neutral-500">
+                            {rows.filter((r) => Number(r.quantity) > 0 && r.typology).length} elementi configurati
+                          </p>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => goToStep(2)}
+                        className="cursor-pointer text-xs font-semibold text-brand hover:underline"
+                      >
+                        Modifica misure
+                      </button>
+                    </div>
+                  )}
+
                   <div>
                     <label htmlFor="quote-name" className={labelBase}>
                       Nome e Cognome *
