@@ -98,9 +98,9 @@ const PARTNERS = [
     to: '/infissi/alluminio',
   },
   {
-    category: 'Tapparelle',
-    brand: 'Plasticino',
-    logo: '/Plasticino.png',
+    category: 'Avvolgibili & Guide',
+    brand: 'Tapparelle',
+    hideLogo: true,
     image: '/tapparelle-preview.webp',
     to: '/complementari/tapparelle',
   },
@@ -126,16 +126,16 @@ const PARTNERS = [
     to: '/porte/porte-interne',
   },
   {
-    category: 'Porte Blindate',
-    brand: 'Metalportblindate',
-    logo: '/METALPORTBLINDATE.png',
+    category: 'Sicurezza & Ingressi',
+    brand: 'Porte Blindate',
+    hideLogo: true,
     image: '/porte-blindate-preview.webp',
     to: '/porte/porte-blindate',
   },
   {
-    category: 'Inferriate',
-    brand: 'Pro Art',
-    logo: '/proArt.png',
+    category: 'Grate & Scuri Blindati',
+    brand: 'Inferriate',
+    hideLogo: true,
     image: '/profili/proart-grata-trend.jpg',
     to: '/complementari/inferriate',
   },
@@ -146,6 +146,17 @@ const PARTNERS = [
     image: '/immagineProdottolsomfy.webp',
     to: '/complementari/tapparelle',
   },
+];
+
+const LOGO_STRIP_BRANDS = [
+  { brand: 'Fossati', logo: '/Logo-Fossati-2024-NEW_Blacktricolore.png', to: '/infissi/serramenti-in-pvc', logoClass: 'h-12 max-w-[130px] sm:h-14 lg:h-12 lg:max-w-[115px] xl:h-14 xl:max-w-[135px]' },
+  { brand: 'AluK', logo: '/logo_aluk.png', to: '/infissi/alluminio' },
+  { brand: 'Brianza Tende', logo: '/cropped-brianzatende-logo-1.webp', to: '/complementari/tende-da-sole' },
+  { brand: 'Bettio', logo: '/bettioezanzar.png', to: '/complementari/zanzariere' },
+  { brand: 'Zanzar', logo: '/logo_zanzar.png', to: '/complementari/zanzariere', logoClass: 'h-7 max-w-[100px] sm:h-8' },
+  { brand: 'Bertolotto', logo: '/logo_bertolottoPorte.webp', to: '/porte/porte-interne' },
+  { brand: 'Parma Porte', logo: '/logo_parmaporte.png', to: '/porte/porte-interne', logoClass: 'h-4 max-w-[125px] sm:h-5' },
+  { brand: 'Somfy', logo: '/logo_somfy_2.svg', to: '/complementari/tapparelle' },
 ];
 
 const REAL_PROJECTS = [
@@ -580,13 +591,21 @@ export default function Home() {
                     ))}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                     <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5">
-                      <div className="inline-flex items-center rounded-md bg-white/95 px-3.5 py-2 shadow-lg">
-                        <img
-                          src={currentPartner.logo}
-                          alt={currentPartner.brand}
-                          className="h-7 w-auto max-w-[160px] object-contain"
-                        />
-                      </div>
+                      {currentPartner.logo && !currentPartner.hideLogo ? (
+                        <div className="inline-flex items-center rounded-md bg-white/95 px-3.5 py-2 shadow-lg">
+                          <img
+                            src={currentPartner.logo}
+                            alt={currentPartner.brand}
+                            className="h-7 w-auto max-w-[160px] object-contain"
+                          />
+                        </div>
+                      ) : (
+                        <div className="inline-flex items-center rounded-md bg-white/95 px-3.5 py-2 shadow-lg">
+                          <span className="font-heading text-sm font-semibold text-neutral-900">
+                            {currentPartner.brand}
+                          </span>
+                        </div>
+                      )}
                       <span className="font-heading text-sm italic text-white/90">
                         0{activePartner + 1} / 0{PARTNERS.length}
                       </span>
@@ -659,24 +678,19 @@ export default function Home() {
         <div className="mt-20 border-y border-neutral-200 bg-white py-10">
           <div className="container">
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 lg:flex-nowrap lg:justify-between lg:gap-x-5 xl:gap-x-7">
-              {PARTNERS.map((partner, idx) => (
+              {LOGO_STRIP_BRANDS.map((item) => (
                 <Link
-                  key={partner.brand}
-                  to={partner.to}
-                  onMouseEnter={() => setActivePartner(idx)}
-                  title={`${partner.brand} — ${partner.category}`}
+                  key={item.brand}
+                  to={item.to}
+                  title={item.brand}
                   className="group flex shrink-0 items-center justify-center transition duration-300"
                 >
                   <img
-                    src={partner.logo}
-                    alt={partner.brand}
-                    className={`w-auto object-contain transition duration-300 ${
-                      partner.logoClass ||
+                    src={item.logo}
+                    alt={item.brand}
+                    className={`w-auto object-contain opacity-80 grayscale-[20%] transition duration-300 group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0 ${
+                      item.logoClass ||
                       'h-8 max-w-[110px] sm:h-9 lg:h-8 lg:max-w-[96px] xl:h-9 xl:max-w-[112px]'
-                    } ${
-                      idx === activePartner
-                        ? 'scale-105 opacity-100'
-                        : 'opacity-75 grayscale-[30%] group-hover:scale-105 group-hover:opacity-100 group-hover:grayscale-0'
                     }`}
                   />
                 </Link>

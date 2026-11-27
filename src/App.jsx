@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import CategoryPage from './pages/CategoryPage';
 import PreventivoPage from './pages/PreventivoPage';
+import ChiSiamoPage from './pages/ChiSiamoPage';
 import './App.css';
 
 const ScrollToTop = () => {
@@ -32,6 +33,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/chi-siamo" element={<ChiSiamoPage />} />
         <Route path="/preventivo" element={<PreventivoPage />} />
         <Route path="/:category/:slug" element={<CategoryPage />} />
       </Routes>

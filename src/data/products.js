@@ -431,7 +431,8 @@ export const productsData = {
     ],
     image: '/porte-interne-preview.webp',
     sidebar: [
-      { title: 'Bertolotto & Parma Porte', items: ['Porte Laccate', 'Porte in Laminato', 'Porte in Vetro'] }
+      { title: 'Bertolotto Porte', items: ['Porte Laccate', 'Porte in Laminato', 'Porte in Vetro'] },
+      { title: 'Parma Porte', items: ['Collezione Mimetika (Filomuro)', 'Collezione Olmo & Microlaminato', 'Collezione Laccato & Classico'] }
     ],
     profileDetails: {
       'Porte Laccate': {
@@ -471,6 +472,45 @@ export const productsData = {
           { label: 'Cristallo', value: 'Vetro temperato o stratificato di sicurezza spessore 8 mm' },
           { label: 'Collezioni', value: 'Alaska (con telaio personalizzabile), Glass Design' },
           { label: 'Lavorazioni', value: 'Trasparente, satinato, sabbiato, inciso o specchiato' }
+        ]
+      },
+      'Collezione Mimetika (Filomuro)': {
+        brand: 'Parma Porte',
+        name: 'Linea Mimetika (Filomuro)',
+        image: '/profili/parmaporte-ares.jpg',
+        description:
+          'Porte filomuro dal design minimale progettate per integrarsi perfettamente a filo parete senza cornici né coprifili. Dotate di cerniere a scomparsa 3D regolabili e serratura magnetica silenziosa.',
+        note: 'Disponibili in versione tinteggiabile come la parete o laccata/rivestita.',
+        specs: [
+          { label: 'Estetica', value: 'Filo muro senza coprifili (a spingere o a tirare)' },
+          { label: 'Ferramenta', value: 'Cerniere a scomparsa 3D e serratura magnetica' },
+          { label: 'Finiture', value: 'Fondo tinteggiabile, laccato opaco o effetto materico' }
+        ]
+      },
+      'Collezione Olmo & Microlaminato': {
+        brand: 'Parma Porte',
+        name: 'Collezioni Olmo & Microlaminato 3D',
+        image: '/profili/parmaporte-classica.jpg',
+        description:
+          'Porte interne in microlaminato touch 3D ad alta resistenza ai graffi e all’usura, con stipiti piatti e reversibilità di apertura. Finiture naturali come Olmo Chiaro, Olmo Grigio, Olmo Bianco e Rovere Cognac.',
+        note: 'Disponibili a battente, scorrevoli interno muro e con vetri decorati.',
+        specs: [
+          { label: 'Finiture Touch 3D', value: 'Olmo Chiaro, Olmo Grigio, Olmo Bianco, Rovere Cognac, Bianco Luxor' },
+          { label: 'Struttura', value: 'Stipiti piatti coordinati e apertura reversibile' },
+          { label: 'Aperture', value: 'Battente o scorrevole interno/esterno muro' }
+        ]
+      },
+      'Collezione Laccato & Classico': {
+        brand: 'Parma Porte',
+        name: 'Collezioni Aptika, Laccato & Classico',
+        image: '/profili/parmaporte-mimetika.jpg',
+        description:
+          'Ampia gamma di porte laccate (modelli Praga, Londra, America) e classiche in essenze calde (Avorio, Noce Biondo, Noce Dogato), oltre alla linea moderna Aptika con stipiti e coprifili personalizzabili.',
+        note: 'Abbinabili a cristalli decorati o sabbiati per ogni stile d’arredo.',
+        specs: [
+          { label: 'Linee', value: 'Aptika · Laccato (Praga, Londra, America) · Classico' },
+          { label: 'Tinte & Essenze', value: 'Laccati opachi, Noce Biondo/Dogato, Avorio, Ares Bianco' },
+          { label: 'Personalizzazione', value: 'Versioni cieche, pantografate o con vetro artistico' }
         ]
       }
     }

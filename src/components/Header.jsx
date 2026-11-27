@@ -96,6 +96,9 @@ export default function Header() {
             <Link to="/" className="nav-link">
               HOME
             </Link>
+            <Link to="/chi-siamo" className="nav-link">
+              CHI SIAMO
+            </Link>
             {Object.entries(menuData).map(([category, items]) => (
               <div 
                 key={category} 
@@ -189,6 +192,15 @@ export default function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               <span>HOME</span>
+            </Link>
+          </div>
+          <div className="mobile-category">
+            <Link
+              to="/chi-siamo"
+              className="mobile-category-header"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <span>CHI SIAMO</span>
             </Link>
           </div>
           {Object.entries(menuData).map(([category, items]) => (

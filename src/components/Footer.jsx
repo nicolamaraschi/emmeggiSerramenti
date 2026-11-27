@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
 
 const INFISSI_PORTE_LINKS = [
+  { label: 'Chi Siamo', to: '/chi-siamo' },
   { label: 'Serramenti in Alluminio', to: '/infissi/alluminio' },
   { label: 'Alluminio e Legno', to: '/infissi/alluminio-e-legno' },
   { label: 'Serramenti in PVC', to: '/infissi/serramenti-in-pvc' },
