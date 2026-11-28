@@ -15,7 +15,6 @@ const CONTAIN_IMAGES = new Set([
   '/profili/aluk-bsf70.jpg',
   '/profili/aluk-persiane-45p.jpg',
   '/profili/aluk-persiane-scorrevole.jpg',
-  '/profili/fossati-portoncini.jpg',
   '/profili/plasticino-guide.jpg',
   '/immagineProdottolsomfy.webp',
 ]);
