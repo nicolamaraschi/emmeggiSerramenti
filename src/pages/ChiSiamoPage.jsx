@@ -290,6 +290,58 @@ export default function ChiSiamoPage() {
           </div>
         </div>
       </section>
+
+      {/* Founder / Leadership Section */}
+      <section className="border-t border-neutral-200 bg-white py-14 sm:py-16">
+        <div className="container">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-8 rounded-2xl border border-neutral-200 bg-[#faf9f7] p-6 shadow-sm sm:p-10 md:grid-cols-12 md:gap-10">
+            <div className="md:col-span-5">
+              <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm">
+                <img
+                  src="/fondatore.jpg"
+                  alt="Titolare e Fondatore Emme.Gi Serramenti"
+                  className="aspect-[3/4] w-full object-cover object-top"
+                />
+              </div>
+            </div>
+
+            <div className="space-y-4 md:col-span-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-brand">
+                La Direzione · Dal 1990
+              </p>
+              <h2 className="font-heading text-3xl text-neutral-900 sm:text-4xl">
+                Un volto, una garanzia diretta sul lavoro
+              </h2>
+              <blockquote className="border-l-2 border-brand pl-4 font-heading text-lg italic leading-relaxed text-neutral-700">
+                «Ogni serramento che esce dalla nostra azienda porta la nostra firma: dal primo
+                sopralluogo alla posa finale, ci mettiamo la faccia per garantire sicurezza,
+                isolamento e durata reale nel tempo.»
+              </blockquote>
+              <p className="text-sm leading-relaxed text-neutral-600">
+                Alla guida di Emme.Gi Serramenti da oltre trent’anni, seguiamo personalmente ogni
+                commessa residenziale e commerciale tra Buccinasco, Milano e provincia, con un team
+                tecnico interno e partner certificati.
+              </p>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Link
+                  to="/preventivo"
+                  className="inline-flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-hover"
+                >
+                  Richiedi un Sopralluogo
+                  <ArrowUpRight className="h-4 w-4" />
+                </Link>
+                <a
+                  href="tel:+390245708405"
+                  className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 bg-white px-5 py-2.5 text-sm font-semibold text-neutral-800 transition hover:border-brand hover:text-brand"
+                >
+                  <Phone className="h-4 w-4 text-brand" />
+                  02 45708405
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
